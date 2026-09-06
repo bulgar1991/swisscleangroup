@@ -52,7 +52,9 @@ export class Request implements OnInit {
           this.form.reset();
         },
         error: (err: HttpErrorResponse) => {
-          const messages: string[] = err.error?.errors ?? ['Something went wrong. Please try again.'];
+          const messages: string[] = err.error?.errors ?? [
+            'Something went wrong. Please try again.',
+          ];
           this.errors.set(messages);
           this.submitting.set(false);
         },
