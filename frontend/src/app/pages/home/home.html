@@ -1,0 +1,24 @@
+<section class="hero">
+  <h1>Swiss Clean Group</h1>
+  <p>Professional cleaning services for homes and businesses. Choose a service below to request a quote.</p>
+</section>
+
+<main class="services">
+  @if (loading()) {
+    <p class="status">Loading services…</p>
+  } @else if (error()) {
+    <p class="status status--error">{{ error() }}</p>
+  } @else {
+    <div class="grid">
+      @for (service of services(); track service.id) {
+        <article class="card">
+          <div class="card__icon" aria-hidden="true">{{ service.icon }}</div>
+          <h2>{{ service.name }}</h2>
+          <p class="card__description">{{ service.description }}</p>
+          <p class="card__price">From CHF {{ service.priceFrom }}</p>
+          <a class="btn" [routerLink]="['/request', service.id]">Choose this service</a>
+        </article>
+      }
+    </div>
+  }
+</main>

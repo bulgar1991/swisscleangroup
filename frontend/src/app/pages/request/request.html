@@ -1,0 +1,61 @@
+<section class="request">
+  <a routerLink="/" class="back-link">&larr; Back to services</a>
+  <h1>Request: {{ serviceId() }}</h1>
+
+  @if (successMessage()) {
+    <p class="alert alert--success">{{ successMessage() }}</p>
+  } @else {
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      @if (errors().length) {
+        <ul class="alert alert--error">
+          @for (message of errors(); track message) {
+            <li>{{ message }}</li>
+          }
+        </ul>
+      }
+
+      <label>
+        Full name
+        <input type="text" formControlName="name" autocomplete="name" />
+        @if (form.controls.name.invalid && form.controls.name.touched) {
+          <span class="field-error">Please enter your name (min. 2 characters).</span>
+        }
+      </label>
+
+      <label>
+        Email
+        <input type="email" formControlName="email" autocomplete="email" />
+        @if (form.controls.email.invalid && form.controls.email.touched) {
+          <span class="field-error">Please enter a valid email address.</span>
+        }
+      </label>
+
+      <label>
+        Phone
+        <input type="tel" formControlName="phone" autocomplete="tel" />
+        @if (form.controls.phone.invalid && form.controls.phone.touched) {
+          <span class="field-error">Please enter a valid phone number.</span>
+        }
+      </label>
+
+      <label>
+        Address (optional)
+        <input type="text" formControlName="address" autocomplete="street-address" />
+      </label>
+
+      <label>
+        Preferred date (optional)
+        <input type="date" formControlName="preferredDate" />
+      </label>
+
+      <label>
+        Message (optional)
+        <textarea formControlName="message" rows="4"></textarea>
+      </label>
+
+      <button type="submit" class="btn" [disabled]="submitting()">
+        {{ submitting() ? 'Sending…' : 'Send request' }}
+      </button>
+    </form>
+  }
+</section>
