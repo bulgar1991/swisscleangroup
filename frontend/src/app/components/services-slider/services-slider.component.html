@@ -1,0 +1,30 @@
+<section class="services-slider" aria-labelledby="services-slider-title">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="services-slider__header">
+      <div>
+        <p class="services-slider__eyebrow">{{ 'servicesSlider.eyebrow' | translate }}</p>
+        <h2 id="services-slider-title" class="services-slider__title">{{ 'servicesSlider.title' | translate }}</h2>
+      </div>
+      <div class="services-slider__arrows">
+        <button type="button" class="services-slider__arrow services-slider__arrow--prev" [attr.aria-label]="'servicesSlider.prev' | translate">
+          <i class="icon-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="services-slider__arrow services-slider__arrow--next" [attr.aria-label]="'servicesSlider.next' | translate">
+          <i class="icon-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div #swiperEl class="swiper services-slider__swiper">
+      <div class="swiper-wrapper">
+        @for (service of services; track service.id) {
+          <article class="swiper-slide services-slider__slide">
+            <app-service-card [service]="service" />
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="services-slider__pagination"></div>
+  </div>
+</section>

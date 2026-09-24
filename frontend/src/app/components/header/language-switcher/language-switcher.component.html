@@ -1,0 +1,46 @@
+@if (variant() === 'dropdown') {
+  <div class="language-switcher language-switcher--dropdown">
+    <button
+      type="button"
+      class="language-switcher__toggle"
+      [attr.aria-expanded]="open()"
+      aria-haspopup="true"
+      [attr.aria-label]="'header.language' | translate"
+      (click)="toggle()"
+    >
+      {{ currentLanguage().label }}
+      <i class="icon-chevron-down language-switcher__chevron" [class.language-switcher__chevron--open]="open()" aria-hidden="true"></i>
+    </button>
+
+    <ul class="language-switcher__menu" [class.language-switcher__menu--open]="open()">
+      @for (lang of languages; track lang.code) {
+        <li>
+          <button
+            type="button"
+            class="language-switcher__option"
+            [class.language-switcher__option--active]="lang.code === currentCode()"
+            [attr.lang]="lang.code"
+            (click)="select(lang.code)"
+          >
+            <span class="language-switcher__code">{{ lang.label }}</span>
+            {{ lang.name }}
+          </button>
+        </li>
+      }
+    </ul>
+  </div>
+} @else {
+  <div class="language-switcher language-switcher--inline" role="group" [attr.aria-label]="'header.language' | translate">
+    @for (lang of languages; track lang.code) {
+      <button
+        type="button"
+        class="language-switcher__pill"
+        [class.language-switcher__pill--active]="lang.code === currentCode()"
+        [attr.aria-pressed]="lang.code === currentCode()"
+        [attr.lang]="lang.code"
+        [title]="lang.name"
+        (click)="select(lang.code)"
+      >{{ lang.label }}</button>
+    }
+  </div>
+}

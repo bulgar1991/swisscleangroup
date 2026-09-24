@@ -1,0 +1,260 @@
+{
+  "header": {
+    "menu": {
+      "home": "Startseite",
+      "services": "Dienstleistungen",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "contacts": {
+      "phone": "Rufen Sie uns an",
+      "whatsapp": "Schreiben Sie uns auf WhatsApp",
+      "facebook": "Folgen Sie uns auf Facebook",
+      "instagram": "Folgen Sie uns auf Instagram"
+    },
+    "language": "Sprache",
+    "mainMenu": "Hauptmenü",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schliessen",
+    "contactCta": "Kontakt aufnehmen"
+  },
+  "banner": {
+    "ariaLabel": "Unsere wichtigsten Dienstleistungen",
+    "prev": "Vorherige Folie",
+    "next": "Nächste Folie",
+    "slides": {
+      "window": {
+        "eyebrow": "Fensterreinigung",
+        "title": "Glasklare Fenster, jedes Mal",
+        "text": "Streifenfreie Reinigung von Fenstern, Rahmen und Fensterbänken, innen und aussen, für Privat- und Geschäftskunden.",
+        "cta": "Fensterreinigung buchen",
+        "imageAlt": "Fachkraft reinigt ein grosses Fenster"
+      },
+      "furniture": {
+        "eyebrow": "Möbelmontage",
+        "title": "Ihre Möbel, fachgerecht montiert",
+        "text": "Betten, Schränke, Küchen und Bausatzmöbel aller Marken – schnell und sicher aufgebaut.",
+        "cta": "Möbelmontage buchen",
+        "imageAlt": "Montage eines Holzschranks"
+      },
+      "team": {
+        "eyebrow": "Swiss Clean Group",
+        "title": "Ein zuverlässiges Team für Ihr Zuhause",
+        "text": "Klare Preise, pünktliche Fachleute und Schweizer Qualität, auf die Sie sich verlassen können.",
+        "cta": "Alle Dienstleistungen ansehen",
+        "imageAlt": "Das Team von Swiss Clean Group"
+      }
+    }
+  },
+  "servicesSlider": {
+    "eyebrow": "Was wir tun",
+    "title": "Unsere Dienstleistungen",
+    "viewDetails": "Details ansehen",
+    "prev": "Vorherige Dienstleistungen",
+    "next": "Nächste Dienstleistungen",
+    "items": {
+      "windowCleaning": {
+        "title": "Fensterreinigung für Privatkunden",
+        "imageAlt": "Reinigung eines Fensters in einer Wohnung"
+      },
+      "furnitureAssembly": {
+        "title": "Montage von Bausatzmöbeln",
+        "imageAlt": "Montage eines Bausatzmöbels"
+      },
+      "facadeCleaning": {
+        "title": "Reinigung von Glasfassaden",
+        "imageAlt": "Glasfassade eines Gebäudes"
+      },
+      "kitchenAssembly": {
+        "title": "Küchenmontage",
+        "imageAlt": "Küche während der Montage"
+      },
+      "officeWindows": {
+        "title": "Fensterreinigung für Büros",
+        "imageAlt": "Fenster eines Büros"
+      },
+      "wardrobeAssembly": {
+        "title": "Montage von Schränken und Ankleiden",
+        "imageAlt": "Schrank während der Montage"
+      }
+    }
+  },
+  "welcome": {
+    "eyebrow": "Wer wir sind",
+    "title": "Willkommen bei Swiss Clean Group",
+    "description": "Wir sind ein lokales Team, spezialisiert auf Fensterreinigung und Möbelmontage. Ob Privat- oder Geschäftskunde – wir arbeiten schnell, sorgfältig und zu transparenten Preisen, damit Sie sich um nichts kümmern müssen.",
+    "aboutUs": "Über uns",
+    "contact": "Kontakt aufnehmen",
+    "imageAlt": "Das Team von Swiss Clean Group bei der Arbeit",
+    "features": {
+      "team": {
+        "title": "Erfahrenes Team",
+        "text": "Geschulte und sorgfältige Fachleute."
+      },
+      "insured": {
+        "title": "Versicherte Arbeit",
+        "text": "Jeder Einsatz ist vollständig abgesichert."
+      },
+      "punctual": {
+        "title": "Immer pünktlich",
+        "text": "Wir kommen zur vereinbarten Zeit."
+      }
+    }
+  },
+  "stats": {
+    "ariaLabel": "Unsere Zahlen",
+    "customers": "Zufriedene Kunden",
+    "buildings": "Gereinigte Gebäude",
+    "employees": "Qualifizierte Mitarbeitende",
+    "offices": "Büros weltweit"
+  },
+  "news": {
+    "eyebrow": "Blog",
+    "title": "Neuigkeiten und Tipps",
+    "viewAll": "Alle Beiträge ansehen",
+    "readMore": "Weiterlesen",
+    "categories": {
+      "tips": "Tipps",
+      "news": "News"
+    },
+    "posts": {
+      "streakFree": {
+        "title": "5 Tipps für streifenfreie Fenster",
+        "excerpt": "Der richtige Zeitpunkt, das richtige Mittel und die richtige Technik: Unsere Fachleute verraten, wie Ihre Fenster auch zwischen zwei Reinigungen sauber bleiben.",
+        "imageAlt": "Glasfassade eines Gebäudes"
+      },
+      "prepareAssembly": {
+        "title": "So bereiten Sie Ihr Zuhause auf die Möbelmontage vor",
+        "excerpt": "Platz schaffen, Pakete prüfen und den Zugang sichern: ein paar einfache Schritte, damit die Montage schnell und ohne Überraschungen klappt.",
+        "imageAlt": "Kleiner Tisch in einem hellen Raum"
+      },
+      "bookEarly": {
+        "title": "Herbstreinigung: Jetzt Termin sichern",
+        "excerpt": "Der Herbst ist die gefragteste Zeit für die Fensterreinigung. Buchen Sie früh, um Ihren Wunschtermin zu erhalten.",
+        "imageAlt": "Bürogebäude aus Glas von unten gesehen"
+      }
+    }
+  },
+  "quoteForm": {
+    "eyebrow": "Kostenlose Offerte",
+    "title": "Offerte anfordern",
+    "text": "Beschreiben Sie uns kurz Ihr Anliegen: Wir melden uns schnell mit einem klaren Angebot ohne Überraschungen.",
+    "benefits": {
+      "free": "Kostenlose Offerte",
+      "fast": "Schnelle Antwort",
+      "noCommitment": "Unverbindlich"
+    },
+    "preferToCall": "Lieber anrufen?",
+    "fields": {
+      "name": "Vor- und Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "service": "Dienstleistung",
+      "address": "Adresse oder Ort",
+      "date": "Wunschtermin",
+      "message": "Nachricht"
+    },
+    "placeholders": {
+      "name": "Max Muster",
+      "email": "max.muster@beispiel.ch",
+      "service": "Dienstleistung wählen",
+      "address": "Strasse, PLZ, Ort",
+      "message": "Anzahl Fenster, Möbeltyp, Stockwerk, Zugang…"
+    },
+    "serviceOther": "Andere Anfrage",
+    "errors": {
+      "name": "Bitte geben Sie Ihren Namen ein.",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "phone": "Bitte geben Sie eine gültige Telefonnummer ein.",
+      "service": "Bitte wählen Sie eine Dienstleistung."
+    },
+    "required": "* Pflichtfelder",
+    "submit": "Anfrage senden",
+    "sending": "Wird gesendet…",
+    "successTitle": "Vielen Dank, Ihre Anfrage wurde gesendet!",
+    "successText": "Wir melden uns sehr bald mit Ihrer Offerte.",
+    "sendAnother": "Weitere Anfrage senden",
+    "errorText": "Leider hat das Senden nicht geklappt. Bitte versuchen Sie es erneut oder rufen Sie uns an:"
+  },
+  "contactForm": {
+    "eyebrow": "Eine Frage?",
+    "title": "Schreiben Sie uns",
+    "text": "Stellen Sie uns Ihre Frage – wir antworten Ihnen schnell per E-Mail oder Telefon.",
+    "optional": "(optional)",
+    "fields": {
+      "name": "Vor- und Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht"
+    },
+    "placeholders": {
+      "subject": "z. B. Verfügbarkeit, Preise, Einsatzgebiet…",
+      "message": "Schreiben Sie hier Ihre Frage…"
+    },
+    "errors": {
+      "subject": "Bitte geben Sie einen Betreff ein.",
+      "message": "Bitte schreiben Sie eine Nachricht mit mindestens 10 Zeichen."
+    },
+    "submit": "Nachricht senden",
+    "successTitle": "Vielen Dank, Ihre Nachricht wurde gesendet!",
+    "successText": "Wir antworten Ihnen so schnell wie möglich.",
+    "sendAnother": "Weitere Nachricht senden"
+  },
+  "footer": {
+    "description": "Fensterreinigung und Möbelmontage für Privat- und Geschäftskunden. Ein lokales, zuverlässiges und sorgfältiges Team für Sie.",
+    "followUs": "Folgen Sie uns",
+    "quickLinks": "Schnellzugriff",
+    "services": "Unsere Dienstleistungen",
+    "contact": "Kontakt",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "backToTop": "Nach oben"
+  },
+  "pages": {
+    "breadcrumb": "Brotkrümelnavigation",
+    "services": {
+      "title": "Unsere Dienstleistungen",
+      "subtitle": "Fensterreinigung und Möbelmontage für Privat- und Geschäftskunden in der ganzen Schweiz.",
+      "ctaTitle": "Nicht das Richtige gefunden?",
+      "ctaText": "Kontaktieren Sie uns – wir finden eine passende Lösung für Sie.",
+      "ctaButton": "Kontakt aufnehmen"
+    },
+    "about": {
+      "title": "Über uns",
+      "subtitle": "Ein lokales Team mit Leidenschaft für saubere Arbeit."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Eine Frage oder eine Offertanfrage? Wir antworten Ihnen schnell.",
+      "phone": "Telefon",
+      "whatsapp": "WhatsApp",
+      "email": "E-Mail",
+      "followTitle": "Folgen Sie uns",
+      "followText": "Entdecken Sie unsere Arbeiten und Tipps in den sozialen Medien."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Fensterreinigung und Möbelmontage | Swiss Clean Group",
+      "description": "Fensterreinigung und Möbelmontage für Privat- und Geschäftskunden in der Schweiz. Kostenlose Offerte, zuverlässiges Team und transparente Preise."
+    },
+    "services": {
+      "title": "Reinigung und Montage | Swiss Clean Group",
+      "description": "Reinigung von Fenstern, Glasfassaden und Büros sowie Montage von Möbeln, Küchen und Schränken. Jetzt kostenlose Offerte anfordern."
+    },
+    "about": {
+      "title": "Über uns | Swiss Clean Group",
+      "description": "Ein lokales, erfahrenes und versichertes Team, spezialisiert auf Fensterreinigung und Möbelmontage. Lernen Sie Swiss Clean Group kennen."
+    },
+    "contact": {
+      "title": "Kontakt – Kostenlose Offerte | Swiss Clean Group",
+      "description": "Kontaktieren Sie Swiss Clean Group per Telefon, WhatsApp oder E-Mail für eine kostenlose Offerte für Fensterreinigung oder Möbelmontage."
+    },
+    "request": {
+      "title": "Offertanfrage | Swiss Clean Group",
+      "description": "Senden Sie Ihre Offertanfrage an Swiss Clean Group."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<section id="news" class="news" aria-labelledby="news-title">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="news__header">
+      <div>
+        <p class="news__eyebrow">{{ 'news.eyebrow' | translate }}</p>
+        <h2 id="news-title" class="news__title">{{ 'news.title' | translate }}</h2>
+      </div>
+      <a class="news__view-all" routerLink="/">
+        {{ 'news.viewAll' | translate }}
+        <i class="icon-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="news__grid">
+      @for (post of posts; track post.id) {
+        <article class="news-card">
+          <a class="news-card__image-wrapper" [routerLink]="post.link" tabindex="-1" aria-hidden="true">
+            <img
+              class="news-card__image"
+              [src]="post.image"
+              [alt]="post.key + '.imageAlt' | translate"
+              loading="lazy"
+            >
+            <span class="news-card__category news-card__category--{{ post.category }}">
+              {{ 'news.categories.' + post.category | translate }}
+            </span>
+          </a>
+
+          <div class="news-card__body">
+            <p class="news-card__date">
+              <i class="icon-calendar" aria-hidden="true"></i>
+              <time [attr.datetime]="post.date">{{ post.date | localDate: lang() }}</time>
+            </p>
+            <h3 class="news-card__title">
+              <a [routerLink]="post.link">{{ post.key + '.title' | translate }}</a>
+            </h3>
+            <p class="news-card__excerpt">{{ post.key + '.excerpt' | translate }}</p>
+            <a class="news-card__read-more" [routerLink]="post.link">
+              {{ 'news.readMore' | translate }}
+              <i class="icon-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

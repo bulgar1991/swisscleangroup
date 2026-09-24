@@ -1,0 +1,197 @@
+.site-header {
+  position: relative;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 4%);
+
+  &__inner-container {
+    height: 4.5rem;
+  }
+
+  &__logo-container {
+    display: block;
+    min-width: 0;
+
+    img {
+      height: 3.75rem;
+      width: auto;
+    }
+  }
+
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: transparent;
+    cursor: pointer;
+
+    span {
+      display: block;
+      height: 2px;
+      background: var(--color-text);
+      border-radius: 2px;
+    }
+  }
+}
+
+// ---- Sidebar (opened by the burger) ----
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgb(0 0 0 / 55%);
+  backdrop-filter: blur(2px);
+  animation: fade-in 0.2s ease;
+}
+
+.sidebar {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  width: min(320px, 85vw);
+  overflow-y: auto;
+  background: #141414;
+  box-shadow: -8px 0 40px rgb(0 0 0 / 40%);
+  animation: slide-in 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &__header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    // Keep clear of the notch / status bar on phones.
+    padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+  }
+
+  &__logo {
+    display: block;
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.6rem;
+    // The logo has dark text, so it sits on a white card (like in the footer).
+    background: #fff;
+  }
+
+  &__logo-img {
+    display: block;
+    height: 2.25rem;
+    width: auto;
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgb(255 255 255 / 7%);
+    color: rgb(255 255 255 / 75%);
+    cursor: pointer;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+
+    &:hover {
+      background: rgb(218 41 28 / 30%);
+      color: #fff;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0.75rem 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.95rem 1.5rem;
+    border-left: 3px solid transparent;
+    color: rgb(255 255 255 / 75%);
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+      color 0.2s,
+      background-color 0.2s,
+      border-color 0.2s;
+
+    i {
+      font-size: 1.25rem;
+      opacity: 0.35;
+    }
+
+    &:hover {
+      background: rgb(218 41 28 / 12%);
+      border-left-color: var(--color-primary);
+      color: #fff;
+    }
+
+    &--active {
+      border-left-color: var(--color-primary);
+      color: #ff6b5e;
+      font-weight: 600;
+
+      i {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid rgb(255 255 255 / 8%);
+  }
+
+  &__cta {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .sidebar-overlay {
+    animation: none;
+  }
+}

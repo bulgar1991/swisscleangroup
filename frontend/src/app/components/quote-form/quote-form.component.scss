@@ -1,0 +1,157 @@
+@use '../../styles/form';
+
+:host {
+  display: block;
+}
+
+.quote {
+  padding: 4rem 0;
+  background: var(--color-background);
+  scroll-margin-top: 5.5rem;
+
+  @media (min-width: 1024px) {
+    padding: 6rem 0;
+  }
+
+  &__card {
+    display: grid;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: var(--color-surface);
+    box-shadow: 0 24px 60px rgb(0 0 0 / 10%);
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 5fr 7fr;
+    }
+  }
+
+  // ---- Left panel ----
+  &__intro {
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem 1.75rem;
+    background: linear-gradient(150deg, #141414 0%, #2a1311 100%);
+    color: rgb(255 255 255 / 80%);
+
+    @media (min-width: 1024px) {
+      padding: 3.5rem 3rem;
+    }
+
+    // Red glow in the corner.
+    &::after {
+      content: '';
+      position: absolute;
+      right: -6rem;
+      bottom: -6rem;
+      width: 16rem;
+      height: 16rem;
+      border-radius: 50%;
+      background: var(--color-primary);
+      opacity: 0.35;
+      filter: blur(40px);
+      pointer-events: none;
+    }
+  }
+
+  &__eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ff6b5e;
+  }
+
+  &__title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #fff;
+  }
+
+  &__text {
+    margin: 0 0 2rem;
+    line-height: 1.7;
+  }
+
+  &__benefits {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0 0 2.5rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    i {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+    }
+  }
+
+  &__call {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 1rem;
+    background: rgb(255 255 255 / 5%);
+  }
+
+  &__call-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 1.3rem;
+  }
+
+  &__call-label {
+    margin: 0 0 0.15rem;
+    font-size: 0.85rem;
+  }
+
+  &__call-number {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // ---- Right panel ----
+  &__form-wrapper {
+    padding: 2rem 1.5rem;
+
+    @media (min-width: 1024px) {
+      padding: 3.5rem 3rem;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: 1.25rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

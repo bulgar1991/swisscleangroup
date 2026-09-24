@@ -1,0 +1,99 @@
+<section id="message" class="contact-form" aria-labelledby="contact-form-title">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="contact-form__card">
+      @if (status() === 'success') {
+        <div class="form-result form-result--success" role="status">
+          <i class="icon-check-circle" aria-hidden="true"></i>
+          <h3>{{ 'contactForm.successTitle' | translate }}</h3>
+          <p>{{ 'contactForm.successText' | translate }}</p>
+          <button type="button" class="btn form-again" (click)="reset()">
+            {{ 'contactForm.sendAnother' | translate }}
+          </button>
+        </div>
+      } @else {
+        <header class="contact-form__header">
+          <span class="contact-form__icon" aria-hidden="true"><i class="icon-email"></i></span>
+          <p class="contact-form__eyebrow">{{ 'contactForm.eyebrow' | translate }}</p>
+          <h2 id="contact-form-title" class="contact-form__title">{{ 'contactForm.title' | translate }}</h2>
+          <p class="contact-form__text">{{ 'contactForm.text' | translate }}</p>
+        </header>
+
+        <form class="contact-form__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+          <div class="field">
+            <label for="contact-name">{{ 'contactForm.fields.name' | translate }} <span aria-hidden="true">*</span></label>
+            <input id="contact-name" type="text" formControlName="name" autocomplete="name"
+              [attr.aria-invalid]="showError('name')" [placeholder]="'quoteForm.placeholders.name' | translate">
+            @if (showError('name')) {
+              <p class="field__error">{{ 'quoteForm.errors.name' | translate }}</p>
+            }
+          </div>
+
+          <div class="field">
+            <label for="contact-email">{{ 'contactForm.fields.email' | translate }} <span aria-hidden="true">*</span></label>
+            <input id="contact-email" type="email" formControlName="email" autocomplete="email"
+              [attr.aria-invalid]="showError('email')" [placeholder]="'quoteForm.placeholders.email' | translate">
+            @if (showError('email')) {
+              <p class="field__error">{{ 'quoteForm.errors.email' | translate }}</p>
+            }
+          </div>
+
+          <div class="field">
+            <label for="contact-phone">
+              {{ 'contactForm.fields.phone' | translate }}
+              <small class="field__optional">{{ 'contactForm.optional' | translate }}</small>
+            </label>
+            <input id="contact-phone" type="tel" formControlName="phone" autocomplete="tel"
+              [attr.aria-invalid]="showError('phone')" placeholder="+41 79 123 45 67">
+            @if (showError('phone')) {
+              <p class="field__error">{{ 'quoteForm.errors.phone' | translate }}</p>
+            }
+          </div>
+
+          <div class="field">
+            <label for="contact-subject">{{ 'contactForm.fields.subject' | translate }} <span aria-hidden="true">*</span></label>
+            <input id="contact-subject" type="text" formControlName="subject"
+              [attr.aria-invalid]="showError('subject')" [placeholder]="'contactForm.placeholders.subject' | translate">
+            @if (showError('subject')) {
+              <p class="field__error">{{ 'contactForm.errors.subject' | translate }}</p>
+            }
+          </div>
+
+          <div class="field field--full">
+            <label for="contact-message">{{ 'contactForm.fields.message' | translate }} <span aria-hidden="true">*</span></label>
+            <textarea id="contact-message" rows="6" formControlName="message"
+              [attr.aria-invalid]="showError('message')" [placeholder]="'contactForm.placeholders.message' | translate"></textarea>
+            @if (showError('message')) {
+              <p class="field__error">{{ 'contactForm.errors.message' | translate }}</p>
+            }
+          </div>
+
+          <!-- Honeypot for spam bots - hidden from people and screen readers. -->
+          <input class="form-honeypot" type="checkbox" formControlName="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          @if (status() === 'error') {
+            <div class="form-result form-result--error field--full" role="alert">
+              <i class="icon-error" aria-hidden="true"></i>
+              <p>
+                {{ 'quoteForm.errorText' | translate }}
+                <a [href]="phoneHref">{{ phone }}</a>
+              </p>
+            </div>
+          }
+
+          <div class="field--full form-footer">
+            <p class="form-required">{{ 'quoteForm.required' | translate }}</p>
+            <button type="submit" class="btn form-submit" [disabled]="status() === 'sending'">
+              @if (status() === 'sending') {
+                <span class="form-spinner" aria-hidden="true"></span>
+                {{ 'quoteForm.sending' | translate }}
+              } @else {
+                {{ 'contactForm.submit' | translate }}
+                <i class="icon-send" aria-hidden="true"></i>
+              }
+            </button>
+          </div>
+        </form>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+.site-header {
+  position: relative;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 4%);
+
+  &__inner-container {
+    height: 5.5rem;
+  }
+
+  &__logo-container {
+    display: block;
+
+    img {
+      height: 4rem;
+      width: auto;
+    }
+  }
+
+  &__menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__menu-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--color-primary);
+      transform: scaleX(0);
+      transition: transform 0.2s;
+    }
+
+    &:hover,
+    &--active {
+      color: var(--color-primary);
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__divider {
+    width: 1px;
+    height: 1.75rem;
+    background: var(--color-border);
+  }
+}

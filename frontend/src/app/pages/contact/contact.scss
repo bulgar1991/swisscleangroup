@@ -1,0 +1,110 @@
+.contact-page {
+  padding: 4rem 0;
+
+  @media (min-width: 1024px) {
+    padding: 5rem 0;
+  }
+
+  // The cards and the form each have their own padding; keep the gaps between them even.
+  &:not(&--follow) {
+    padding-bottom: 0;
+  }
+
+  &--follow {
+    padding-top: 0;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    li {
+      display: flex;
+    }
+  }
+
+  &__follow {
+    padding: 2.5rem 1.5rem;
+    border-radius: 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    text-align: center;
+
+    h2 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 1.5rem;
+      color: var(--color-text-muted);
+    }
+
+    app-contact-buttons ::ng-deep .contact-buttons {
+      justify-content: center;
+    }
+  }
+}
+
+.contact-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-surface);
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+
+  &--link:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 14px 28px rgb(0 0 0 / 8%);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: rgb(218 41 28 / 10%);
+    color: var(--color-primary);
+    font-size: 1.6rem;
+  }
+
+  &__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    word-break: break-word;
+  }
+}

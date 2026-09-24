@@ -1,0 +1,30 @@
+<header class="site-header site-header--desktop">
+  <div class="container mx-auto px-6">
+    <div class="site-header__inner-container flex items-center gap-10">
+      <a class="site-header__logo-container shrink-0" routerLink="/">
+        <img [src]="siteLogo" alt="Swiss Clean Group">
+      </a>
+
+      <nav class="site-header__menu flex-1" [attr.aria-label]="'header.mainMenu' | translate">
+        <ul class="flex items-center justify-center gap-8">
+          @for (item of menuItems; track item.labelKey) {
+            <li>
+              <a
+                class="site-header__menu-link"
+                [routerLink]="item.link"
+                routerLinkActive="site-header__menu-link--active"
+                [routerLinkActiveOptions]="activeOptions"
+              >{{ item.labelKey | translate }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <div class="site-header__actions flex items-center gap-5 shrink-0">
+        <app-contact-buttons />
+        <span class="site-header__divider" aria-hidden="true"></span>
+        <app-language-switcher variant="dropdown" />
+      </div>
+    </div>
+  </div>
+</header>

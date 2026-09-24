@@ -1,0 +1,260 @@
+{
+  "header": {
+    "menu": {
+      "home": "Accueil",
+      "services": "Services",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+    "contacts": {
+      "phone": "Appelez-nous",
+      "whatsapp": "Écrivez-nous sur WhatsApp",
+      "facebook": "Suivez-nous sur Facebook",
+      "instagram": "Suivez-nous sur Instagram"
+    },
+    "language": "Langue",
+    "mainMenu": "Menu principal",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "contactCta": "Contactez-nous"
+  },
+  "banner": {
+    "ariaLabel": "Nos services phares",
+    "prev": "Diapositive précédente",
+    "next": "Diapositive suivante",
+    "slides": {
+      "window": {
+        "eyebrow": "Nettoyage de vitres",
+        "title": "Des vitres impeccables, à chaque fois",
+        "text": "Nettoyage sans traces des vitres, cadres et rebords, à l'intérieur comme à l'extérieur, pour particuliers et entreprises.",
+        "cta": "Réserver un nettoyage",
+        "imageAlt": "Professionnel nettoyant une grande fenêtre"
+      },
+      "furniture": {
+        "eyebrow": "Montage de meubles",
+        "title": "Vos meubles, montés dans les règles de l'art",
+        "text": "Lits, armoires, cuisines et meubles en kit de toutes marques, montés rapidement et en toute sécurité.",
+        "cta": "Réserver un montage",
+        "imageAlt": "Montage d'une armoire en bois"
+      },
+      "team": {
+        "eyebrow": "Swiss Clean Group",
+        "title": "Une équipe fiable pour votre intérieur",
+        "text": "Des prix clairs, des professionnels ponctuels et une qualité suisse sur laquelle vous pouvez compter.",
+        "cta": "Voir tous les services",
+        "imageAlt": "L'équipe Swiss Clean Group"
+      }
+    }
+  },
+  "servicesSlider": {
+    "eyebrow": "Ce que nous faisons",
+    "title": "Les services que nous proposons",
+    "viewDetails": "Voir les détails",
+    "prev": "Services précédents",
+    "next": "Services suivants",
+    "items": {
+      "windowCleaning": {
+        "title": "Nettoyage de vitres pour particuliers",
+        "imageAlt": "Nettoyage d'une fenêtre dans un appartement"
+      },
+      "furnitureAssembly": {
+        "title": "Montage de meubles en kit",
+        "imageAlt": "Montage d'un meuble en kit"
+      },
+      "facadeCleaning": {
+        "title": "Nettoyage de façades vitrées",
+        "imageAlt": "Façade vitrée d'un immeuble"
+      },
+      "kitchenAssembly": {
+        "title": "Montage de cuisines",
+        "imageAlt": "Cuisine en cours de montage"
+      },
+      "officeWindows": {
+        "title": "Nettoyage de vitres de bureaux",
+        "imageAlt": "Fenêtres d'un bureau"
+      },
+      "wardrobeAssembly": {
+        "title": "Montage d'armoires et dressings",
+        "imageAlt": "Armoire en cours de montage"
+      }
+    }
+  },
+  "welcome": {
+    "eyebrow": "Qui sommes-nous",
+    "title": "Bienvenue chez Swiss Clean Group",
+    "description": "Nous sommes une équipe locale spécialisée dans le nettoyage de vitres et le montage de meubles. Particuliers ou entreprises, nous intervenons rapidement, avec soin et à des prix transparents, pour que vous n'ayez plus à vous soucier de rien.",
+    "aboutUs": "À propos de nous",
+    "contact": "Contactez-nous",
+    "imageAlt": "L'équipe Swiss Clean Group au travail",
+    "features": {
+      "team": {
+        "title": "Équipe expérimentée",
+        "text": "Des professionnels formés et soigneux."
+      },
+      "insured": {
+        "title": "Travail assuré",
+        "text": "Chaque intervention est entièrement couverte."
+      },
+      "punctual": {
+        "title": "Toujours ponctuels",
+        "text": "Nous arrivons à l'heure convenue."
+      }
+    }
+  },
+  "stats": {
+    "ariaLabel": "Nos chiffres",
+    "customers": "Clients satisfaits",
+    "buildings": "Bâtiments nettoyés",
+    "employees": "Employés qualifiés",
+    "offices": "Bureaux dans le monde"
+  },
+  "news": {
+    "eyebrow": "Blog",
+    "title": "Dernières actualités et conseils",
+    "viewAll": "Voir tous les articles",
+    "readMore": "Lire la suite",
+    "categories": {
+      "tips": "Conseils",
+      "news": "Actualités"
+    },
+    "posts": {
+      "streakFree": {
+        "title": "5 astuces pour des vitres sans traces",
+        "excerpt": "Le bon moment, le bon produit et le bon geste : nos professionnels partagent leurs secrets pour des vitres parfaitement propres entre deux nettoyages.",
+        "imageAlt": "Façade vitrée d'un immeuble"
+      },
+      "prepareAssembly": {
+        "title": "Comment préparer votre intérieur avant un montage de meubles",
+        "excerpt": "Libérer l'espace, vérifier les colis et prévoir l'accès : quelques gestes simples pour que le montage se passe rapidement et sans surprise.",
+        "imageAlt": "Petite table dans une pièce lumineuse"
+      },
+      "bookEarly": {
+        "title": "Nettoyage d'automne : réservez votre créneau dès maintenant",
+        "excerpt": "L'automne est la période la plus chargée pour le nettoyage de vitres. Réservez tôt pour obtenir la date qui vous convient.",
+        "imageAlt": "Immeubles de bureaux vitrés vus d'en bas"
+      }
+    }
+  },
+  "quoteForm": {
+    "eyebrow": "Devis gratuit",
+    "title": "Demandez votre devis",
+    "text": "Décrivez-nous votre besoin en quelques mots : nous vous répondons rapidement avec une offre claire et sans surprise.",
+    "benefits": {
+      "free": "Devis gratuit",
+      "fast": "Réponse rapide",
+      "noCommitment": "Sans engagement"
+    },
+    "preferToCall": "Vous préférez appeler ?",
+    "fields": {
+      "name": "Nom et prénom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "service": "Service",
+      "address": "Adresse ou localité",
+      "date": "Date souhaitée",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Jean Dupont",
+      "email": "jean.dupont@exemple.ch",
+      "service": "Choisissez un service",
+      "address": "Rue, NPA, localité",
+      "message": "Nombre de fenêtres, type de meuble, étage, accès…"
+    },
+    "serviceOther": "Autre demande",
+    "errors": {
+      "name": "Veuillez indiquer votre nom.",
+      "email": "Veuillez indiquer une adresse e-mail valide.",
+      "phone": "Veuillez indiquer un numéro de téléphone valide.",
+      "service": "Veuillez choisir un service."
+    },
+    "required": "* Champs obligatoires",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi en cours…",
+    "successTitle": "Merci, votre demande a bien été envoyée !",
+    "successText": "Nous vous recontactons très rapidement avec votre devis.",
+    "sendAnother": "Envoyer une autre demande",
+    "errorText": "Désolé, l'envoi n'a pas fonctionné. Veuillez réessayer ou appelez-nous au"
+  },
+  "contactForm": {
+    "eyebrow": "Une question ?",
+    "title": "Envoyez-nous un message",
+    "text": "Posez-nous votre question, nous vous répondons rapidement par e-mail ou par téléphone.",
+    "optional": "(facultatif)",
+    "fields": {
+      "name": "Nom et prénom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Votre message"
+    },
+    "placeholders": {
+      "subject": "Ex. : disponibilités, prix, zone d'intervention…",
+      "message": "Écrivez votre question ici…"
+    },
+    "errors": {
+      "subject": "Veuillez indiquer le sujet de votre message.",
+      "message": "Veuillez écrire un message d'au moins 10 caractères."
+    },
+    "submit": "Envoyer le message",
+    "successTitle": "Merci, votre message a bien été envoyé !",
+    "successText": "Nous vous répondons dans les plus brefs délais.",
+    "sendAnother": "Envoyer un autre message"
+  },
+  "footer": {
+    "description": "Nettoyage de vitres et montage de meubles pour particuliers et entreprises. Une équipe locale, fiable et soigneuse, à votre service.",
+    "followUs": "Suivez-nous",
+    "quickLinks": "Liens rapides",
+    "services": "Nos services",
+    "contact": "Contact",
+    "rights": "Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions générales",
+    "backToTop": "Retour en haut"
+  },
+  "pages": {
+    "breadcrumb": "Fil d'Ariane",
+    "services": {
+      "title": "Nos services",
+      "subtitle": "Nettoyage de vitres et montage de meubles pour particuliers et entreprises, partout en Suisse.",
+      "ctaTitle": "Vous ne trouvez pas ce qu'il vous faut ?",
+      "ctaText": "Contactez-nous, nous trouverons une solution adaptée à votre besoin.",
+      "ctaButton": "Nous contacter"
+    },
+    "about": {
+      "title": "À propos de nous",
+      "subtitle": "Une équipe locale, passionnée par le travail bien fait."
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "subtitle": "Une question ou une demande de devis ? Nous vous répondons rapidement.",
+      "phone": "Téléphone",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "followTitle": "Suivez-nous",
+      "followText": "Découvrez nos réalisations et nos conseils sur les réseaux sociaux."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Nettoyage de vitres et montage de meubles | Swiss Clean Group",
+      "description": "Nettoyage de vitres et montage de meubles pour particuliers et entreprises en Suisse. Devis gratuit, équipe fiable et prix transparents."
+    },
+    "services": {
+      "title": "Nos services de nettoyage et montage | Swiss Clean Group",
+      "description": "Nettoyage de vitres, de façades et de bureaux, montage de meubles, de cuisines et d'armoires. Découvrez nos services et demandez un devis gratuit."
+    },
+    "about": {
+      "title": "À propos de nous | Swiss Clean Group",
+      "description": "Une équipe locale, expérimentée et assurée, spécialisée dans le nettoyage de vitres et le montage de meubles. Découvrez Swiss Clean Group."
+    },
+    "contact": {
+      "title": "Contact – Devis gratuit | Swiss Clean Group",
+      "description": "Contactez Swiss Clean Group par téléphone, WhatsApp ou e-mail pour un devis gratuit de nettoyage de vitres ou de montage de meubles."
+    },
+    "request": {
+      "title": "Demande de devis | Swiss Clean Group",
+      "description": "Envoyez votre demande de devis à Swiss Clean Group."
+    }
+  }
+}

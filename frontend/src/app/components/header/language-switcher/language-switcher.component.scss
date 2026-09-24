@@ -1,0 +1,129 @@
+:host {
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.language-switcher {
+  &--dropdown {
+    position: relative;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    height: 2.5rem;
+    padding: 0 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__chevron {
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 11rem;
+    margin: 0;
+    padding: 0.4rem;
+    list-style: none;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.4rem);
+    transition:
+      opacity 0.15s,
+      transform 0.15s,
+      visibility 0.15s;
+
+    &--open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--color-text);
+    text-align: left;
+
+    &:hover {
+      background: var(--color-background);
+    }
+
+    &--active {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+  }
+
+  &__code {
+    width: 1.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+  }
+
+  &__option--active &__code {
+    color: var(--color-primary);
+  }
+
+  &--inline {
+    display: inline-flex;
+    padding: 0.25rem;
+    border-radius: 999px;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+  }
+
+  &__pill {
+    min-width: 3rem;
+    padding: 0.45rem 0.9rem;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+
+    &--active {
+      background: var(--color-primary);
+      color: #fff;
+    }
+  }
+}

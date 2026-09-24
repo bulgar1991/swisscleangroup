@@ -1,0 +1,43 @@
+<section id="welcome" class="welcome" aria-labelledby="welcome-title">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="welcome__grid">
+      <div class="welcome__media">
+        <img
+          class="welcome__image"
+          [src]="image"
+          [alt]="'welcome.imageAlt' | translate"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="welcome__content">
+        <p class="welcome__eyebrow">{{ 'welcome.eyebrow' | translate }}</p>
+        <h2 id="welcome-title" class="welcome__title">{{ 'welcome.title' | translate }}</h2>
+        <p class="welcome__description">{{ 'welcome.description' | translate }}</p>
+
+        <div class="welcome__buttons">
+          @if (showAboutButton()) {
+            <a class="btn welcome__button" routerLink="/about">{{ 'welcome.aboutUs' | translate }}</a>
+          }
+          <a class="btn welcome__button welcome__button--outline" routerLink="/contact">
+            {{ 'welcome.contact' | translate }}
+          </a>
+        </div>
+
+        <ul class="welcome__features">
+          @for (feature of features; track feature.key) {
+            <li class="feature">
+              <span class="feature__icon" aria-hidden="true">
+                <i class="icon-{{ feature.icon }}"></i>
+              </span>
+              <div>
+                <h3 class="feature__title">{{ feature.key + '.title' | translate }}</h3>
+                <p class="feature__text">{{ feature.key + '.text' | translate }}</p>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
