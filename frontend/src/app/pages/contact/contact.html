@@ -1,0 +1,52 @@
+<app-page-header
+  titleKey="pages.contact.title"
+  subtitleKey="pages.contact.subtitle"
+  image="assets/images/banner/furniture-assembly.jpg"
+/>
+
+<section class="contact-page">
+  <div class="container mx-auto px-4 lg:px-6">
+    <ul class="contact-page__grid">
+      @for (card of cards; track card.titleKey) {
+        <li>
+          @if (card.href) {
+            <a
+              class="contact-card contact-card--link"
+              [href]="card.href"
+              [attr.target]="card.external ? '_blank' : null"
+              [attr.rel]="card.external ? 'noopener noreferrer' : null"
+            >
+              <ng-container *ngTemplateOutlet="cardContent; context: { $implicit: card }" />
+            </a>
+          } @else {
+            <div class="contact-card">
+              <ng-container *ngTemplateOutlet="cardContent; context: { $implicit: card }" />
+            </div>
+          }
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<app-contact-form />
+
+<section class="contact-page contact-page--follow">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="contact-page__follow">
+      <h2>{{ 'pages.contact.followTitle' | translate }}</h2>
+      <p>{{ 'pages.contact.followText' | translate }}</p>
+      <app-contact-buttons [only]="['facebook', 'instagram', 'whatsapp']" />
+    </div>
+  </div>
+</section>
+
+<ng-template #cardContent let-card>
+  <span class="contact-card__icon" aria-hidden="true"><i class="icon-{{ card.icon }}"></i></span>
+  <h2 class="contact-card__title">{{ card.titleKey | translate }}</h2>
+  <p class="contact-card__text">
+    @for (line of card.lines; track line) {
+      {{ line }}<br>
+    }
+  </p>
+</ng-template>

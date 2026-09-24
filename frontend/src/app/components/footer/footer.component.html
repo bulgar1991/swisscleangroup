@@ -1,1 +1,75 @@
-<p>footer works!</p>
+<footer class="site-footer">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="site-footer__grid">
+      <!-- About -->
+      <div class="site-footer__about">
+        <a class="site-footer__logo" routerLink="/">
+          <img [src]="siteLogo" alt="Swiss Clean Group" loading="lazy">
+        </a>
+        <p class="site-footer__description">{{ 'footer.description' | translate }}</p>
+        <p class="site-footer__follow">{{ 'footer.followUs' | translate }}</p>
+        <app-contact-buttons theme="dark" />
+      </div>
+
+      <!-- Quick links -->
+      <nav class="site-footer__column" [attr.aria-label]="'footer.quickLinks' | translate">
+        <h3 class="site-footer__heading">{{ 'footer.quickLinks' | translate }}</h3>
+        <ul class="site-footer__links">
+          @for (item of menuItems; track item.labelKey) {
+            <li>
+              <a [routerLink]="item.link">{{ item.labelKey | translate }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <!-- Services -->
+      <nav class="site-footer__column" [attr.aria-label]="'footer.services' | translate">
+        <h3 class="site-footer__heading">{{ 'footer.services' | translate }}</h3>
+        <ul class="site-footer__links">
+          @for (service of services; track service.id) {
+            <li>
+              <a [routerLink]="service.link">{{ service.key + '.title' | translate }}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+
+      <!-- Contact -->
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">{{ 'footer.contact' | translate }}</h3>
+        <ul class="site-footer__contact">
+          <li>
+            <i class="icon-phone" aria-hidden="true"></i>
+            <a [href]="phoneHref">{{ phone }}</a>
+          </li>
+          <li>
+            <i class="icon-email" aria-hidden="true"></i>
+            <a [href]="'mailto:' + email">{{ email }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="container mx-auto px-4 lg:px-6 site-footer__bottom-inner">
+      <p class="site-footer__copyright">
+        © {{ year }} Swiss Clean Group. {{ 'footer.rights' | translate }}
+      </p>
+      <div class="site-footer__legal">
+        <a routerLink="/">{{ 'footer.privacy' | translate }}</a>
+        <a routerLink="/">{{ 'footer.terms' | translate }}</a>
+        <button
+          type="button"
+          class="site-footer__to-top"
+          [attr.aria-label]="'footer.backToTop' | translate"
+          [title]="'footer.backToTop' | translate"
+          (click)="scrollToTop()"
+        >
+          <i class="icon-arrow-up" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,16 @@
+<ul class="contact-buttons">
+  @for (link of links(); track link.id) {
+    <li>
+      <a
+        class="contact-buttons__button contact-buttons__button--{{ link.id }}"
+        [href]="link.href"
+        [attr.target]="link.external ? '_blank' : null"
+        [attr.rel]="link.external ? 'noopener noreferrer' : null"
+        [attr.aria-label]="link.labelKey | translate"
+        [title]="link.labelKey | translate"
+      >
+        <i class="icon-{{ link.icon }}" aria-hidden="true"></i>
+      </a>
+    </li>
+  }
+</ul>

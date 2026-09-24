@@ -1,0 +1,260 @@
+{
+  "header": {
+    "menu": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About us",
+      "contact": "Contact"
+    },
+    "contacts": {
+      "phone": "Call us",
+      "whatsapp": "Message us on WhatsApp",
+      "facebook": "Follow us on Facebook",
+      "instagram": "Follow us on Instagram"
+    },
+    "language": "Language",
+    "mainMenu": "Main menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "contactCta": "Contact us"
+  },
+  "banner": {
+    "ariaLabel": "Featured services",
+    "prev": "Previous slide",
+    "next": "Next slide",
+    "slides": {
+      "window": {
+        "eyebrow": "Window Cleaning",
+        "title": "Crystal-clear windows, every time",
+        "text": "Streak-free cleaning of windows, frames and sills, inside and out, for homes and offices.",
+        "cta": "Book window cleaning",
+        "imageAlt": "Professional cleaning a large window"
+      },
+      "furniture": {
+        "eyebrow": "Furniture Assembly",
+        "title": "Your furniture, assembled right",
+        "text": "Beds, wardrobes, kitchens and flat-pack furniture of any brand, built quickly and safely.",
+        "cta": "Book furniture assembly",
+        "imageAlt": "Assembling a wooden wardrobe"
+      },
+      "team": {
+        "eyebrow": "Swiss Clean Group",
+        "title": "One reliable team for your home",
+        "text": "Clear prices, punctual professionals and Swiss quality you can count on.",
+        "cta": "See all services",
+        "imageAlt": "The Swiss Clean Group team"
+      }
+    }
+  },
+  "servicesSlider": {
+    "eyebrow": "What we do",
+    "title": "Services we offer",
+    "viewDetails": "View details",
+    "prev": "Previous services",
+    "next": "Next services",
+    "items": {
+      "windowCleaning": {
+        "title": "Window cleaning for homes",
+        "imageAlt": "Cleaning a window in an apartment"
+      },
+      "furnitureAssembly": {
+        "title": "Flat-pack furniture assembly",
+        "imageAlt": "Assembling a flat-pack piece of furniture"
+      },
+      "facadeCleaning": {
+        "title": "Glass facade cleaning",
+        "imageAlt": "Glass facade of a building"
+      },
+      "kitchenAssembly": {
+        "title": "Kitchen assembly",
+        "imageAlt": "Kitchen being assembled"
+      },
+      "officeWindows": {
+        "title": "Office window cleaning",
+        "imageAlt": "Office windows"
+      },
+      "wardrobeAssembly": {
+        "title": "Wardrobe and walk-in closet assembly",
+        "imageAlt": "Wardrobe being assembled"
+      }
+    }
+  },
+  "welcome": {
+    "eyebrow": "Who we are",
+    "title": "Welcome to Swiss Clean Group",
+    "description": "We are a local team specialised in window cleaning and furniture assembly. For homes and businesses alike, we work quickly, carefully and at transparent prices, so you don't have to worry about a thing.",
+    "aboutUs": "About us",
+    "contact": "Contact us",
+    "imageAlt": "The Swiss Clean Group team at work",
+    "features": {
+      "team": {
+        "title": "Experienced team",
+        "text": "Trained and careful professionals."
+      },
+      "insured": {
+        "title": "Fully insured",
+        "text": "Every job is fully covered."
+      },
+      "punctual": {
+        "title": "Always on time",
+        "text": "We arrive when we say we will."
+      }
+    }
+  },
+  "stats": {
+    "ariaLabel": "Our numbers",
+    "customers": "Satisfied customers",
+    "buildings": "Buildings cleaned",
+    "employees": "Clever employees",
+    "offices": "Offices worldwide"
+  },
+  "news": {
+    "eyebrow": "Blog",
+    "title": "Latest news and tips",
+    "viewAll": "View all posts",
+    "readMore": "Read more",
+    "categories": {
+      "tips": "Tips",
+      "news": "News"
+    },
+    "posts": {
+      "streakFree": {
+        "title": "5 tips for streak-free windows",
+        "excerpt": "The right time, the right product and the right technique: our professionals share how to keep your windows spotless between two cleanings.",
+        "imageAlt": "Glass facade of a building"
+      },
+      "prepareAssembly": {
+        "title": "How to prepare your home for furniture assembly",
+        "excerpt": "Clear the space, check the boxes and plan the access: a few simple steps so the assembly goes quickly and without surprises.",
+        "imageAlt": "Small table in a bright room"
+      },
+      "bookEarly": {
+        "title": "Autumn cleaning: book your slot now",
+        "excerpt": "Autumn is the busiest season for window cleaning. Book early to get the date that suits you.",
+        "imageAlt": "Glass office buildings seen from below"
+      }
+    }
+  },
+  "quoteForm": {
+    "eyebrow": "Free quote",
+    "title": "Request your quote",
+    "text": "Tell us what you need in a few words: we'll get back to you quickly with a clear offer and no surprises.",
+    "benefits": {
+      "free": "Free quote",
+      "fast": "Quick reply",
+      "noCommitment": "No commitment"
+    },
+    "preferToCall": "Prefer to call?",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service",
+      "address": "Address or town",
+      "date": "Preferred date",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "John Smith",
+      "email": "john.smith@example.ch",
+      "service": "Choose a service",
+      "address": "Street, postcode, town",
+      "message": "Number of windows, type of furniture, floor, access…"
+    },
+    "serviceOther": "Other request",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "phone": "Please enter a valid phone number.",
+      "service": "Please choose a service."
+    },
+    "required": "* Required fields",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "successTitle": "Thank you, your request has been sent!",
+    "successText": "We'll get back to you very soon with your quote.",
+    "sendAnother": "Send another request",
+    "errorText": "Sorry, sending didn't work. Please try again or call us on"
+  },
+  "contactForm": {
+    "eyebrow": "Have a question?",
+    "title": "Send us a message",
+    "text": "Ask us anything – we'll get back to you quickly by email or phone.",
+    "optional": "(optional)",
+    "fields": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Your message"
+    },
+    "placeholders": {
+      "subject": "e.g. availability, prices, service area…",
+      "message": "Write your question here…"
+    },
+    "errors": {
+      "subject": "Please enter a subject.",
+      "message": "Please write a message of at least 10 characters."
+    },
+    "submit": "Send message",
+    "successTitle": "Thank you, your message has been sent!",
+    "successText": "We'll get back to you as soon as possible.",
+    "sendAnother": "Send another message"
+  },
+  "footer": {
+    "description": "Window cleaning and furniture assembly for homes and businesses. A local, reliable and careful team at your service.",
+    "followUs": "Follow us",
+    "quickLinks": "Quick links",
+    "services": "Our services",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy policy",
+    "terms": "Terms & conditions",
+    "backToTop": "Back to top"
+  },
+  "pages": {
+    "breadcrumb": "Breadcrumb",
+    "services": {
+      "title": "Our services",
+      "subtitle": "Window cleaning and furniture assembly for homes and businesses across Switzerland.",
+      "ctaTitle": "Can't find what you need?",
+      "ctaText": "Get in touch and we'll find a solution that fits your needs.",
+      "ctaButton": "Contact us"
+    },
+    "about": {
+      "title": "About us",
+      "subtitle": "A local team with a passion for a job well done."
+    },
+    "contact": {
+      "title": "Contact us",
+      "subtitle": "A question or a quote request? We'll get back to you quickly.",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "followTitle": "Follow us",
+      "followText": "See our work and tips on social media."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Window Cleaning & Furniture Assembly | Swiss Clean Group",
+      "description": "Window cleaning and furniture assembly for homes and businesses in Switzerland. Free quote, reliable team and transparent prices."
+    },
+    "services": {
+      "title": "Cleaning & Assembly Services | Swiss Clean Group",
+      "description": "Window, glass facade and office cleaning, plus furniture, kitchen and wardrobe assembly. Explore our services and request a free quote."
+    },
+    "about": {
+      "title": "About Us | Swiss Clean Group",
+      "description": "A local, experienced and insured team specialised in window cleaning and furniture assembly. Get to know Swiss Clean Group."
+    },
+    "contact": {
+      "title": "Contact – Free Quote | Swiss Clean Group",
+      "description": "Contact Swiss Clean Group by phone, WhatsApp or email for a free window cleaning or furniture assembly quote."
+    },
+    "request": {
+      "title": "Quote Request | Swiss Clean Group",
+      "description": "Send your quote request to Swiss Clean Group."
+    }
+  }
+}

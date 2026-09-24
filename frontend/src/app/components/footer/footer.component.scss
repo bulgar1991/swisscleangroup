@@ -1,0 +1,185 @@
+:host {
+  display: block;
+}
+
+.site-footer {
+  --footer-text: rgb(255 255 255 / 70%);
+
+  // Top red line ties the footer to the brand colour.
+  border-top: 4px solid var(--color-primary);
+  background: #141414;
+  color: var(--footer-text);
+  font-size: 0.95rem;
+
+  &__grid {
+    display: grid;
+    gap: 2.5rem;
+    padding: 4rem 0 3rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1.4fr 1fr 1.1fr 1.3fr;
+      gap: 3rem;
+      padding: 5rem 0 4rem;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.75rem;
+    // The logo has dark text, so it sits on a white card.
+    background: #fff;
+
+    img {
+      height: 3.25rem;
+      width: auto;
+    }
+  }
+
+  &__description {
+    max-width: 22rem;
+    margin: 0 0 1.5rem;
+    line-height: 1.7;
+  }
+
+  &__follow {
+    margin: 0 0 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 2rem;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--color-primary);
+    }
+  }
+
+  &__links {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      color: var(--footer-text);
+      text-decoration: none;
+      transition:
+        color 0.2s,
+        padding-left 0.2s;
+
+      &:hover {
+        color: #fff;
+        padding-left: 0.25rem;
+      }
+    }
+  }
+
+  &__contact {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      line-height: 1.5;
+    }
+
+    i {
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+      font-size: 1.15rem;
+      color: var(--color-primary);
+    }
+
+    a {
+      color: var(--footer-text);
+      text-decoration: none;
+      word-break: break-word;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid rgb(255 255 255 / 10%);
+    font-size: 0.85rem;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.25rem;
+  }
+
+  &__copyright {
+    margin: 0;
+  }
+
+  &__legal {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    a {
+      color: var(--footer-text);
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}

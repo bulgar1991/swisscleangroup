@@ -1,0 +1,11 @@
+// Sticky needs the wrappers to span the whole page, not just their own height.
+:host {
+  display: contents;
+}
+
+app-header-desktop,
+app-header-mobile {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}

@@ -1,0 +1,97 @@
+:host {
+  display: block;
+}
+
+.stats {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0;
+  background: linear-gradient(120deg, #9e1d13 0%, var(--color-primary) 55%, #e8493d 100%);
+  color: #fff;
+
+  @media (min-width: 1024px) {
+    padding: 5rem 0;
+  }
+
+  // Soft decorative circles.
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 6%);
+    pointer-events: none;
+  }
+
+  &::before {
+    width: 26rem;
+    height: 26rem;
+    top: -12rem;
+    left: -8rem;
+  }
+
+  &::after {
+    width: 20rem;
+    height: 20rem;
+    bottom: -10rem;
+    right: -5rem;
+  }
+
+  &__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    // Thin dividers between the columns.
+    & + & {
+      border-left: 1px solid rgb(255 255 255 / 20%);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 14%);
+    font-size: 1.9rem;
+  }
+
+  &__number {
+    margin: 0 0 0.35rem;
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1;
+    // Digits keep the same width, so the number doesn't jitter while counting.
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__label {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+}

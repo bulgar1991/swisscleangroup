@@ -1,0 +1,97 @@
+@use '../../styles/form';
+
+:host {
+  display: block;
+}
+
+.contact-form {
+  padding: 4rem 0;
+  scroll-margin-top: 5.5rem;
+
+  @media (min-width: 1024px) {
+    padding: 5rem 0;
+  }
+
+  &__card {
+    position: relative;
+    max-width: 52rem;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1.5rem;
+    background: var(--color-surface);
+    box-shadow: 0 24px 60px rgb(0 0 0 / 10%);
+
+    @media (min-width: 1024px) {
+      padding: 3.5rem;
+    }
+
+    // Brand line along the top of the card.
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #9e1d13, var(--color-primary), #e8493d);
+    }
+  }
+
+  &__header {
+    margin-bottom: 2.25rem;
+    text-align: center;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: rgb(218 41 28 / 10%);
+    color: var(--color-primary);
+    font-size: 1.6rem;
+  }
+
+  &__eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  &__title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__text {
+    max-width: 32rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+  }
+
+  &__form {
+    display: grid;
+    gap: 1.25rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.field__optional {
+  margin-left: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}

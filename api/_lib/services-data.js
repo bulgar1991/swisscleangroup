@@ -43,6 +43,13 @@ const SERVICES = [
     priceFrom: 180,
     icon: '🧱',
   },
+  {
+    id: 'furniture-assembly',
+    name: 'Furniture Assembly',
+    description: 'Assembly of beds, wardrobes, kitchens and flat-pack furniture of any brand.',
+    priceFrom: 70,
+    icon: '🛠️',
+  },
 ];
 
 module.exports = { SERVICES };

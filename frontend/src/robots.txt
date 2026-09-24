@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /request/
+
+Sitemap: https://www.swisscleangroup.ch/sitemap.xml

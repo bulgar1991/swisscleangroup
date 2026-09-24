@@ -1,0 +1,23 @@
+<app-page-header
+  titleKey="pages.services.title"
+  subtitleKey="pages.services.subtitle"
+  image="assets/images/banner/window-cleaning.jpg"
+/>
+
+<section class="services-page">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="services-page__grid">
+      @for (service of services; track service.id) {
+        <app-service-card [service]="service" />
+      }
+    </div>
+
+    <div class="services-page__cta">
+      <div>
+        <h2>{{ 'pages.services.ctaTitle' | translate }}</h2>
+        <p>{{ 'pages.services.ctaText' | translate }}</p>
+      </div>
+      <a class="btn services-page__cta-button" routerLink="/contact">{{ 'pages.services.ctaButton' | translate }}</a>
+    </div>
+  </div>
+</section>

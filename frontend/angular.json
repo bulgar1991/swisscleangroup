@@ -52,9 +52,16 @@
             "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": ["src/favicon.ico", "src/site.webmanifest", "src/robots.txt", "src/sitemap.xml", "src/assets"],
             "preserveSymlinks": true,
-            "styles": ["src/styles.scss", "src/assets/fonts/icons.css"]
+            "styles": [
+              "node_modules/swiper/swiper.css",
+              "node_modules/swiper/modules/navigation.css",
+              "node_modules/swiper/modules/pagination.css",
+              "node_modules/swiper/modules/effect-fade.css",
+              "src/styles.scss",
+              "src/assets/fonts/icons.css"
+            ]
           },
           "configurations": {
             "production": {

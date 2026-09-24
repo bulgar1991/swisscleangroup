@@ -1,0 +1,76 @@
+<header class="site-header site-header--mobile">
+  <div class="container mx-auto px-4">
+    <div class="site-header__inner-container flex justify-between items-center gap-3">
+      <a class="site-header__logo-container" routerLink="/">
+        <img [src]="siteLogo" alt="Swiss Clean Group">
+      </a>
+
+      <div class="flex items-center gap-2">
+        <!-- Quick contact without opening the menu -->
+        <app-contact-buttons [only]="['phone', 'whatsapp']" />
+        <button
+          type="button"
+          class="site-header__burger"
+          [attr.aria-expanded]="sidebarOpen()"
+          aria-controls="mobile-sidebar"
+          [attr.aria-label]="'header.openMenu' | translate"
+          (click)="openSidebar()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+@if (sidebarOpen()) {
+  <div class="sidebar-overlay" (click)="closeSidebar()" aria-hidden="true"></div>
+  <aside
+    id="mobile-sidebar"
+    class="sidebar"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="'header.mainMenu' | translate"
+  >
+    <div class="sidebar__header">
+      <a class="sidebar__logo" routerLink="/" (click)="closeSidebar()">
+        <img [src]="sidebarLogo" alt="Swiss Clean Group" class="sidebar__logo-img">
+      </a>
+      <button
+        type="button"
+        class="sidebar__close"
+        [attr.aria-label]="'header.closeMenu' | translate"
+        (click)="closeSidebar()"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="sidebar__nav">
+      @for (item of menuItems; track item.labelKey) {
+        <a
+          class="sidebar__link"
+          [routerLink]="item.link"
+          routerLinkActive="sidebar__link--active"
+          [routerLinkActiveOptions]="activeOptions"
+          (click)="closeSidebar()"
+        >
+          {{ item.labelKey | translate }}
+          <i class="icon-chevron-right" aria-hidden="true"></i>
+        </a>
+      }
+    </nav>
+
+    <div class="sidebar__footer">
+      <app-contact-buttons theme="dark" />
+      <app-language-switcher variant="inline" />
+      <a class="btn sidebar__cta" routerLink="/contact" (click)="closeSidebar()">
+        {{ 'header.contactCta' | translate }}
+      </a>
+    </div>
+  </aside>
+}

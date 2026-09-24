@@ -1,0 +1,105 @@
+:host {
+  display: block;
+  // Swiper renders its arrows and bullets itself, so style them through its CSS variables.
+  --swiper-theme-color: #fff;
+  --swiper-navigation-size: 1.75rem;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+  --swiper-pagination-bullet-size: 10px;
+}
+
+.hero-banner {
+  &__swiper {
+    height: clamp(26rem, 70vh, 40rem);
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    // Shown while the image is loading or if it fails.
+    background: #1a2a33;
+  }
+
+  // The <img> fills the slide like a cover background.
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.08);
+    transition: transform 7s ease-out;
+  }
+
+  // Slow zoom-out on the visible slide.
+  &__slide.swiper-slide-active &__image {
+    transform: scale(1);
+  }
+
+  // Darkens the left side so the text stays readable on any photo.
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 40%) 45%, rgb(0 0 0 / 10%) 100%),
+      linear-gradient(0deg, rgb(0 0 0 / 35%) 0%, transparent 30%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 0 1px 12px rgb(0 0 0 / 30%);
+
+    // Keep the text clear of the prev/next arrows.
+    @media (min-width: 1024px) {
+      padding-inline: 5rem;
+    }
+  }
+
+  &__eyebrow {
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  &__title {
+    max-width: 36rem;
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  &__text {
+    max-width: 32rem;
+    margin: 0 0 2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+
+  &__cta {
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+    }
+  }
+}
