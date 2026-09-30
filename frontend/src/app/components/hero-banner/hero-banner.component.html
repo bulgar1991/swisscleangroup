@@ -3,13 +3,15 @@
     <div class="swiper-wrapper">
       @for (slide of slides; track slide.key; let first = $first) {
         <div class="swiper-slide hero-banner__slide">
-          <img
-            class="hero-banner__image"
-            [src]="slide.image"
-            [alt]="slide.key + '.imageAlt' | translate"
-            [attr.loading]="first ? 'eager' : 'lazy'"
-            [attr.fetchpriority]="first ? 'high' : null"
-          >
+          <div class="hero-banner__image-container">
+            <img
+              class="hero-banner__image"
+              [src]="slide.image"
+              [alt]="slide.key + '.imageAlt' | translate"
+              [attr.loading]="first ? 'eager' : 'lazy'"
+              [attr.fetchpriority]="first ? 'high' : null"
+            >
+          </div>
           <div class="hero-banner__overlay"></div>
           <div class="container mx-auto px-4 lg:px-6 hero-banner__content">
             <p class="hero-banner__eyebrow">{{ slide.key + '.eyebrow' | translate }}</p>

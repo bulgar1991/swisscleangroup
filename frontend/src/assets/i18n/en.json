@@ -54,30 +54,44 @@
     "next": "Next services",
     "items": {
       "windowCleaning": {
-        "title": "Window cleaning for homes",
-        "imageAlt": "Cleaning a window in an apartment"
+        "title": "Window cleaning",
+        "imageAlt": "Cleaning a window in an apartment",
+        "description": "Streak-free window cleaning for apartments, houses and business premises, inside and out.",
+        "content": [
+          "Clean windows let in more light and make any space feel more welcoming. Our team cleans your windows carefully, with professional tools and gentle products that are safe for your glass, frames and floors.",
+          "We work for private homes as well as offices, shops and building managements, for a one-off cleaning or on a regular schedule. We adapt to your timetable so your daily life or business isn't disturbed.",
+          "Before we start, we look at the number and type of windows, the access and any special needs, so you get a clear price with no surprises."
+        ],
+        "features": [
+          "Glass cleaned inside and out",
+          "Frames, sills and window tracks",
+          "Hard-to-reach windows and glass roofs on request",
+          "Professional, surface-safe products",
+          "One-off or regular cleaning"
+        ]
       },
       "furnitureAssembly": {
-        "title": "Flat-pack furniture assembly",
-        "imageAlt": "Assembling a flat-pack piece of furniture"
-      },
-      "facadeCleaning": {
-        "title": "Glass facade cleaning",
-        "imageAlt": "Glass facade of a building"
-      },
-      "kitchenAssembly": {
-        "title": "Kitchen assembly",
-        "imageAlt": "Kitchen being assembled"
-      },
-      "officeWindows": {
-        "title": "Office window cleaning",
-        "imageAlt": "Office windows"
-      },
-      "wardrobeAssembly": {
-        "title": "Wardrobe and walk-in closet assembly",
-        "imageAlt": "Wardrobe being assembled"
+        "title": "Furniture assembly",
+        "imageAlt": "Assembling a flat-pack piece of furniture",
+        "description": "Fast, careful assembly of flat-pack furniture of any brand, for homes and offices.",
+        "content": [
+          "Save yourself the hours of instructions and missing screws. Our fitters assemble your new furniture quickly and properly, whether it's a single chest of drawers or a whole room.",
+          "We assemble furniture from all the major brands: wardrobes, beds, desks, shelves, tables and more. High furniture is securely fixed to the wall for your safety.",
+          "Tell us what you bought and where you live: we'll give you a clear price and a date that suits you, and on request we take the packaging away after the assembly."
+        ],
+        "features": [
+          "Flat-pack furniture of any brand",
+          "Wardrobes, beds, desks, shelves and tables",
+          "Wall fixing of high furniture",
+          "Adjustment of doors and drawers",
+          "Packaging taken away on request"
+        ]
       }
-    }
+    },
+    "included": "What's included",
+    "requestQuote": "Request a free quote",
+    "backToServices": "Back to all services",
+    "moreServices": "Other services"
   },
   "welcome": {
     "eyebrow": "Who we are",
@@ -121,19 +135,41 @@
       "streakFree": {
         "title": "5 tips for streak-free windows",
         "excerpt": "The right time, the right product and the right technique: our professionals share how to keep your windows spotless between two cleanings.",
-        "imageAlt": "Glass facade of a building"
+        "imageAlt": "Glass facade of a building",
+        "content": [
+          "Choose the right moment. Avoid cleaning windows in direct sunlight: the water dries too fast and leaves streaks. An overcast day, or the shaded side of the house, gives you much better results.",
+          "Use as little product as possible. A few drops of washing-up liquid in lukewarm water are enough for most windows. Too much detergent leaves a film that attracts dust again.",
+          "Work with a squeegee. Wet the glass with a microfibre applicator, then pull the water off with a squeegee in overlapping strokes from top to bottom. Wipe the blade after each stroke.",
+          "Finish the edges. Dry the corners and the frame with a lint-free cloth so no drops run back onto the glass. Clean the frames and sills first, otherwise dirt ends up on the clean panes.",
+          "Keep a rhythm. Windows cleaned regularly are faster to clean and stay bright longer. And for large surfaces, glass roofs or hard-to-reach windows, our team is happy to help."
+        ]
       },
       "prepareAssembly": {
         "title": "How to prepare your home for furniture assembly",
         "excerpt": "Clear the space, check the boxes and plan the access: a few simple steps so the assembly goes quickly and without surprises.",
-        "imageAlt": "Small table in a bright room"
+        "imageAlt": "Small table in a bright room",
+        "content": [
+          "Clear the space. Make room where the furniture will stand and where it will be assembled. A free area of about two metres around the piece lets our fitters work quickly and safely.",
+          "Check the delivery. Before the appointment, make sure all packages have arrived and that none are visibly damaged. Missing boxes are the most common reason for an assembly being delayed.",
+          "Plan the access. Tell us about the floor, the lift and any narrow stairs or doors. For large wardrobes and kitchens this helps us bring the right tools and the right number of people.",
+          "Think about the walls. High furniture must be fixed to the wall. Let us know what the walls are made of (concrete, brick, plasterboard) so we can bring suitable fixings.",
+          "Leave the packaging to us. On request we take the cardboard and packaging with us after the assembly, so you can enjoy your new furniture straight away."
+        ]
       },
       "bookEarly": {
         "title": "Autumn cleaning: book your slot now",
         "excerpt": "Autumn is the busiest season for window cleaning. Book early to get the date that suits you.",
-        "imageAlt": "Glass office buildings seen from below"
+        "imageAlt": "Glass office buildings seen from below",
+        "content": [
+          "Autumn is the busiest time of the year for window cleaning. Before winter, many homes and businesses want clean windows to make the most of the shorter days.",
+          "Our calendar fills up quickly from October on. Booking now gives you the widest choice of dates, including Saturdays, and lets us plan the right team for your building.",
+          "An autumn cleaning is also the right moment to clean the frames, sills and window blinds, and to check that the seals are in good condition before the cold arrives.",
+          "Request your free quote online or call us: we answer within one working day and confirm your appointment in writing."
+        ]
       }
-    }
+    },
+    "backToBlog": "Back to all posts",
+    "morePosts": "More posts"
   },
   "quoteForm": {
     "eyebrow": "Free quote",
@@ -233,6 +269,10 @@
       "email": "Email",
       "followTitle": "Follow us",
       "followText": "See our work and tips on social media."
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "News, tips and advice from the Swiss Clean Group team."
     }
   },
   "seo": {
@@ -242,7 +282,7 @@
     },
     "services": {
       "title": "Cleaning & Assembly Services | Swiss Clean Group",
-      "description": "Window, glass facade and office cleaning, plus furniture, kitchen and wardrobe assembly. Explore our services and request a free quote."
+      "description": "Streak-free window cleaning and furniture assembly of any brand, for homes and businesses. Explore our services and request a free quote."
     },
     "about": {
       "title": "About Us | Swiss Clean Group",
@@ -255,6 +295,10 @@
     "request": {
       "title": "Quote Request | Swiss Clean Group",
       "description": "Send your quote request to Swiss Clean Group."
+    },
+    "blog": {
+      "title": "Blog – News and Tips | Swiss Clean Group",
+      "description": "Window cleaning and furniture assembly tips, plus the latest news from Swiss Clean Group."
     }
   }
 }

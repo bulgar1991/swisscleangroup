@@ -1,0 +1,54 @@
+@let item = service();
+
+<app-page-header [titleKey]="item.key + '.title'" [image]="item.image" />
+
+<article class="article-page">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="article-page__inner">
+      <p class="article-page__lead">{{ item.key + '.description' | translate }}</p>
+
+      @for (paragraph of item.key + '.content' | translate; track $index) {
+        <p class="article-page__paragraph">{{ paragraph }}</p>
+      }
+
+      <h2 class="article-page__subtitle">{{ 'servicesSlider.included' | translate }}</h2>
+      <ul class="article-page__features">
+        @for (feature of item.key + '.features' | translate; track $index) {
+          <li>
+            <i class="icon-check-circle" aria-hidden="true"></i>
+            {{ feature }}
+          </li>
+        }
+      </ul>
+
+      <div class="article-page__actions">
+        <!-- The quote form lives on the home page. -->
+        <a class="btn" routerLink="/" fragment="quote">{{
+          'servicesSlider.requestQuote' | translate
+        }}</a>
+        <a class="article-page__back" routerLink="/services">
+          <i class="icon-chevron-left" aria-hidden="true"></i>
+          {{ 'servicesSlider.backToServices' | translate }}
+        </a>
+      </div>
+    </div>
+
+    @if (otherServices().length) {
+      <aside class="article-page__more" aria-labelledby="more-services-title">
+        <h2 id="more-services-title" class="article-page__more-title">
+          {{ 'servicesSlider.moreServices' | translate }}
+        </h2>
+        <ul class="article-page__more-list">
+          @for (other of otherServices(); track other.id) {
+            <li>
+              <a class="article-page__more-link" [routerLink]="other.link">
+                <img class="article-page__more-image" [src]="other.image" alt="" loading="lazy" />
+                <span class="article-page__more-name">{{ other.key + '.title' | translate }}</span>
+              </a>
+            </li>
+          }
+        </ul>
+      </aside>
+    }
+  </div>
+</article>

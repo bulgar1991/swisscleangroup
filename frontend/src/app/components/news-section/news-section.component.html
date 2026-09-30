@@ -1,20 +1,22 @@
-<section id="news" class="news" aria-labelledby="news-title">
+<section id="news" class="news" [attr.aria-labelledby]="showHeader() ? 'news-title' : null">
   <div class="container mx-auto px-4 lg:px-6">
-    <div class="news__header">
-      <div>
-        <p class="news__eyebrow">{{ 'news.eyebrow' | translate }}</p>
-        <h2 id="news-title" class="news__title">{{ 'news.title' | translate }}</h2>
+    @if (showHeader()) {
+      <div class="news__header">
+        <div>
+          <p class="news__eyebrow">{{ 'news.eyebrow' | translate }}</p>
+          <h2 id="news-title" class="news__title">{{ 'news.title' | translate }}</h2>
+        </div>
+        <a class="news__view-all" routerLink="/blog">
+          {{ 'news.viewAll' | translate }}
+          <i class="icon-arrow-right" aria-hidden="true"></i>
+        </a>
       </div>
-      <a class="news__view-all" routerLink="/">
-        {{ 'news.viewAll' | translate }}
-        <i class="icon-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
+    }
 
     <div class="news__grid">
       @for (post of posts; track post.id) {
         <article class="news-card">
-          <a class="news-card__image-wrapper" [routerLink]="post.link" tabindex="-1" aria-hidden="true">
+          <a class="news-card__image-wrapper" [routerLink]="['/blog', post.id]" tabindex="-1" aria-hidden="true">
             <img
               class="news-card__image"
               [src]="post.image"
@@ -32,10 +34,10 @@
               <time [attr.datetime]="post.date">{{ post.date | localDate: lang() }}</time>
             </p>
             <h3 class="news-card__title">
-              <a [routerLink]="post.link">{{ post.key + '.title' | translate }}</a>
+              <a [routerLink]="['/blog', post.id]">{{ post.key + '.title' | translate }}</a>
             </h3>
             <p class="news-card__excerpt">{{ post.key + '.excerpt' | translate }}</p>
-            <a class="news-card__read-more" [routerLink]="post.link">
+            <a class="news-card__read-more" [routerLink]="['/blog', post.id]">
               {{ 'news.readMore' | translate }}
               <i class="icon-arrow-right" aria-hidden="true"></i>
             </a>

@@ -54,30 +54,44 @@
     "next": "Nächste Dienstleistungen",
     "items": {
       "windowCleaning": {
-        "title": "Fensterreinigung für Privatkunden",
-        "imageAlt": "Reinigung eines Fensters in einer Wohnung"
+        "title": "Fensterreinigung",
+        "imageAlt": "Reinigung eines Fensters in einer Wohnung",
+        "description": "Streifenfreie Fensterreinigung für Wohnungen, Häuser und Geschäftsräume, innen und aussen.",
+        "content": [
+          "Saubere Fenster lassen mehr Licht herein und machen jeden Raum einladender. Unser Team reinigt Ihre Fenster sorgfältig, mit professionellem Werkzeug und schonenden Mitteln, die Glas, Rahmen und Böden nicht angreifen.",
+          "Wir arbeiten für Privathaushalte ebenso wie für Büros, Geschäfte und Verwaltungen, einmalig oder regelmässig. Wir richten uns nach Ihrem Zeitplan, damit Ihr Alltag oder Betrieb nicht gestört wird.",
+          "Vor Beginn klären wir Anzahl und Art der Fenster, den Zugang und besondere Wünsche, damit Sie einen klaren Preis ohne Überraschungen erhalten."
+        ],
+        "features": [
+          "Glas innen und aussen gereinigt",
+          "Rahmen, Fensterbänke und Fensterschienen",
+          "Schwer erreichbare Fenster und Glasdächer auf Anfrage",
+          "Professionelle, oberflächenschonende Mittel",
+          "Einmalige oder regelmässige Reinigung"
+        ]
       },
       "furnitureAssembly": {
-        "title": "Montage von Bausatzmöbeln",
-        "imageAlt": "Montage eines Bausatzmöbels"
-      },
-      "facadeCleaning": {
-        "title": "Reinigung von Glasfassaden",
-        "imageAlt": "Glasfassade eines Gebäudes"
-      },
-      "kitchenAssembly": {
-        "title": "Küchenmontage",
-        "imageAlt": "Küche während der Montage"
-      },
-      "officeWindows": {
-        "title": "Fensterreinigung für Büros",
-        "imageAlt": "Fenster eines Büros"
-      },
-      "wardrobeAssembly": {
-        "title": "Montage von Schränken und Ankleiden",
-        "imageAlt": "Schrank während der Montage"
+        "title": "Möbelmontage",
+        "imageAlt": "Montage eines Bausatzmöbels",
+        "description": "Schnelle und sorgfältige Montage von Bausatzmöbeln aller Marken, für Privathaushalte und Büros.",
+        "content": [
+          "Ersparen Sie sich stundenlanges Anleitungslesen und fehlende Schrauben. Unsere Monteure bauen Ihre neuen Möbel schnell und fachgerecht auf, ob eine einzelne Kommode oder ein ganzes Zimmer.",
+          "Wir montieren Möbel aller grossen Marken: Schränke, Betten, Schreibtische, Regale, Tische und mehr. Hohe Möbel werden zu Ihrer Sicherheit fest an der Wand befestigt.",
+          "Sagen Sie uns, was Sie gekauft haben und wo Sie wohnen: Wir nennen Ihnen einen klaren Preis und einen passenden Termin, und auf Wunsch nehmen wir die Verpackung nach der Montage mit."
+        ],
+        "features": [
+          "Bausatzmöbel aller Marken",
+          "Schränke, Betten, Schreibtische, Regale und Tische",
+          "Wandbefestigung hoher Möbel",
+          "Einstellen von Türen und Schubladen",
+          "Verpackung auf Wunsch entsorgt"
+        ]
       }
-    }
+    },
+    "included": "Was inbegriffen ist",
+    "requestQuote": "Kostenlose Offerte anfordern",
+    "backToServices": "Zurück zu allen Dienstleistungen",
+    "moreServices": "Weitere Dienstleistungen"
   },
   "welcome": {
     "eyebrow": "Wer wir sind",
@@ -121,19 +135,41 @@
       "streakFree": {
         "title": "5 Tipps für streifenfreie Fenster",
         "excerpt": "Der richtige Zeitpunkt, das richtige Mittel und die richtige Technik: Unsere Fachleute verraten, wie Ihre Fenster auch zwischen zwei Reinigungen sauber bleiben.",
-        "imageAlt": "Glasfassade eines Gebäudes"
+        "imageAlt": "Glasfassade eines Gebäudes",
+        "content": [
+          "Wählen Sie den richtigen Zeitpunkt. Reinigen Sie Fenster nicht in praller Sonne: Das Wasser trocknet zu schnell und hinterlässt Streifen. Ein bewölkter Tag oder die Schattenseite des Hauses bringt deutlich bessere Ergebnisse.",
+          "Verwenden Sie so wenig Mittel wie möglich. Ein paar Tropfen Spülmittel in lauwarmem Wasser reichen für die meisten Fenster. Zu viel Reiniger hinterlässt einen Film, der wieder Staub anzieht.",
+          "Arbeiten Sie mit einem Abzieher. Befeuchten Sie das Glas mit einem Mikrofaser-Einwascher und ziehen Sie das Wasser in überlappenden Bahnen von oben nach unten ab. Wischen Sie die Gummilippe nach jedem Zug ab.",
+          "Achten Sie auf die Ränder. Trocknen Sie Ecken und Rahmen mit einem fusselfreien Tuch, damit keine Tropfen zurück aufs Glas laufen. Reinigen Sie Rahmen und Fensterbänke zuerst, sonst landet der Schmutz auf den sauberen Scheiben.",
+          "Bleiben Sie dran. Regelmässig gereinigte Fenster sind schneller sauber und bleiben länger klar. Und bei grossen Flächen, Glasdächern oder schwer erreichbaren Fenstern hilft Ihnen unser Team gerne."
+        ]
       },
       "prepareAssembly": {
         "title": "So bereiten Sie Ihr Zuhause auf die Möbelmontage vor",
         "excerpt": "Platz schaffen, Pakete prüfen und den Zugang sichern: ein paar einfache Schritte, damit die Montage schnell und ohne Überraschungen klappt.",
-        "imageAlt": "Kleiner Tisch in einem hellen Raum"
+        "imageAlt": "Kleiner Tisch in einem hellen Raum",
+        "content": [
+          "Schaffen Sie Platz. Räumen Sie den Ort frei, an dem das Möbel stehen und montiert werden soll. Etwa zwei Meter freie Fläche rund um das Möbel lassen unsere Monteure schnell und sicher arbeiten.",
+          "Prüfen Sie die Lieferung. Stellen Sie vor dem Termin sicher, dass alle Pakete angekommen und keine sichtbar beschädigt sind. Fehlende Kartons sind der häufigste Grund für eine verschobene Montage.",
+          "Planen Sie den Zugang. Teilen Sie uns Stockwerk, Lift und enge Treppen oder Türen mit. Bei grossen Schränken und Küchen hilft uns das, mit dem richtigen Werkzeug und genügend Personen zu kommen.",
+          "Denken Sie an die Wände. Hohe Möbel müssen an der Wand befestigt werden. Sagen Sie uns, woraus Ihre Wände bestehen (Beton, Backstein, Gips), damit wir passende Befestigungen mitbringen.",
+          "Überlassen Sie uns die Verpackung. Auf Wunsch nehmen wir Kartons und Verpackungen nach der Montage mit, damit Sie Ihre neuen Möbel sofort geniessen können."
+        ]
       },
       "bookEarly": {
         "title": "Herbstreinigung: Jetzt Termin sichern",
         "excerpt": "Der Herbst ist die gefragteste Zeit für die Fensterreinigung. Buchen Sie früh, um Ihren Wunschtermin zu erhalten.",
-        "imageAlt": "Bürogebäude aus Glas von unten gesehen"
+        "imageAlt": "Bürogebäude aus Glas von unten gesehen",
+        "content": [
+          "Der Herbst ist die geschäftigste Zeit des Jahres für die Fensterreinigung. Vor dem Winter möchten viele Haushalte und Unternehmen saubere Fenster, um das Tageslicht der kürzeren Tage optimal zu nutzen.",
+          "Ab Oktober füllt sich unser Kalender schnell. Wenn Sie jetzt buchen, haben Sie die grösste Auswahl an Terminen, samstags inklusive, und wir können das passende Team für Ihr Gebäude einplanen.",
+          "Eine Herbstreinigung ist auch der richtige Moment, um Rahmen, Fensterbänke und Storen zu reinigen und vor der Kälte zu prüfen, ob die Dichtungen in gutem Zustand sind.",
+          "Fordern Sie Ihre kostenlose Offerte online an oder rufen Sie uns an: Wir antworten innerhalb eines Werktags und bestätigen Ihren Termin schriftlich."
+        ]
       }
-    }
+    },
+    "backToBlog": "Zurück zu allen Beiträgen",
+    "morePosts": "Weitere Beiträge"
   },
   "quoteForm": {
     "eyebrow": "Kostenlose Offerte",
@@ -233,6 +269,10 @@
       "email": "E-Mail",
       "followTitle": "Folgen Sie uns",
       "followText": "Entdecken Sie unsere Arbeiten und Tipps in den sozialen Medien."
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Neuigkeiten, Tipps und Ratschläge vom Team der Swiss Clean Group."
     }
   },
   "seo": {
@@ -242,7 +282,7 @@
     },
     "services": {
       "title": "Reinigung und Montage | Swiss Clean Group",
-      "description": "Reinigung von Fenstern, Glasfassaden und Büros sowie Montage von Möbeln, Küchen und Schränken. Jetzt kostenlose Offerte anfordern."
+      "description": "Streifenfreie Fensterreinigung und Möbelmontage aller Marken für Privat- und Geschäftskunden. Jetzt kostenlose Offerte anfordern."
     },
     "about": {
       "title": "Über uns | Swiss Clean Group",
@@ -255,6 +295,10 @@
     "request": {
       "title": "Offertanfrage | Swiss Clean Group",
       "description": "Senden Sie Ihre Offertanfrage an Swiss Clean Group."
+    },
+    "blog": {
+      "title": "Blog – Neuigkeiten und Tipps | Swiss Clean Group",
+      "description": "Tipps zur Fensterreinigung und Möbelmontage sowie die neuesten Nachrichten der Swiss Clean Group."
     }
   }
 }
