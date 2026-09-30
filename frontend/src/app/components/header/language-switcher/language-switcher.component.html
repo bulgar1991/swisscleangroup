@@ -8,6 +8,7 @@
       [attr.aria-label]="'header.language' | translate"
       (click)="toggle()"
     >
+      <img class="language-switcher__flag" [src]="currentLanguage().flag" alt="" aria-hidden="true">
       {{ currentLanguage().label }}
       <i class="icon-chevron-down language-switcher__chevron" [class.language-switcher__chevron--open]="open()" aria-hidden="true"></i>
     </button>
@@ -22,6 +23,7 @@
             [attr.lang]="lang.code"
             (click)="select(lang.code)"
           >
+            <img class="language-switcher__flag" [src]="lang.flag" alt="" aria-hidden="true">
             <span class="language-switcher__code">{{ lang.label }}</span>
             {{ lang.name }}
           </button>
@@ -40,7 +42,10 @@
         [attr.lang]="lang.code"
         [title]="lang.name"
         (click)="select(lang.code)"
-      >{{ lang.label }}</button>
+      >
+        <img class="language-switcher__flag" [src]="lang.flag" alt="" aria-hidden="true">
+        {{ lang.label }}
+      </button>
     }
   </div>
 }

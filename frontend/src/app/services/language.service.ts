@@ -9,13 +9,14 @@ export interface Language {
   code: LanguageCode;
   label: string;
   name: string;
+  flag: string;
 }
 
 // Order matters: this is the order shown in the language switcher.
 export const LANGUAGES: Language[] = [
-  { code: 'fr', label: 'FR', name: 'Français' },
-  { code: 'de', label: 'DE', name: 'Deutsch' },
-  { code: 'en', label: 'EN', name: 'English' },
+  { code: 'fr', label: 'FR', name: 'Français', flag: 'assets/images/flags/fr.svg' },
+  { code: 'de', label: 'DE', name: 'Deutsch', flag: 'assets/images/flags/de.svg' },
+  { code: 'en', label: 'EN', name: 'English', flag: 'assets/images/flags/gb.svg' },
 ];
 
 export const DEFAULT_LANGUAGE: LanguageCode = 'fr';

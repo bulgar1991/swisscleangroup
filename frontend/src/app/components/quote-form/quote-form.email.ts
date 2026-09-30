@@ -14,12 +14,8 @@ export const QUOTE_EMAIL_LABELS = {
 
 // Service names as they appear in the email.
 export const QUOTE_EMAIL_SERVICE_NAMES: Record<string, string> = {
-  'window-cleaning': 'Nettoyage de vitres (particuliers)',
-  'furniture-assembly': 'Montage de meubles en kit',
-  'facade-cleaning': 'Nettoyage de façades vitrées',
-  'kitchen-assembly': 'Montage de cuisine',
-  'office-windows': 'Nettoyage de vitres de bureaux',
-  'wardrobe-assembly': "Montage d'armoires et dressings",
+  'window-cleaning': 'Nettoyage de vitres',
+  'furniture-assembly': 'Montage de meubles',
   other: 'Autre demande',
 };
 

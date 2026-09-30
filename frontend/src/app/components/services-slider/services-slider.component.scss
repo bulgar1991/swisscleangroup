@@ -69,6 +69,11 @@
       opacity: 0.35;
       cursor: default;
     }
+
+    // ...and this one when all slides already fit, so there's nothing to scroll.
+    &.swiper-button-lock {
+      display: none;
+    }
   }
 
   // Room for the card shadow and hover lift, which the swiper would otherwise clip.
@@ -92,5 +97,9 @@
     justify-content: center;
     gap: 0.25rem;
     margin-top: 1.25rem;
+
+    &.swiper-pagination-lock {
+      display: none;
+    }
   }
 }

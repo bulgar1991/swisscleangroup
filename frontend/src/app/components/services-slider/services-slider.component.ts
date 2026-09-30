@@ -31,10 +31,10 @@ export class ServicesSliderComponent implements AfterViewInit, OnDestroy {
         prevEl: '.services-slider__arrow--prev',
         nextEl: '.services-slider__arrow--next',
       },
+      // Only 2 services: side by side from 640px, where the arrows and dots hide themselves.
       breakpoints: {
-        640: { slidesPerView: 2, spaceBetween: 20 },
-        1024: { slidesPerView: 3, spaceBetween: 24 },
-        1280: { slidesPerView: 4, spaceBetween: 24 },
+        640: { slidesPerView: 2, spaceBetween: 24 },
+        1024: { slidesPerView: 2, spaceBetween: 32 },
       },
     })
   }

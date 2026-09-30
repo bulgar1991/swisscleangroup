@@ -31,6 +31,16 @@ button {
     }
   }
 
+  // The flag SVGs are 3:2.
+  &__flag {
+    flex-shrink: 0;
+    width: 1.35rem;
+    height: 0.9rem;
+    border-radius: 2px;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 8%);
+  }
+
   &__chevron {
     font-size: 1.1rem;
     transition: transform 0.2s;
@@ -90,7 +100,7 @@ button {
   }
 
   &__code {
-    width: 1.75rem;
+    width: 1.5rem;
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--color-text-muted);
@@ -109,6 +119,9 @@ button {
   }
 
   &__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     min-width: 3rem;
     padding: 0.45rem 0.9rem;
     border: none;

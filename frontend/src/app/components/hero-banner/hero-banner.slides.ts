@@ -9,17 +9,17 @@ export interface HeroSlide {
 // Texts live in assets/i18n/{fr,de,en}.json under "banner.slides".
 export const HERO_SLIDES: HeroSlide[] = [
   {
-    image: 'assets/images/banner/window-cleaning.jpg',
+    image: 'assets/images/banner/banner-1.jpg',
     key: 'banner.slides.window',
     ctaLink: '/request/window-cleaning',
   },
   {
-    image: 'assets/images/banner/furniture-assembly.jpg',
+    image: 'assets/images/banner/banner-2.jpg',
     key: 'banner.slides.furniture',
     ctaLink: '/request/furniture-assembly',
   },
   {
-    image: 'assets/images/banner/team.jpg',
+    image: 'assets/images/banner/banner-3.jpg',
     key: 'banner.slides.team',
     ctaLink: '/services',
   },

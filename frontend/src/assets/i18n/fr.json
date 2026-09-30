@@ -54,30 +54,44 @@
     "next": "Services suivants",
     "items": {
       "windowCleaning": {
-        "title": "Nettoyage de vitres pour particuliers",
-        "imageAlt": "Nettoyage d'une fenêtre dans un appartement"
+        "title": "Nettoyage de vitres",
+        "imageAlt": "Nettoyage d'une fenêtre dans un appartement",
+        "description": "Nettoyage de vitres sans traces pour appartements, maisons et locaux professionnels, à l'intérieur comme à l'extérieur.",
+        "content": [
+          "Des vitres propres laissent entrer plus de lumière et rendent chaque espace plus accueillant. Notre équipe nettoie vos fenêtres avec soin, avec des outils professionnels et des produits doux, sans danger pour vos vitres, cadres et sols.",
+          "Nous intervenons chez les particuliers comme dans les bureaux, commerces et gérances, pour un nettoyage ponctuel ou régulier. Nous nous adaptons à vos horaires pour ne pas perturber votre quotidien ou votre activité.",
+          "Avant de commencer, nous regardons le nombre et le type de fenêtres, l'accès et vos besoins particuliers, pour vous proposer un prix clair et sans surprise."
+        ],
+        "features": [
+          "Vitres nettoyées à l'intérieur et à l'extérieur",
+          "Cadres, rebords et rails de fenêtres",
+          "Fenêtres difficiles d'accès et verrières sur demande",
+          "Produits professionnels respectueux des surfaces",
+          "Nettoyage ponctuel ou régulier"
+        ]
       },
       "furnitureAssembly": {
-        "title": "Montage de meubles en kit",
-        "imageAlt": "Montage d'un meuble en kit"
-      },
-      "facadeCleaning": {
-        "title": "Nettoyage de façades vitrées",
-        "imageAlt": "Façade vitrée d'un immeuble"
-      },
-      "kitchenAssembly": {
-        "title": "Montage de cuisines",
-        "imageAlt": "Cuisine en cours de montage"
-      },
-      "officeWindows": {
-        "title": "Nettoyage de vitres de bureaux",
-        "imageAlt": "Fenêtres d'un bureau"
-      },
-      "wardrobeAssembly": {
-        "title": "Montage d'armoires et dressings",
-        "imageAlt": "Armoire en cours de montage"
+        "title": "Montage de meubles",
+        "imageAlt": "Montage d'un meuble en kit",
+        "description": "Montage rapide et soigné de meubles en kit de toutes marques, pour particuliers et bureaux.",
+        "content": [
+          "Épargnez-vous des heures de notices et de vis manquantes. Nos monteurs assemblent vos nouveaux meubles rapidement et correctement, qu'il s'agisse d'une simple commode ou d'une pièce entière.",
+          "Nous montons les meubles de toutes les grandes marques : armoires, lits, bureaux, étagères, tables et bien plus. Les meubles hauts sont solidement fixés au mur pour votre sécurité.",
+          "Dites-nous ce que vous avez acheté et où vous habitez : nous vous proposons un prix clair et une date qui vous convient, et sur demande nous emportons les emballages après le montage."
+        ],
+        "features": [
+          "Meubles en kit de toutes marques",
+          "Armoires, lits, bureaux, étagères et tables",
+          "Fixation murale des meubles hauts",
+          "Réglage des portes et tiroirs",
+          "Emballages emportés sur demande"
+        ]
       }
-    }
+    },
+    "included": "Ce qui est inclus",
+    "requestQuote": "Demander un devis gratuit",
+    "backToServices": "Retour à tous les services",
+    "moreServices": "Autres services"
   },
   "welcome": {
     "eyebrow": "Qui sommes-nous",
@@ -121,19 +135,41 @@
       "streakFree": {
         "title": "5 astuces pour des vitres sans traces",
         "excerpt": "Le bon moment, le bon produit et le bon geste : nos professionnels partagent leurs secrets pour des vitres parfaitement propres entre deux nettoyages.",
-        "imageAlt": "Façade vitrée d'un immeuble"
+        "imageAlt": "Façade vitrée d'un immeuble",
+        "content": [
+          "Choisissez le bon moment. Évitez de nettoyer les vitres en plein soleil : l'eau sèche trop vite et laisse des traces. Un jour nuageux, ou le côté ombragé de la maison, donne de bien meilleurs résultats.",
+          "Utilisez le moins de produit possible. Quelques gouttes de liquide vaisselle dans de l'eau tiède suffisent pour la plupart des vitres. Trop de détergent laisse un film qui attire à nouveau la poussière.",
+          "Travaillez avec une raclette. Mouillez la vitre avec un mouilleur en microfibre, puis retirez l'eau avec une raclette en bandes qui se chevauchent, de haut en bas. Essuyez la lame après chaque passage.",
+          "Soignez les bords. Séchez les coins et le cadre avec un chiffon non pelucheux pour qu'aucune goutte ne coule sur la vitre. Nettoyez d'abord les cadres et les rebords, sinon la saleté finit sur les vitres propres.",
+          "Gardez un rythme. Des vitres nettoyées régulièrement sont plus rapides à entretenir et restent lumineuses plus longtemps. Et pour les grandes surfaces, les verrières ou les fenêtres difficiles d'accès, notre équipe est là pour vous."
+        ]
       },
       "prepareAssembly": {
         "title": "Comment préparer votre intérieur avant un montage de meubles",
         "excerpt": "Libérer l'espace, vérifier les colis et prévoir l'accès : quelques gestes simples pour que le montage se passe rapidement et sans surprise.",
-        "imageAlt": "Petite table dans une pièce lumineuse"
+        "imageAlt": "Petite table dans une pièce lumineuse",
+        "content": [
+          "Libérez l'espace. Faites de la place là où le meuble sera installé et là où il sera monté. Une zone libre d'environ deux mètres autour du meuble permet à nos monteurs de travailler vite et en sécurité.",
+          "Vérifiez la livraison. Avant le rendez-vous, assurez-vous que tous les colis sont arrivés et qu'aucun n'est visiblement endommagé. Les cartons manquants sont la cause la plus fréquente de retard.",
+          "Prévoyez l'accès. Indiquez-nous l'étage, la présence d'un ascenseur et les escaliers ou portes étroits. Pour les grandes armoires et les cuisines, cela nous aide à venir avec les bons outils et le bon nombre de personnes.",
+          "Pensez aux murs. Les meubles hauts doivent être fixés au mur. Dites-nous en quoi sont vos murs (béton, brique, plâtre) afin que nous apportions les fixations adaptées.",
+          "Laissez-nous les emballages. Sur demande, nous emportons les cartons et les emballages après le montage, pour que vous profitiez tout de suite de vos nouveaux meubles."
+        ]
       },
       "bookEarly": {
         "title": "Nettoyage d'automne : réservez votre créneau dès maintenant",
         "excerpt": "L'automne est la période la plus chargée pour le nettoyage de vitres. Réservez tôt pour obtenir la date qui vous convient.",
-        "imageAlt": "Immeubles de bureaux vitrés vus d'en bas"
+        "imageAlt": "Immeubles de bureaux vitrés vus d'en bas",
+        "content": [
+          "L'automne est la période la plus chargée de l'année pour le nettoyage de vitres. Avant l'hiver, de nombreux particuliers et entreprises veulent des vitres propres pour profiter au mieux des journées plus courtes.",
+          "Notre agenda se remplit vite dès octobre. Réserver maintenant vous offre le plus grand choix de dates, samedis compris, et nous permet de prévoir la bonne équipe pour votre bâtiment.",
+          "Un nettoyage d'automne est aussi le bon moment pour nettoyer les cadres, les rebords et les stores, et pour vérifier que les joints sont en bon état avant l'arrivée du froid.",
+          "Demandez votre devis gratuit en ligne ou appelez-nous : nous répondons en un jour ouvrable et confirmons votre rendez-vous par écrit."
+        ]
       }
-    }
+    },
+    "backToBlog": "Retour à tous les articles",
+    "morePosts": "Autres articles"
   },
   "quoteForm": {
     "eyebrow": "Devis gratuit",
@@ -233,6 +269,10 @@
       "email": "E-mail",
       "followTitle": "Suivez-nous",
       "followText": "Découvrez nos réalisations et nos conseils sur les réseaux sociaux."
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Actualités, astuces et conseils de l'équipe Swiss Clean Group."
     }
   },
   "seo": {
@@ -242,7 +282,7 @@
     },
     "services": {
       "title": "Nos services de nettoyage et montage | Swiss Clean Group",
-      "description": "Nettoyage de vitres, de façades et de bureaux, montage de meubles, de cuisines et d'armoires. Découvrez nos services et demandez un devis gratuit."
+      "description": "Nettoyage de vitres sans traces et montage de meubles de toutes marques, pour particuliers et entreprises. Découvrez nos services et demandez un devis gratuit."
     },
     "about": {
       "title": "À propos de nous | Swiss Clean Group",
@@ -255,6 +295,10 @@
     "request": {
       "title": "Demande de devis | Swiss Clean Group",
       "description": "Envoyez votre demande de devis à Swiss Clean Group."
+    },
+    "blog": {
+      "title": "Blog – Actualités et astuces | Swiss Clean Group",
+      "description": "Astuces pour le nettoyage de vitres et le montage de meubles, et les dernières actualités de Swiss Clean Group."
     }
   }
 }

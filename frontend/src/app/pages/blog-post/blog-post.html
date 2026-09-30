@@ -1,0 +1,55 @@
+@let article = post();
+
+<app-page-header [titleKey]="article.key + '.title'" [image]="article.image" />
+
+<article class="article-page">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="article-page__inner">
+      <p class="article-page__meta">
+        <span class="article-page__category article-page__category--{{ article.category }}">
+          {{ 'news.categories.' + article.category | translate }}
+        </span>
+        <span class="article-page__date">
+          <i class="icon-calendar" aria-hidden="true"></i>
+          <time [attr.datetime]="article.date">{{ article.date | localDate: lang() }}</time>
+        </span>
+      </p>
+
+      <p class="article-page__lead">{{ article.key + '.excerpt' | translate }}</p>
+
+      @for (paragraph of article.key + '.content' | translate; track $index) {
+        <p class="article-page__paragraph">{{ paragraph }}</p>
+      }
+
+      <a class="article-page__back" routerLink="/blog">
+        <i class="icon-chevron-left" aria-hidden="true"></i>
+        {{ 'news.backToBlog' | translate }}
+      </a>
+    </div>
+
+    @if (otherPosts().length) {
+      <aside class="article-page__more" aria-labelledby="more-posts-title">
+        <h2 id="more-posts-title" class="article-page__more-title">
+          {{ 'news.morePosts' | translate }}
+        </h2>
+        <ul class="article-page__more-list">
+          @for (other of otherPosts(); track other.id) {
+            <li>
+              <a class="article-page__more-link" [routerLink]="['/blog', other.id]">
+                <img class="article-page__more-image" [src]="other.image" alt="" loading="lazy" />
+                <span>
+                  <time class="article-page__more-date" [attr.datetime]="other.date">{{
+                    other.date | localDate: lang()
+                  }}</time>
+                  <span class="article-page__more-name">{{
+                    other.key + '.title' | translate
+                  }}</span>
+                </span>
+              </a>
+            </li>
+          }
+        </ul>
+      </aside>
+    }
+  </div>
+</article>
