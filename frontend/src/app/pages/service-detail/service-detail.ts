@@ -9,7 +9,7 @@ import { SERVICE_POSTS, findServicePost } from '@components/services-slider/serv
   selector: 'app-service-detail',
   imports: [RouterLink, TranslatePipe, PageHeaderComponent],
   templateUrl: './service-detail.html',
-  // Shared with the blog post page.
+  // Shared with the other article page.
   styleUrl: '../article-page.scss',
 })
 export class ServiceDetail {

@@ -1,97 +1,40 @@
 @use '../../styles/form';
 
 :host {
-  display: block;
+  @apply block;
 }
 
 .contact-form {
-  padding: 4rem 0;
-  scroll-margin-top: 5.5rem;
-
-  @media (min-width: 1024px) {
-    padding: 5rem 0;
-  }
+  @apply scroll-mt-[5.5rem] py-16 lg:py-20;
 
   &__card {
-    position: relative;
-    max-width: 52rem;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 2.5rem 1.5rem;
-    border-radius: 1.5rem;
-    background: var(--color-surface);
-    box-shadow: 0 24px 60px rgb(0 0 0 / 10%);
-
-    @media (min-width: 1024px) {
-      padding: 3.5rem;
-    }
+    @apply relative mx-auto max-w-[52rem] overflow-hidden rounded-3xl bg-surface px-6 py-10 shadow-[0_24px_60px_theme(colors.black/10%)] lg:p-14;
 
     // Brand line along the top of the card.
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #9e1d13, var(--color-primary), #e8493d);
-    }
+    @apply before:absolute before:inset-x-0 before:top-0 before:h-1 before:bg-gradient-to-r before:from-primary-dark before:via-primary before:to-primary-light;
   }
 
   &__header {
-    margin-bottom: 2.25rem;
-    text-align: center;
+    @apply mb-9 text-center;
   }
 
   &__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-bottom: 1rem;
-    border-radius: 50%;
-    background: rgb(218 41 28 / 10%);
-    color: var(--color-primary);
-    font-size: 1.6rem;
+    @apply mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-[1.6rem] text-primary;
   }
 
   &__eyebrow {
-    margin: 0 0 0.5rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-primary);
+    @apply mb-2 mt-0 text-[0.85rem] font-semibold uppercase tracking-[0.12em] text-primary;
   }
 
   &__title {
-    margin: 0 0 0.75rem;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 700;
-    line-height: 1.2;
+    @apply mb-3 mt-0 text-[clamp(1.6rem,3vw,2.2rem)] font-bold leading-[1.2];
   }
 
   &__text {
-    max-width: 32rem;
-    margin: 0 auto;
-    line-height: 1.6;
-    color: var(--color-text-muted);
+    @apply mx-auto my-0 max-w-[32rem] leading-relaxed text-ink-muted;
   }
 
   &__form {
-    display: grid;
-    gap: 1.25rem;
-
-    @media (min-width: 640px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    @apply grid gap-5 sm:grid-cols-2;
   }
-}
-
-.field__optional {
-  margin-left: 0.25rem;
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--color-text-muted);
 }

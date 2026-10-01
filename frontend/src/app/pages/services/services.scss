@@ -1,51 +1,23 @@
 .services-page {
-  padding: 4rem 0;
-
-  @media (min-width: 1024px) {
-    padding: 5rem 0;
-  }
+  @apply py-16 lg:py-20;
 
   &__grid {
-    display: grid;
-    gap: 1.5rem;
-
-    @media (min-width: 640px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: 1024px) {
-      gap: 2rem;
-    }
+    @apply grid gap-6 sm:grid-cols-2 lg:gap-8;
   }
 
   &__cta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-top: 4rem;
-    padding: 2.5rem;
-    border-radius: 1.25rem;
-    background: linear-gradient(120deg, #9e1d13 0%, var(--color-primary) 100%);
-    color: #fff;
+    @apply mt-16 flex flex-wrap items-center justify-between gap-6 rounded-[1.25rem] bg-gradient-to-br from-primary-dark to-primary p-10 text-white;
 
     h2 {
-      margin: 0 0 0.5rem;
-      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 700;
+      @apply mb-2 mt-0 text-[clamp(1.4rem,2.5vw,1.9rem)] font-bold;
     }
 
     p {
-      margin: 0;
-      opacity: 0.9;
+      @apply m-0 opacity-90;
     }
   }
 
   &__cta-button {
-    padding: 0.9rem 1.75rem;
-    background: #fff;
-    color: var(--color-primary);
-    font-size: 1rem;
+    @apply bg-white px-7 py-[0.9rem] text-base text-primary;
   }
 }

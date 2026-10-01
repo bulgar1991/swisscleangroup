@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff2?ae33a0d15f2f8b0898258bc86d25f509") format("woff2"),
-url("./icons.woff?ae33a0d15f2f8b0898258bc86d25f509") format("woff");
+    src: url("./icons.woff2?193fdeaedf806d5443535eb977494366") format("woff2"),
+url("./icons.woff?193fdeaedf806d5443535eb977494366") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -15,63 +15,63 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-whatsapp:before {
+.icon-xmark-solid-full:before {
     content: "\f101";
 }
-.icon-team:before {
+.icon-whatsapp-brands-solid-full:before {
     content: "\f102";
 }
-.icon-smile:before {
+.icon-users-solid-full:before {
     content: "\f103";
 }
-.icon-shield-check:before {
+.icon-shield-solid-full:before {
     content: "\f104";
 }
-.icon-send:before {
+.icon-phone-solid-full:before {
     content: "\f105";
 }
-.icon-phone:before {
+.icon-paper-plane-solid-full:before {
     content: "\f106";
 }
-.icon-instagram:before {
+.icon-instagram-brands-solid-full:before {
     content: "\f107";
 }
-.icon-globe:before {
+.icon-facebook-f-brands-solid-full:before {
     content: "\f108";
 }
-.icon-facebook:before {
+.icon-envelope-solid-full:before {
     content: "\f109";
 }
-.icon-error:before {
+.icon-clock-regular-full:before {
     content: "\f10a";
 }
-.icon-email:before {
+.icon-circle-exclamation-solid-full:before {
     content: "\f10b";
 }
-.icon-clock:before {
+.icon-circle-check-solid-full:before {
     content: "\f10c";
 }
-.icon-chevron-right:before {
+.icon-check-solid-full:before {
     content: "\f10d";
 }
-.icon-chevron-left:before {
+.icon-calendar-days-regular-full:before {
     content: "\f10e";
 }
-.icon-chevron-down:before {
+.icon-arrow-up-solid-full:before {
     content: "\f10f";
 }
-.icon-check-circle:before {
+.icon-arrow-right-solid-full:before {
     content: "\f110";
 }
-.icon-calendar:before {
+.icon-angle-up-solid-full:before {
     content: "\f111";
 }
-.icon-building:before {
+.icon-angle-right-solid-full:before {
     content: "\f112";
 }
-.icon-arrow-up:before {
+.icon-angle-left-solid-full:before {
     content: "\f113";
 }
-.icon-arrow-right:before {
+.icon-angle-down-solid-full:before {
     content: "\f114";
 }

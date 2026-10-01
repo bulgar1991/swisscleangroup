@@ -1,72 +1,40 @@
 .request {
-  max-width: 32rem;
-  margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  @apply mx-auto max-w-lg px-6 pb-16 pt-8;
 }
 
 .back-link {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: var(--color-primary);
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  @apply mb-4 inline-block text-primary no-underline hover:underline;
 }
 
 h1 {
-  margin: 0 0 1.5rem;
-  font-size: 1.5rem;
-  text-transform: capitalize;
+  @apply mb-6 mt-0 text-2xl capitalize;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  @apply flex flex-col gap-4;
 }
 
 label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+  @apply flex flex-col gap-[0.35rem] text-[0.9rem] font-semibold;
 }
 
 input,
 textarea {
-  font: inherit;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: 0.5rem;
-  color: inherit;
-  background: var(--color-surface);
+  @apply rounded-lg border border-border bg-surface px-3 py-[0.6rem] font-normal text-inherit;
 }
 
 .field-error {
-  color: var(--color-danger);
-  font-size: 0.8rem;
-  font-weight: 400;
+  @apply text-[0.8rem] font-normal text-danger;
 }
 
 .alert {
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.9rem;
-  list-style: none;
-  margin: 0 0 1rem;
+  @apply mb-4 mt-0 list-none rounded-lg px-4 py-3 text-[0.9rem];
 
   &--success {
-    background: color-mix(in srgb, var(--color-success) 15%, transparent);
-    color: var(--color-success);
+    @apply bg-success/15 text-success;
   }
 
   &--error {
-    background: color-mix(in srgb, var(--color-danger) 12%, transparent);
-    color: var(--color-danger);
-    padding-left: 1.25rem;
-    list-style: disc;
+    @apply list-disc bg-danger/[0.12] pl-5 text-danger;
   }
 }

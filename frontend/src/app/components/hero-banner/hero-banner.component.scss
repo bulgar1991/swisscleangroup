@@ -1,167 +1,58 @@
 :host {
-  display: block;
-  --swiper-theme-color: #fff;
-  --swiper-navigation-size: 1.75rem;
-  --swiper-pagination-bullet-inactive-color: #fff;
-  --swiper-pagination-bullet-inactive-opacity: 0.5;
-  --swiper-pagination-bullet-size: 10px;
-
-  ::ng-deep {
-    .swiper-button-prev {
-      &.hero-banner__arrow {
-        @apply absolute top-1/2 cursor-pointer;
-
-        &.hero-banner__arrow--prev {
-          @apply left-2;
-        }
-
-        &.hero-banner__arrow--next {
-          @apply right-2;
-        }
-      }
-    }
-  }
-
-  .hero-banner {
-    &__slide {
-      @apply flex justify-start items-center relative 2xl:min-h-[600px] xl:min-h-[550px] lg:min-h-[500px] min-h-[450px] h-full;
-    }
-
-    &__image-container {
-      @apply absolute inset-0;
-    }
-
-    &__image {
-      @apply w-full h-full absolute object-cover top-0 left-1/2 -ml-[50%];
-    }
-
-    &__slide {
-      &.swiper-slide-active &__image {
-        @apply scale-100;
-      }
-    }
-
-    &__overlay {
-      @apply absolute inset-0;
-      background:
-        linear-gradient(90deg, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 40%) 45%, rgb(0 0 0 / 10%) 100%),
-        linear-gradient(0deg, rgb(0 0 0 / 35%) 0%, transparent 30%);
-    }
-
-    &__content {
-      @apply flex flex-col items-start justify-center h-full w-full relative text-white;
-      text-shadow: 0 1px 12px rgb(0 0 0 / 30%);
-    }
-
-    &__eyebrow {
-      @apply 2xl:text-3xl xl:text-2xl lg:text-xl text-sm;
-    }
-
-    &__title {
-      @apply 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-xl mt-3;
-    }
-
-    &__text {
-      @apply md:text-xl text-base mt-3;
-    }
-
-    &__cta {
-      @apply mt-8;
-    }
-  }
-
-
+  // Swiper renders the arrows and bullets itself, so style them through its CSS variables.
+  @apply block [--swiper-navigation-size:1.75rem] [--swiper-theme-color:theme(colors.white)];
+  @apply [--swiper-pagination-bullet-inactive-color:theme(colors.white)] [--swiper-pagination-bullet-inactive-opacity:0.5] [--swiper-pagination-bullet-size:10px];
 }
 
 .hero-banner {
+  &__slide {
+    @apply relative flex h-full min-h-[450px] items-center justify-start lg:min-h-[500px] xl:min-h-[550px] 2xl:min-h-[600px];
+  }
 
-  //&__slide {
-  //  position: relative;
-  //  display: flex;
-  //  align-items: center;
-  //  overflow: hidden;
-  //  // Shown while the image is loading or if it fails.
-  //  background: #1a2a33;
-  //}
-  //
-  //// Stretches over the whole slide; the <img> inside fills it like a cover background.
-  //&__image-container {
-  //  position: absolute;
-  //  top: 0;
-  //  right: 0;
-  //  bottom: 0;
-  //  left: 0;
-  //  overflow: hidden;
-  //}
-  //
-  //&__image {
-  //  width: 100%;
-  //  height: 100%;
-  //  max-width: none;
-  //  position: absolute;
-  //  object-fit: cover;
-  //  top: 0;
-  //  left: 50%;
-  //  margin-left: -50%;
-  //}
-  //
-  //// Slow zoom-out on the visible slide.
+  // Stretches over the whole slide; the <img> inside fills it like a cover background.
+  &__image-container {
+    @apply absolute inset-0;
+  }
 
-  //
-  //// Darkens the left side so the text stays readable on any photo.
+  &__image {
+    @apply absolute left-1/2 top-0 -ml-[50%] h-full w-full object-cover;
+  }
 
-  //
-  //&__content {
-  //  position: relative;
-  //  z-index: 1;
-  //  color: #fff;
-  //  text-shadow: 0 1px 12px rgb(0 0 0 / 30%);
-  //
-  //  // Keep the text clear of the prev/next arrows.
-  //  @media (min-width: 1024px) {
-  //    padding-inline: 5rem;
-  //  }
-  //}
-  //
-  //&__eyebrow {
-  //  margin: 0 0 0.75rem;
-  //  font-size: 0.85rem;
-  //  font-weight: 600;
-  //  letter-spacing: 0.12em;
-  //  text-transform: uppercase;
-  //  opacity: 0.85;
-  //}
-  //
-  //&__title {
-  //  max-width: 36rem;
-  //  margin: 0 0 1rem;
-  //  font-size: clamp(2rem, 5vw, 3.5rem);
-  //  font-weight: 700;
-  //  line-height: 1.1;
-  //}
-  //
-  //&__text {
-  //  max-width: 32rem;
-  //  margin: 0 0 2rem;
-  //  font-size: clamp(1rem, 2vw, 1.2rem);
-  //  line-height: 1.5;
-  //  opacity: 0.9;
-  //}
-  //
-  //&__cta {
-  //  padding: 0.85rem 1.5rem;
-  //  font-size: 1rem;
-  //}
-  //
-  //.swiper-button-prev,
-  //.swiper-button-next {
-  //  display: none;
-  //}
-  //
-  //@media (min-width: 1024px) {
-  //  .swiper-button-prev,
-  //  .swiper-button-next {
-  //    display: flex;
-  //  }
-  //}
+  // Darkens the left side and the bottom so the text stays readable on any photo.
+  &__overlay {
+    @apply absolute inset-0;
+    @apply bg-[linear-gradient(90deg,theme(colors.black/70%)_0%,theme(colors.black/40%)_45%,theme(colors.black/10%)_100%),linear-gradient(0deg,theme(colors.black/35%)_0%,theme(colors.transparent)_30%)];
+  }
+
+  &__content {
+    @apply relative flex h-full w-full flex-col items-start justify-center text-white [text-shadow:0_1px_12px_theme(colors.black/30%)];
+  }
+
+  &__eyebrow {
+    @apply text-sm lg:text-xl xl:text-2xl 2xl:text-3xl;
+  }
+
+  &__title {
+    @apply mt-3 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+  }
+
+  &__text {
+    @apply mt-3 text-base md:text-xl;
+  }
+
+  &__cta {
+    @apply mt-8;
+  }
+
+  &__arrow {
+    @apply absolute top-1/2 cursor-pointer;
+
+    &--prev {
+      @apply left-2;
+    }
+
+    &--next {
+      @apply right-2;
+    }
+  }
 }

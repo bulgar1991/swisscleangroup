@@ -8,6 +8,7 @@
         [attr.rel]="link.external ? 'noopener noreferrer' : null"
         [attr.aria-label]="link.labelKey | translate"
         [title]="link.labelKey | translate"
+        [attr.data-testid]="'contact-button-' + link.id"
       >
         <i class="icon-{{ link.icon }}" aria-hidden="true"></i>
       </a>

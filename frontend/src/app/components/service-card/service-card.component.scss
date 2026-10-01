@@ -1,76 +1,36 @@
 :host {
-  display: block;
-  height: 100%;
+  @apply block h-full;
 }
 
 .post-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: 1rem;
-  background: var(--color-surface);
-  box-shadow: 0 2px 8px rgb(0 0 0 / 4%);
-  color: inherit;
-  text-decoration: none;
-  transition:
-    transform 0.25s,
-    box-shadow 0.25s;
+  @apply flex h-full flex-col no-underline;
 
-  &:hover,
-  &:focus-visible {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 28px rgb(0 0 0 / 10%);
-  }
-
+  // Same 8:5 ratio as the service photos.
   &__image-wrapper {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--color-background);
+    @apply relative aspect-[8/5] overflow-hidden;
   }
 
   &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-  }
-
-  &:hover &__image {
-    transform: scale(1.06);
+    @apply absolute inset-0 h-full w-full object-cover;
   }
 
   &__body {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.25rem 1.25rem 1.5rem;
+    @apply mt-4 flex flex-1 flex-col gap-4;
   }
 
   &__title {
-    flex: 1;
-    margin: 0;
-    font-size: 1.15rem;
-    font-weight: 600;
-    line-height: 1.35;
+    @apply m-0 flex-1 text-[1.15rem] font-semibold leading-[1.35] text-ink;
   }
 
   &__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--color-primary);
+    @apply inline-flex items-center gap-[0.4rem] text-[0.95rem] font-semibold text-primary;
 
     i {
-      transition: transform 0.2s;
+      @apply transition-transform duration-200;
     }
   }
 
   &:hover &__link i {
-    transform: translateX(4px);
+    @apply translate-x-1;
   }
 }

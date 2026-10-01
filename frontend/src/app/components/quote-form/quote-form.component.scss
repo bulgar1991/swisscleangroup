@@ -1,157 +1,70 @@
 @use '../../styles/form';
 
 :host {
-  display: block;
+  @apply block;
 }
 
 .quote {
-  padding: 4rem 0;
-  background: var(--color-background);
-  scroll-margin-top: 5.5rem;
-
-  @media (min-width: 1024px) {
-    padding: 6rem 0;
-  }
+  @apply scroll-mt-[5.5rem] bg-background py-16 lg:py-24;
 
   &__card {
-    display: grid;
-    overflow: hidden;
-    border-radius: 1.5rem;
-    background: var(--color-surface);
-    box-shadow: 0 24px 60px rgb(0 0 0 / 10%);
-
-    @media (min-width: 1024px) {
-      grid-template-columns: 5fr 7fr;
-    }
+    @apply grid overflow-hidden rounded-3xl bg-surface shadow-[0_24px_60px_theme(colors.black/10%)] lg:grid-cols-[5fr_7fr];
   }
 
   // ---- Left panel ----
   &__intro {
-    position: relative;
-    overflow: hidden;
-    padding: 2.5rem 1.75rem;
-    background: linear-gradient(150deg, #141414 0%, #2a1311 100%);
-    color: rgb(255 255 255 / 80%);
-
-    @media (min-width: 1024px) {
-      padding: 3.5rem 3rem;
-    }
+    @apply relative overflow-hidden bg-gradient-to-br from-dark to-primary-darkest px-7 py-10 text-white/80 lg:px-12 lg:py-14;
 
     // Red glow in the corner.
-    &::after {
-      content: '';
-      position: absolute;
-      right: -6rem;
-      bottom: -6rem;
-      width: 16rem;
-      height: 16rem;
-      border-radius: 50%;
-      background: var(--color-primary);
-      opacity: 0.35;
-      filter: blur(40px);
-      pointer-events: none;
-    }
+    @apply after:pointer-events-none after:absolute after:-bottom-24 after:-right-24 after:h-64 after:w-64 after:rounded-full after:bg-primary after:opacity-35 after:blur-[40px];
   }
 
   &__eyebrow {
-    margin: 0 0 0.5rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #ff6b5e;
+    @apply mb-2 mt-0 text-[0.85rem] font-semibold uppercase tracking-[0.12em] text-primary-lighter;
   }
 
   &__title {
-    margin: 0 0 1rem;
-    font-size: clamp(1.75rem, 3vw, 2.4rem);
-    font-weight: 700;
-    line-height: 1.15;
-    color: #fff;
+    @apply mb-4 mt-0 text-[clamp(1.75rem,3vw,2.4rem)] font-bold leading-[1.15] text-white;
   }
 
   &__text {
-    margin: 0 0 2rem;
-    line-height: 1.7;
+    @apply mb-8 mt-0 leading-[1.7];
   }
 
   &__benefits {
-    display: grid;
-    gap: 0.85rem;
-    margin: 0 0 2.5rem;
-    padding: 0;
-    list-style: none;
+    @apply mb-10 mt-0 grid list-none gap-[0.85rem] p-0;
 
     li {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-weight: 500;
-      color: #fff;
+      @apply flex items-center gap-3 font-medium text-white;
     }
 
     i {
-      font-size: 1.3rem;
-      color: var(--color-primary);
+      @apply text-[1.3rem] text-primary;
     }
   }
 
   &__call {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.25rem;
-    border: 1px solid rgb(255 255 255 / 12%);
-    border-radius: 1rem;
-    background: rgb(255 255 255 / 5%);
+    @apply relative z-[1] flex items-center gap-4 rounded-2xl border border-white/[0.12] bg-white/5 p-5;
   }
 
   &__call-icon {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background: var(--color-primary);
-    color: #fff;
-    font-size: 1.3rem;
+    @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-[1.3rem] text-white;
   }
 
   &__call-label {
-    margin: 0 0 0.15rem;
-    font-size: 0.85rem;
+    @apply mb-[0.15rem] mt-0 text-[0.85rem];
   }
 
   &__call-number {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    @apply text-[1.15rem] font-bold text-white no-underline hover:underline;
   }
 
   // ---- Right panel ----
   &__form-wrapper {
-    padding: 2rem 1.5rem;
-
-    @media (min-width: 1024px) {
-      padding: 3.5rem 3rem;
-    }
+    @apply px-6 py-8 lg:px-12 lg:py-14;
   }
 
   &__form {
-    display: grid;
-    gap: 1.25rem;
-
-    @media (min-width: 640px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    @apply grid gap-5 sm:grid-cols-2;
   }
 }

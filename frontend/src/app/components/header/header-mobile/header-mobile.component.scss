@@ -1,41 +1,27 @@
 .site-header {
-  position: relative;
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 2px 12px rgb(0 0 0 / 4%);
+  @apply relative border-b border-border bg-surface shadow-[0_2px_12px_theme(colors.black/4%)];
 
   &__inner-container {
-    height: 4.5rem;
+    @apply flex h-[4.5rem] items-center justify-between gap-3;
   }
 
   &__logo-container {
-    display: block;
-    min-width: 0;
+    @apply block min-w-0;
 
     img {
-      height: 3.75rem;
-      width: auto;
+      @apply h-[3.75rem] w-auto;
     }
   }
 
+  &__actions {
+    @apply flex items-center gap-2;
+  }
+
   &__burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 2.75rem;
-    height: 2.75rem;
-    padding: 0.6rem;
-    border: none;
-    border-radius: 0.5rem;
-    background: transparent;
-    cursor: pointer;
+    @apply flex h-11 w-11 cursor-pointer flex-col justify-center gap-[5px] rounded-lg border-none bg-transparent p-[0.6rem];
 
     span {
-      display: block;
-      height: 2px;
-      background: var(--color-text);
-      border-radius: 2px;
+      @apply block h-0.5 rounded-sm bg-ink;
     }
   }
 }
@@ -43,155 +29,63 @@
 // ---- Sidebar (opened by the burger) ----
 
 .sidebar-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: rgb(0 0 0 / 55%);
-  backdrop-filter: blur(2px);
-  animation: fade-in 0.2s ease;
+  @apply fixed inset-0 z-[200] animate-fade-in bg-black/55 backdrop-blur-[2px] motion-reduce:animate-none;
 }
 
 .sidebar {
-  position: fixed;
-  inset-block: 0;
-  inset-inline-end: 0;
-  z-index: 201;
-  display: flex;
-  flex-direction: column;
-  width: min(320px, 85vw);
-  overflow-y: auto;
-  background: #141414;
-  box-shadow: -8px 0 40px rgb(0 0 0 / 40%);
-  animation: slide-in 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  @apply fixed inset-y-0 end-0 z-[201] flex w-[min(320px,85vw)] animate-slide-in flex-col overflow-y-auto bg-dark;
+  @apply shadow-[-8px_0_40px_theme(colors.black/40%)] motion-reduce:animate-none;
 
+  // Top padding keeps clear of the notch / status bar on phones.
   &__header {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.25rem;
-    // Keep clear of the notch / status bar on phones.
-    padding-top: calc(1rem + env(safe-area-inset-top, 0px));
-    border-bottom: 1px solid rgb(255 255 255 / 8%);
+    @apply flex shrink-0 items-center justify-between border-b border-white/[0.08] px-5 pb-4 pt-[calc(1rem+env(safe-area-inset-top,0px))];
   }
 
+  // The logo has dark text, so it sits on a white card (like in the footer).
   &__logo {
-    display: block;
-    padding: 0.4rem 0.7rem;
-    border-radius: 0.6rem;
-    // The logo has dark text, so it sits on a white card (like in the footer).
-    background: #fff;
+    @apply block rounded-[0.6rem] bg-white px-[0.7rem] py-[0.4rem];
   }
 
   &__logo-img {
-    display: block;
-    height: 2.25rem;
-    width: auto;
+    @apply block h-9 w-auto;
   }
 
   &__close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    background: rgb(255 255 255 / 7%);
-    color: rgb(255 255 255 / 75%);
-    cursor: pointer;
-    transition:
-      background-color 0.2s,
-      color 0.2s;
+    @apply flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border-none bg-white/[0.07] text-white/75 transition-colors duration-200;
+    @apply hover:bg-primary/30 hover:text-white;
 
-    &:hover {
-      background: rgb(218 41 28 / 30%);
-      color: #fff;
+    i {
+      @apply text-xl;
     }
   }
 
   &__nav {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 0.75rem 0;
+    @apply flex flex-1 flex-col py-3;
   }
 
   &__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.95rem 1.5rem;
-    border-left: 3px solid transparent;
-    color: rgb(255 255 255 / 75%);
-    font-size: 1.05rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition:
-      color 0.2s,
-      background-color 0.2s,
-      border-color 0.2s;
+    @apply flex items-center justify-between border-l-[3px] border-transparent px-6 py-[0.95rem] text-[1.05rem] font-medium text-white/75 no-underline transition-colors duration-200;
+    @apply hover:border-primary hover:bg-primary/[0.12] hover:text-white;
 
     i {
-      font-size: 1.25rem;
-      opacity: 0.35;
-    }
-
-    &:hover {
-      background: rgb(218 41 28 / 12%);
-      border-left-color: var(--color-primary);
-      color: #fff;
+      @apply text-xl opacity-35;
     }
 
     &--active {
-      border-left-color: var(--color-primary);
-      color: #ff6b5e;
-      font-weight: 600;
+      @apply border-primary font-semibold text-primary-lighter;
 
       i {
-        opacity: 1;
+        @apply opacity-100;
       }
     }
   }
 
+  // Bottom padding keeps clear of the home bar on phones.
   &__footer {
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.25rem;
-    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
-    border-top: 1px solid rgb(255 255 255 / 8%);
+    @apply flex shrink-0 flex-col gap-4 border-t border-white/[0.08] px-5 pb-[calc(1.25rem+env(safe-area-inset-bottom,0px))] pt-5;
   }
 
   &__cta {
-    width: 100%;
-    padding: 0.9rem 1rem;
-    font-size: 1rem;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .sidebar,
-  .sidebar-overlay {
-    animation: none;
+    @apply w-full px-4 py-[0.9rem] text-base;
   }
 }

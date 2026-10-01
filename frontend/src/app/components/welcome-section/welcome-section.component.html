@@ -1,4 +1,4 @@
-<section id="welcome" class="welcome" aria-labelledby="welcome-title">
+<section id="welcome" class="welcome" aria-labelledby="welcome-title" data-testid="welcome-section">
   <div class="container mx-auto px-4 lg:px-6">
     <div class="welcome__grid">
       <div class="welcome__media">
@@ -7,19 +7,26 @@
           [src]="image"
           [alt]="'welcome.imageAlt' | translate"
           loading="lazy"
-        >
+          decoding="async"
+        />
       </div>
 
-      <div class="welcome__content">
+      <div>
         <p class="welcome__eyebrow">{{ 'welcome.eyebrow' | translate }}</p>
         <h2 id="welcome-title" class="welcome__title">{{ 'welcome.title' | translate }}</h2>
         <p class="welcome__description">{{ 'welcome.description' | translate }}</p>
 
         <div class="welcome__buttons">
           @if (showAboutButton()) {
-            <a class="btn welcome__button" routerLink="/about">{{ 'welcome.aboutUs' | translate }}</a>
+            <a class="btn welcome__button" routerLink="/about" data-testid="welcome-about-link">{{
+              'welcome.aboutUs' | translate
+            }}</a>
           }
-          <a class="btn welcome__button welcome__button--outline" routerLink="/contact">
+          <a
+            class="btn welcome__button welcome__button--outline"
+            routerLink="/contact"
+            data-testid="welcome-contact-link"
+          >
             {{ 'welcome.contact' | translate }}
           </a>
         </div>

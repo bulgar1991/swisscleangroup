@@ -1,11 +1,8 @@
-// Sticky needs the wrappers to span the whole page, not just their own height.
+// Sticky needs the <header> to span the whole page, not just this element's height.
 :host {
-  display: contents;
+  @apply contents;
 }
 
-app-header-desktop,
-app-header-mobile {
-  position: sticky;
-  top: 0;
-  z-index: 50;
+.site-header-bar {
+  @apply sticky top-0 z-50 block;
 }

@@ -1,196 +1,117 @@
 // Shared styles for the site's forms (quote form, contact form).
 // Use with `@use '<relative path>/styles/form';` in a component stylesheet.
 
+// Honeypot for spam bots - off screen and invisible.
 .form-honeypot {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
+  @apply absolute -left-[9999px] h-px w-px opacity-0;
 }
 
 .form-footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 0.25rem;
+  @apply col-span-full mt-1 flex flex-wrap items-center justify-between gap-4;
 }
 
 .form-required {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
+  @apply m-0 text-[0.85rem] text-ink-muted;
 }
 
 .form-submit {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  min-width: 12rem;
-  padding: 0.95rem 1.75rem;
-  font-size: 1rem;
+  @apply inline-flex min-w-48 items-center justify-center gap-[0.6rem] px-7 py-[0.95rem] text-base;
 
   i {
-    font-size: 1.1rem;
+    @apply text-[1.1rem];
   }
 }
 
 .form-spinner {
-  width: 1rem;
-  height: 1rem;
-  border: 2px solid rgb(255 255 255 / 40%);
-  border-top-color: #fff;
-  border-radius: 50%;
-  animation: form-spin 0.7s linear infinite;
+  @apply h-4 w-4 animate-spin-fast rounded-full border-2 border-white/40 border-t-white;
 }
 
 .form-result {
-  display: flex;
-  gap: 0.75rem;
-  border-radius: 0.75rem;
+  @apply flex gap-3 rounded-xl;
 
   i {
-    flex-shrink: 0;
-    font-size: 1.4rem;
+    @apply shrink-0 text-[1.4rem];
   }
 
   p {
-    margin: 0;
-    line-height: 1.5;
+    @apply m-0 leading-normal;
   }
 
   &--error {
-    align-items: flex-start;
-    padding: 1rem 1.25rem;
-    background: rgb(179 38 30 / 8%);
-    color: var(--color-danger);
+    @apply col-span-full items-start bg-danger/[0.08] px-5 py-4 text-danger;
 
     a {
-      color: inherit;
-      font-weight: 700;
-      white-space: nowrap;
+      @apply whitespace-nowrap font-bold text-inherit;
     }
   }
 
   &--success {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-height: 22rem;
-    text-align: center;
+    @apply h-full min-h-[22rem] flex-col items-center justify-center text-center;
 
     i {
-      font-size: 4rem;
-      color: var(--color-success);
+      @apply text-[4rem] text-success;
     }
 
+    h2,
     h3 {
-      margin: 0.5rem 0 0;
-      font-size: 1.5rem;
-      font-weight: 700;
+      @apply mb-0 mt-2 text-2xl font-bold;
     }
 
     p {
-      max-width: 26rem;
-      color: var(--color-text-muted);
+      @apply max-w-[26rem] text-ink-muted;
     }
   }
 }
 
 .form-again {
-  margin-top: 1rem;
+  @apply mt-4;
 }
 
 .field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  min-width: 0;
+  @apply flex min-w-0 flex-col gap-[0.4rem];
 
   &--full {
-    grid-column: 1 / -1;
+    @apply col-span-full;
   }
 
   label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-text);
+    @apply text-[0.9rem] font-semibold text-ink;
 
     span {
-      color: var(--color-primary);
+      @apply text-primary;
     }
   }
 
   input,
   select,
   textarea {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.65rem;
-    background: var(--color-background);
-    color: var(--color-text);
-    font: inherit;
-    font-size: 0.95rem;
-    transition:
-      border-color 0.2s,
-      box-shadow 0.2s,
-      background-color 0.2s;
-
-    &::placeholder {
-      color: #9a9a9a;
-    }
-
-    &:focus {
-      outline: none;
-      border-color: var(--color-primary);
-      background: var(--color-surface);
-      box-shadow: 0 0 0 4px rgb(218 41 28 / 12%);
-    }
-
-    &[aria-invalid='true'] {
-      border-color: var(--color-danger);
-    }
+    @apply w-full rounded-[0.65rem] border border-border bg-background px-4 py-[0.8rem] text-[0.95rem] text-ink;
+    @apply transition-[border-color,box-shadow,background-color] duration-200 placeholder:text-ink-subtle;
+    @apply focus:border-primary focus:bg-surface focus:shadow-[0_0_0_4px_theme(colors.primary/12%)] focus:outline-none;
+    @apply aria-[invalid=true]:border-danger;
   }
 
   textarea {
-    resize: vertical;
-    min-height: 7rem;
+    @apply min-h-28 resize-y;
+  }
+
+  &__optional {
+    @apply ml-1 text-[0.8rem] font-normal text-ink-muted;
   }
 
   &__select {
-    position: relative;
+    @apply relative;
 
     select {
-      appearance: none;
-      padding-right: 2.5rem;
-      cursor: pointer;
+      @apply cursor-pointer appearance-none pr-10;
     }
 
     i {
-      position: absolute;
-      top: 50%;
-      right: 0.85rem;
-      transform: translateY(-50%);
-      font-size: 1.25rem;
-      color: var(--color-text-muted);
-      pointer-events: none;
+      @apply pointer-events-none absolute right-[0.85rem] top-1/2 -translate-y-1/2 text-xl text-ink-muted;
     }
   }
 
   &__error {
-    margin: 0;
-    font-size: 0.8rem;
-    color: var(--color-danger);
-  }
-}
-
-@keyframes form-spin {
-  to {
-    transform: rotate(360deg);
+    @apply m-0 text-[0.8rem] text-danger;
   }
 }

@@ -1,28 +1,41 @@
-<section class="hero-banner" [attr.aria-label]="'banner.ariaLabel' | translate">
+<section
+  class="hero-banner"
+  [attr.aria-label]="'banner.ariaLabel' | translate"
+  aria-roledescription="carousel"
+  data-testid="hero-banner"
+>
   <div #swiperEl class="swiper hero-banner__swiper">
     <div class="swiper-wrapper">
       @for (slide of slides; track slide.key; let first = $first) {
-        <div class="swiper-slide hero-banner__slide">
+        <div
+          class="swiper-slide hero-banner__slide"
+          role="group"
+          aria-roledescription="slide"
+          [attr.aria-label]="$index + 1 + ' / ' + slides.length"
+          data-testid="hero-slide"
+        >
           <div class="hero-banner__image-container">
             <img
               class="hero-banner__image"
               [src]="slide.image"
               [alt]="slide.key + '.imageAlt' | translate"
+              width="1920"
+              height="1280"
               [attr.loading]="first ? 'eager' : 'lazy'"
               [attr.fetchpriority]="first ? 'high' : null"
-            >
+            />
           </div>
-          <div class="hero-banner__overlay"></div>
+          <div class="hero-banner__overlay" aria-hidden="true"></div>
           <div class="container mx-auto px-4 lg:px-6 hero-banner__content">
             <p class="hero-banner__eyebrow">{{ slide.key + '.eyebrow' | translate }}</p>
             <!-- The first slide carries the home page's only <h1>. -->
             @if (first) {
-              <h1 class="hero-banner__title">{{ slide.key + '.title' | translate }}</h1>
+              <h1 class="hero-banner__title" data-testid="hero-title">{{ slide.key + '.title' | translate }}</h1>
             } @else {
-              <h2 class="hero-banner__title">{{ slide.key + '.title' | translate }}</h2>
+              <h2 class="hero-banner__title" data-testid="hero-title">{{ slide.key + '.title' | translate }}</h2>
             }
             <p class="hero-banner__text">{{ slide.key + '.text' | translate }}</p>
-            <a class="btn hero-banner__cta" [routerLink]="slide.ctaLink">
+            <a class="btn hero-banner__cta" [routerLink]="slide.ctaLink" data-testid="hero-cta">
               {{ slide.key + '.cta' | translate }}
             </a>
           </div>
@@ -30,8 +43,18 @@
       }
     </div>
 
-    <button type="button" class="swiper-button-prev hero-banner__arrow hero-banner__arrow--prev" [attr.aria-label]="'banner.prev' | translate"></button>
-    <button type="button" class="swiper-button-next hero-banner__arrow hero-banner__arrow--next" [attr.aria-label]="'banner.next' | translate"></button>
-    <div class="swiper-pagination hero-banner__pagination"></div>
+    <button
+      type="button"
+      class="swiper-button-prev hero-banner__arrow hero-banner__arrow--prev"
+      [attr.aria-label]="'banner.prev' | translate"
+      data-testid="hero-prev"
+    ></button>
+    <button
+      type="button"
+      class="swiper-button-next hero-banner__arrow hero-banner__arrow--next"
+      [attr.aria-label]="'banner.next' | translate"
+      data-testid="hero-next"
+    ></button>
+    <div class="swiper-pagination hero-banner__pagination" data-testid="hero-pagination"></div>
   </div>
 </section>

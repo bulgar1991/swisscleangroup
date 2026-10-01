@@ -1,142 +1,65 @@
 :host {
-  display: block;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
+  @apply block;
 }
 
 .language-switcher {
   &--dropdown {
-    position: relative;
+    @apply relative;
   }
 
   &__toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    height: 2.5rem;
-    padding: 0 0.85rem;
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
-    background: var(--color-surface);
-    color: var(--color-text);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: border-color 0.2s;
-
-    &:hover {
-      border-color: var(--color-primary);
-    }
+    @apply flex h-10 cursor-pointer items-center gap-[0.35rem] rounded-full border border-border bg-surface px-[0.85rem] text-[0.9rem] font-semibold text-ink transition-colors duration-200;
+    @apply hover:border-primary;
   }
 
   // The flag SVGs are 3:2.
   &__flag {
-    flex-shrink: 0;
-    width: 1.35rem;
-    height: 0.9rem;
-    border-radius: 2px;
-    object-fit: cover;
-    box-shadow: 0 0 0 1px rgb(0 0 0 / 8%);
+    @apply h-[0.9rem] w-[1.35rem] shrink-0 rounded-sm object-cover shadow-[0_0_0_1px_theme(colors.black/8%)];
   }
 
   &__chevron {
-    font-size: 1.1rem;
-    transition: transform 0.2s;
+    @apply text-[1.1rem] transition-transform duration-200;
 
     &--open {
-      transform: rotate(180deg);
+      @apply rotate-180;
     }
   }
 
   &__menu {
-    position: absolute;
-    top: calc(100% + 0.5rem);
-    right: 0;
-    min-width: 11rem;
-    margin: 0;
-    padding: 0.4rem;
-    list-style: none;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 0.75rem;
-    box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-0.4rem);
-    transition:
-      opacity 0.15s,
-      transform 0.15s,
-      visibility 0.15s;
+    @apply invisible absolute right-0 top-[calc(100%+0.5rem)] m-0 min-w-44 -translate-y-[0.4rem] list-none rounded-xl border border-border bg-surface p-[0.4rem] opacity-0;
+    @apply shadow-[0_12px_32px_theme(colors.black/12%)] transition-all duration-150;
 
     &--open {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
+      @apply visible translate-y-0 opacity-100;
     }
   }
 
   &__option {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    width: 100%;
-    padding: 0.6rem 0.75rem;
-    border: none;
-    border-radius: 0.5rem;
-    background: transparent;
-    color: var(--color-text);
-    text-align: left;
-
-    &:hover {
-      background: var(--color-background);
-    }
+    @apply flex w-full cursor-pointer items-center gap-3 rounded-lg border-none bg-transparent px-3 py-[0.6rem] text-left text-ink;
+    @apply hover:bg-background;
 
     &--active {
-      color: var(--color-primary);
-      font-weight: 600;
+      @apply font-semibold text-primary;
     }
   }
 
   &__code {
-    width: 1.5rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--color-text-muted);
+    @apply w-6 text-xs font-bold text-ink-muted;
   }
 
   &__option--active &__code {
-    color: var(--color-primary);
+    @apply text-primary;
   }
 
   &--inline {
-    display: inline-flex;
-    padding: 0.25rem;
-    border-radius: 999px;
-    background: var(--color-background);
-    border: 1px solid var(--color-border);
+    @apply inline-flex rounded-full border border-border bg-background p-1;
   }
 
   &__pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    min-width: 3rem;
-    padding: 0.45rem 0.9rem;
-    border: none;
-    border-radius: 999px;
-    background: transparent;
-    color: var(--color-text-muted);
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition:
-      background-color 0.2s,
-      color 0.2s;
+    @apply inline-flex min-w-12 cursor-pointer items-center gap-[0.4rem] rounded-full border-none bg-transparent px-[0.9rem] py-[0.45rem] text-[0.9rem] font-semibold text-ink-muted transition-colors duration-200;
 
     &--active {
-      background: var(--color-primary);
-      color: #fff;
+      @apply bg-primary text-white;
     }
   }
 }

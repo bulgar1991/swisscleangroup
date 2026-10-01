@@ -16,7 +16,8 @@
     "mainMenu": "Main menu",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "contactCta": "Contact us"
+    "contactCta": "Contact us",
+    "skipToContent": "Skip to main content"
   },
   "banner": {
     "ariaLabel": "Featured services",
@@ -114,13 +115,6 @@
         "text": "We arrive when we say we will."
       }
     }
-  },
-  "stats": {
-    "ariaLabel": "Our numbers",
-    "customers": "Satisfied customers",
-    "buildings": "Buildings cleaned",
-    "employees": "Clever employees",
-    "offices": "Offices worldwide"
   },
   "news": {
     "eyebrow": "Blog",
