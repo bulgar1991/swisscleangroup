@@ -1,54 +1,76 @@
 @let item = service();
 
-<app-page-header [titleKey]="item.key + '.title'" [image]="item.image" />
+<article class="article-page" data-testid="service-detail">
+  <app-page-header
+    [titleKey]="item.key + '.title'"
+    [image]="item.image"
+    [parent]="{ labelKey: 'header.menu.services', link: '/services' }"
+  />
 
-<article class="article-page">
-  <div class="container mx-auto px-4 lg:px-6">
+  <div class="container mx-auto px-4 lg:px-6 article-page__container">
     <div class="article-page__inner">
-      <p class="article-page__lead">{{ item.key + '.description' | translate }}</p>
+      <div data-testid="service-detail-content">
+        <p class="article-page__lead">{{ item.key + '.description' | translate }}</p>
 
-      @for (paragraph of item.key + '.content' | translate; track $index) {
-        <p class="article-page__paragraph">{{ paragraph }}</p>
-      }
-
-      <h2 class="article-page__subtitle">{{ 'servicesSlider.included' | translate }}</h2>
-      <ul class="article-page__features">
-        @for (feature of item.key + '.features' | translate; track $index) {
-          <li>
-            <i class="icon-check-circle" aria-hidden="true"></i>
-            {{ feature }}
-          </li>
+        @for (paragraph of item.key + '.content' | translate; track $index) {
+          <p class="article-page__paragraph">{{ paragraph }}</p>
         }
-      </ul>
+
+        <h2 class="article-page__subtitle">{{ 'servicesSlider.included' | translate }}</h2>
+        <ul class="article-page__features" data-testid="service-detail-features">
+          @for (feature of item.key + '.features' | translate; track $index) {
+            <li>
+              <i class="icon-circle-check-solid-full" aria-hidden="true"></i>
+              {{ feature }}
+            </li>
+          }
+        </ul>
+      </div>
 
       <div class="article-page__actions">
         <!-- The quote form lives on the home page. -->
-        <a class="btn" routerLink="/" fragment="quote">{{
+        <a class="btn" routerLink="/" fragment="quote" data-testid="service-detail-quote-cta">{{
           'servicesSlider.requestQuote' | translate
         }}</a>
-        <a class="article-page__back" routerLink="/services">
-          <i class="icon-chevron-left" aria-hidden="true"></i>
+        <a class="article-page__back" routerLink="/services" data-testid="service-detail-back">
+          <i class="icon-angle-left-solid-full" aria-hidden="true"></i>
           {{ 'servicesSlider.backToServices' | translate }}
         </a>
       </div>
     </div>
+  </div>
+</article>
 
-    @if (otherServices().length) {
-      <aside class="article-page__more" aria-labelledby="more-services-title">
+@if (otherServices().length) {
+  <aside class="article-page__related" aria-labelledby="more-services-title" data-testid="related-services">
+    <div class="container mx-auto px-4 lg:px-6">
+      <div class="article-page__more">
         <h2 id="more-services-title" class="article-page__more-title">
           {{ 'servicesSlider.moreServices' | translate }}
         </h2>
         <ul class="article-page__more-list">
           @for (other of otherServices(); track other.id) {
             <li>
-              <a class="article-page__more-link" [routerLink]="other.link">
-                <img class="article-page__more-image" [src]="other.image" alt="" loading="lazy" />
+              <a
+                class="article-page__more-link"
+                [routerLink]="other.link"
+                [attr.data-testid]="'related-service-' + other.id"
+              >
+                <img
+                  class="article-page__more-image"
+                  [src]="other.image"
+                  alt=""
+                  width="1280"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <span class="article-page__more-name">{{ other.key + '.title' | translate }}</span>
               </a>
             </li>
           }
         </ul>
-      </aside>
-    }
-  </div>
-</article>
+      </div>
+    </div>
+  </aside>
+}

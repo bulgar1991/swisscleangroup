@@ -18,6 +18,7 @@ export class ServicesSliderComponent implements AfterViewInit, OnDestroy {
 
   services: ServicePost[] = SERVICE_POSTS
 
+
   ngAfterViewInit(): void {
     this.swiper = new Swiper(this.swiperEl.nativeElement, {
       modules: [Navigation, Pagination],

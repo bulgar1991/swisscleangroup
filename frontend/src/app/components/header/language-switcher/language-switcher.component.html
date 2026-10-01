@@ -6,11 +6,16 @@
       [attr.aria-expanded]="open()"
       aria-haspopup="true"
       [attr.aria-label]="'header.language' | translate"
+      data-testid="language-switcher-toggle"
       (click)="toggle()"
     >
-      <img class="language-switcher__flag" [src]="currentLanguage().flag" alt="" aria-hidden="true">
+      <img class="language-switcher__flag" [src]="currentLanguage().flag" alt="" width="21" height="14" />
       {{ currentLanguage().label }}
-      <i class="icon-chevron-down language-switcher__chevron" [class.language-switcher__chevron--open]="open()" aria-hidden="true"></i>
+      <i
+        class="icon-angle-down-solid-full language-switcher__chevron"
+        [class.language-switcher__chevron--open]="open()"
+        aria-hidden="true"
+      ></i>
     </button>
 
     <ul class="language-switcher__menu" [class.language-switcher__menu--open]="open()">
@@ -21,9 +26,10 @@
             class="language-switcher__option"
             [class.language-switcher__option--active]="lang.code === currentCode()"
             [attr.lang]="lang.code"
+            [attr.data-testid]="'language-option-' + lang.code"
             (click)="select(lang.code)"
           >
-            <img class="language-switcher__flag" [src]="lang.flag" alt="" aria-hidden="true">
+            <img class="language-switcher__flag" [src]="lang.flag" alt="" width="21" height="14" />
             <span class="language-switcher__code">{{ lang.label }}</span>
             {{ lang.name }}
           </button>
@@ -32,7 +38,11 @@
     </ul>
   </div>
 } @else {
-  <div class="language-switcher language-switcher--inline" role="group" [attr.aria-label]="'header.language' | translate">
+  <div
+    class="language-switcher language-switcher--inline"
+    role="group"
+    [attr.aria-label]="'header.language' | translate"
+  >
     @for (lang of languages; track lang.code) {
       <button
         type="button"
@@ -41,9 +51,10 @@
         [attr.aria-pressed]="lang.code === currentCode()"
         [attr.lang]="lang.code"
         [title]="lang.name"
+        [attr.data-testid]="'language-option-' + lang.code"
         (click)="select(lang.code)"
       >
-        <img class="language-switcher__flag" [src]="lang.flag" alt="" aria-hidden="true">
+        <img class="language-switcher__flag" [src]="lang.flag" alt="" width="21" height="14" />
         {{ lang.label }}
       </button>
     }

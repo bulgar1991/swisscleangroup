@@ -1,4 +1,4 @@
-<section id="quote" class="quote" aria-labelledby="quote-title">
+<section id="quote" class="quote" aria-labelledby="quote-title" data-testid="quote-section">
   <div class="container mx-auto px-4 lg:px-6">
     <div class="quote__card">
       <!-- Left: why ask for a quote -->
@@ -10,17 +10,17 @@
         <ul class="quote__benefits">
           @for (benefit of benefits; track benefit) {
             <li>
-              <i class="icon-check-circle" aria-hidden="true"></i>
+              <i class="icon-circle-check-solid-full" aria-hidden="true"></i>
               {{ benefit | translate }}
             </li>
           }
         </ul>
 
         <div class="quote__call">
-          <span class="quote__call-icon" aria-hidden="true"><i class="icon-phone"></i></span>
+          <span class="quote__call-icon" aria-hidden="true"><i class="icon-phone-solid-full"></i></span>
           <div>
             <p class="quote__call-label">{{ 'quoteForm.preferToCall' | translate }}</p>
-            <a class="quote__call-number" [href]="phoneHref">{{ phone }}</a>
+            <a class="quote__call-number" [href]="phoneHref" data-testid="quote-call-link">{{ phone }}</a>
           </div>
         </div>
       </div>
@@ -28,20 +28,21 @@
       <!-- Right: the form -->
       <div class="quote__form-wrapper">
         @if (status() === 'success') {
-          <div class="form-result form-result--success" role="status">
-            <i class="icon-check-circle" aria-hidden="true"></i>
+          <div class="form-result form-result--success" role="status" data-testid="quote-form-success">
+            <i class="icon-circle-check-solid-full" aria-hidden="true"></i>
             <h3>{{ 'quoteForm.successTitle' | translate }}</h3>
             <p>{{ 'quoteForm.successText' | translate }}</p>
-            <button type="button" class="btn form-again" (click)="reset()">
+            <button type="button" class="btn form-again" data-testid="quote-form-send-another" (click)="reset()">
               {{ 'quoteForm.sendAnother' | translate }}
             </button>
           </div>
         } @else {
-          <form class="quote__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+          <form class="quote__form" data-testid="quote-form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
             <div class="field">
               <label for="quote-name">{{ 'quoteForm.fields.name' | translate }} <span aria-hidden="true">*</span></label>
-              <input id="quote-name" type="text" formControlName="name" autocomplete="name"
-                [attr.aria-invalid]="showError('name')" [placeholder]="'quoteForm.placeholders.name' | translate">
+              <input id="quote-name" data-testid="quote-form-name" aria-required="true" type="text"
+                formControlName="name" autocomplete="name" [attr.aria-invalid]="showError('name')"
+                [placeholder]="'quoteForm.placeholders.name' | translate">
               @if (showError('name')) {
                 <p class="field__error">{{ 'quoteForm.errors.name' | translate }}</p>
               }
@@ -49,8 +50,9 @@
 
             <div class="field">
               <label for="quote-phone">{{ 'quoteForm.fields.phone' | translate }} <span aria-hidden="true">*</span></label>
-              <input id="quote-phone" type="tel" formControlName="phone" autocomplete="tel"
-                [attr.aria-invalid]="showError('phone')" placeholder="+41 79 123 45 67">
+              <input id="quote-phone" data-testid="quote-form-phone" aria-required="true" type="tel"
+                formControlName="phone" autocomplete="tel" [attr.aria-invalid]="showError('phone')"
+                placeholder="+41 79 123 45 67">
               @if (showError('phone')) {
                 <p class="field__error">{{ 'quoteForm.errors.phone' | translate }}</p>
               }
@@ -58,8 +60,9 @@
 
             <div class="field">
               <label for="quote-email">{{ 'quoteForm.fields.email' | translate }} <span aria-hidden="true">*</span></label>
-              <input id="quote-email" type="email" formControlName="email" autocomplete="email"
-                [attr.aria-invalid]="showError('email')" [placeholder]="'quoteForm.placeholders.email' | translate">
+              <input id="quote-email" data-testid="quote-form-email" aria-required="true" type="email"
+                formControlName="email" autocomplete="email" [attr.aria-invalid]="showError('email')"
+                [placeholder]="'quoteForm.placeholders.email' | translate">
               @if (showError('email')) {
                 <p class="field__error">{{ 'quoteForm.errors.email' | translate }}</p>
               }
@@ -68,13 +71,14 @@
             <div class="field">
               <label for="quote-service">{{ 'quoteForm.fields.service' | translate }} <span aria-hidden="true">*</span></label>
               <div class="field__select">
-                <select id="quote-service" formControlName="service" [attr.aria-invalid]="showError('service')">
+                <select id="quote-service" data-testid="quote-form-service" aria-required="true"
+                  formControlName="service" [attr.aria-invalid]="showError('service')">
                   <option value="" disabled>{{ 'quoteForm.placeholders.service' | translate }}</option>
                   @for (option of serviceOptions; track option.id) {
                     <option [value]="option.id">{{ option.labelKey | translate }}</option>
                   }
                 </select>
-                <i class="icon-chevron-down" aria-hidden="true"></i>
+                <i class="icon-angle-down-solid-full" aria-hidden="true"></i>
               </div>
               @if (showError('service')) {
                 <p class="field__error">{{ 'quoteForm.errors.service' | translate }}</p>
@@ -83,18 +87,18 @@
 
             <div class="field">
               <label for="quote-address">{{ 'quoteForm.fields.address' | translate }}</label>
-              <input id="quote-address" type="text" formControlName="address" autocomplete="street-address"
-                [placeholder]="'quoteForm.placeholders.address' | translate">
+              <input id="quote-address" data-testid="quote-form-address" type="text" formControlName="address"
+                autocomplete="street-address" [placeholder]="'quoteForm.placeholders.address' | translate">
             </div>
 
             <div class="field">
               <label for="quote-date">{{ 'quoteForm.fields.date' | translate }}</label>
-              <input id="quote-date" type="date" formControlName="date" [min]="today">
+              <input id="quote-date" data-testid="quote-form-date" type="date" formControlName="date" [min]="today">
             </div>
 
             <div class="field field--full">
               <label for="quote-message">{{ 'quoteForm.fields.message' | translate }}</label>
-              <textarea id="quote-message" rows="4" formControlName="message"
+              <textarea id="quote-message" data-testid="quote-form-message" rows="4" formControlName="message"
                 [placeholder]="'quoteForm.placeholders.message' | translate"></textarea>
             </div>
 
@@ -102,8 +106,8 @@
             <input class="form-honeypot" type="checkbox" formControlName="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
 
             @if (status() === 'error') {
-              <div class="form-result form-result--error field--full" role="alert">
-                <i class="icon-error" aria-hidden="true"></i>
+              <div class="form-result form-result--error" role="alert" data-testid="quote-form-error">
+                <i class="icon-circle-exclamation-solid-full" aria-hidden="true"></i>
                 <p>
                   {{ 'quoteForm.errorText' | translate }}
                   <a [href]="phoneHref">{{ phone }}</a>
@@ -111,15 +115,15 @@
               </div>
             }
 
-            <div class="field--full form-footer">
+            <div class="form-footer">
               <p class="form-required">{{ 'quoteForm.required' | translate }}</p>
-              <button type="submit" class="btn form-submit" [disabled]="status() === 'sending'">
+              <button type="submit" class="btn form-submit" data-testid="quote-form-submit" [disabled]="status() === 'sending'">
                 @if (status() === 'sending') {
                   <span class="form-spinner" aria-hidden="true"></span>
                   {{ 'quoteForm.sending' | translate }}
                 } @else {
                   {{ 'quoteForm.submit' | translate }}
-                  <i class="icon-send" aria-hidden="true"></i>
+                  <i class="icon-paper-plane-solid-full" aria-hidden="true"></i>
                 }
               </button>
             </div>

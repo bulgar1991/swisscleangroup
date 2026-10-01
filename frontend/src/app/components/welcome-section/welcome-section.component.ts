@@ -23,8 +23,8 @@ export class WelcomeSectionComponent {
   image: string = 'assets/images/welcome/welcome.jpg';
 
   features: WelcomeFeature[] = [
-    { icon: 'team', key: 'welcome.features.team' },
-    { icon: 'shield-check', key: 'welcome.features.insured' },
-    { icon: 'clock', key: 'welcome.features.punctual' },
+    { icon: 'users-solid-full', key: 'welcome.features.team' },
+    { icon: 'shield-solid-full', key: 'welcome.features.insured' },
+    { icon: 'clock-regular-full', key: 'welcome.features.punctual' },
   ];
 }

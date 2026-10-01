@@ -11,7 +11,7 @@ import { LanguageService } from '@services/language.service';
   selector: 'app-blog-post',
   imports: [RouterLink, TranslatePipe, PageHeaderComponent, LocalDatePipe],
   templateUrl: './blog-post.html',
-  // Shared with the service detail page.
+  // Shared with the other article page.
   styleUrl: '../article-page.scss',
 })
 export class BlogPost {

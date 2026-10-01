@@ -1,199 +1,91 @@
 :host {
-  display: block;
+  @apply block;
 }
 
 .news {
-  padding: 4rem 0;
-  background: var(--color-surface);
-  scroll-margin-top: 5.5rem;
-
-  @media (min-width: 1024px) {
-    padding: 6rem 0;
-  }
+  @apply scroll-mt-[5.5rem] bg-surface py-16 lg:py-24;
 
   &__header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1rem 1.5rem;
-    margin-bottom: 2.5rem;
+    @apply mb-10 flex flex-wrap items-end justify-between gap-x-6 gap-y-4;
   }
 
   &__eyebrow {
-    margin: 0 0 0.5rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-primary);
+    @apply mb-2 mt-0 text-[0.85rem] font-semibold uppercase tracking-[0.12em] text-primary;
   }
 
   &__title {
-    margin: 0;
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--color-text);
+    @apply m-0 text-[clamp(1.75rem,3vw,2.5rem)] font-bold leading-[1.15] text-ink;
   }
 
   &__view-all {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.7rem 1.25rem;
-    border-radius: 999px;
-    box-shadow: inset 0 0 0 2px var(--color-primary);
-    color: var(--color-primary);
-    font-weight: 600;
-    text-decoration: none;
-    transition:
-      background-color 0.2s,
-      color 0.2s;
-
-    &:hover {
-      background: var(--color-primary);
-      color: #fff;
-    }
+    @apply inline-flex items-center gap-[0.4rem] rounded-full px-5 py-[0.7rem] font-semibold text-primary no-underline shadow-[inset_0_0_0_2px_theme(colors.primary)] transition-colors duration-200;
+    @apply hover:bg-primary hover:text-white;
   }
 
   &__grid {
-    display: grid;
-    gap: 1.5rem;
-
-    @media (min-width: 640px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
+    @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8;
   }
 }
 
 .news-card {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: 1rem;
-  background: var(--color-surface);
-  box-shadow: 0 2px 8px rgb(0 0 0 / 4%);
-  transition:
-    transform 0.25s,
-    box-shadow 0.25s;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 32px rgb(0 0 0 / 10%);
-  }
+  @apply relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_2px_8px_theme(colors.black/4%)] transition-[transform,box-shadow] duration-[250ms];
+  @apply hover:-translate-y-1 hover:shadow-[0_16px_32px_theme(colors.black/10%)];
 
   &__image-wrapper {
-    position: relative;
-    display: block;
-    aspect-ratio: 10 / 7;
-    overflow: hidden;
-    background: var(--color-background);
+    @apply relative block aspect-[10/7] overflow-hidden bg-background;
   }
 
   &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
+    @apply h-full w-full object-cover transition-transform duration-500;
   }
 
   &:hover &__image {
-    transform: scale(1.06);
+    @apply scale-[1.06];
   }
 
   &__category {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    padding: 0.3rem 0.75rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #fff;
-    background: var(--color-primary);
+    @apply absolute left-4 top-4 z-[1] rounded-full bg-primary px-3 py-[0.3rem] text-xs font-bold uppercase tracking-[0.06em] text-white;
 
     &--news {
-      background: #1a1a1a;
+      @apply bg-ink;
     }
   }
 
   &__body {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 1.5rem;
+    @apply flex flex-1 flex-col p-6;
   }
 
   &__date {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin: 0 0 0.75rem;
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
+    @apply mb-3 mt-0 flex items-center gap-[0.4rem] text-[0.85rem] text-ink-muted;
 
     i {
-      color: var(--color-primary);
-      font-size: 1rem;
+      @apply text-base text-primary;
     }
   }
 
   &__title {
-    margin: 0 0 0.75rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.35;
+    @apply mb-3 mt-0 text-[1.2rem] font-bold leading-[1.35];
 
     a {
-      color: var(--color-text);
-      text-decoration: none;
-      transition: color 0.2s;
-
-      &:hover {
-        color: var(--color-primary);
-      }
+      @apply text-ink no-underline transition-colors duration-200 hover:text-primary;
     }
   }
 
+  // Clamped so all cards keep the same height, even with longer texts.
   &__excerpt {
-    margin: 0 0 1.25rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--color-text-muted);
-    // Keep all cards the same height, even with longer texts.
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    @apply mb-5 mt-0 line-clamp-3 text-[0.95rem] leading-relaxed text-ink-muted;
   }
 
+  // Pinned to the bottom so all cards line up.
   &__read-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    align-self: flex-start;
-    // Pinned to the bottom so all cards line up.
-    margin-top: auto;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--color-primary);
-    text-decoration: none;
+    @apply mt-auto inline-flex items-center gap-[0.4rem] self-start text-[0.95rem] font-semibold text-primary no-underline;
 
     i {
-      transition: transform 0.2s;
+      @apply transition-transform duration-200;
     }
 
     &:hover i {
-      transform: translateX(4px);
+      @apply translate-x-1;
     }
   }
 }

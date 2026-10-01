@@ -27,7 +27,7 @@ export const NEWS_POSTS: NewsPost[] = [
     key: 'news.posts.prepareAssembly',
   },
   {
-    id: 'spring-cleaning',
+    id: 'autumn-window-cleaning',
     image: 'assets/images/news/autumn-cleaning.jpg',
     date: '2026-08-10',
     category: 'news',

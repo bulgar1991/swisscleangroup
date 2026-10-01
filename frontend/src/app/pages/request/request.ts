@@ -7,8 +7,8 @@ import { BookingService } from '../../services/booking.service';
 @Component({
   selector: 'app-request',
   imports: [ReactiveFormsModule, RouterLink],
-  templateUrl: './request.html',
   styleUrl: './request.scss',
+  templateUrl: './request.html',
 })
 export class Request implements OnInit {
   private route = inject(ActivatedRoute);

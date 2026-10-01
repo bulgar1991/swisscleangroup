@@ -1,105 +1,61 @@
 :host {
-  display: block;
+  @apply block;
 }
 
 .services-slider {
-  padding: 4rem 0;
-  background: var(--color-surface);
+  @apply bg-surface py-16;
 
   &__header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    @apply mb-8 flex items-end justify-between gap-6;
   }
 
   &__eyebrow {
-    margin: 0 0 0.5rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-primary);
+    @apply mb-2 mt-0 text-[0.85rem] font-semibold uppercase tracking-[0.12em] text-primary;
   }
 
   &__title {
-    margin: 0;
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--color-text);
+    @apply m-0 text-[clamp(1.75rem,3vw,2.5rem)] font-bold leading-[1.15] text-ink;
   }
 
   &__arrows {
-    display: none;
-    gap: 0.5rem;
-    flex-shrink: 0;
-
-    @media (min-width: 640px) {
-      display: flex;
-    }
+    @apply hidden shrink-0 gap-2 sm:flex;
   }
 
   &__arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid var(--color-border);
-    border-radius: 50%;
-    background: var(--color-surface);
-    color: var(--color-text);
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition:
-      background-color 0.2s,
-      border-color 0.2s,
-      color 0.2s;
+    @apply flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-border bg-surface text-2xl text-ink transition-colors duration-200;
 
     &:hover:not(.swiper-button-disabled) {
-      background: var(--color-primary);
-      border-color: var(--color-primary);
-      color: #fff;
+      @apply border-primary bg-primary text-white;
     }
 
     // Swiper adds this class at the first/last slide.
     &.swiper-button-disabled {
-      opacity: 0.35;
-      cursor: default;
+      @apply cursor-default opacity-35;
     }
 
     // ...and this one when all slides already fit, so there's nothing to scroll.
     &.swiper-button-lock {
-      display: none;
+      @apply hidden;
     }
   }
 
   // Room for the card shadow and hover lift, which the swiper would otherwise clip.
   &__swiper {
-    padding: 0.5rem 0.25rem 1rem;
-    margin: -0.5rem -0.25rem 0;
+    @apply -mx-1 -mt-2 mb-0 px-1 pb-4 pt-2;
   }
 
   &__slide {
-    height: auto;
+    @apply h-auto;
   }
 
   // Swiper renders the bullets itself, so style them through its CSS variables.
   &__pagination {
-    --swiper-pagination-color: var(--color-primary);
-    --swiper-pagination-bullet-inactive-color: var(--color-text-muted);
-    --swiper-pagination-bullet-inactive-opacity: 0.3;
-    --swiper-pagination-bullet-size: 10px;
-
-    display: flex;
-    justify-content: center;
-    gap: 0.25rem;
-    margin-top: 1.25rem;
+    @apply mt-5 flex justify-center gap-1;
+    @apply [--swiper-pagination-bullet-inactive-color:theme(colors.ink-muted)] [--swiper-pagination-bullet-inactive-opacity:0.3];
+    @apply [--swiper-pagination-bullet-size:10px] [--swiper-pagination-color:theme(colors.primary)];
 
     &.swiper-pagination-lock {
-      display: none;
+      @apply hidden;
     }
   }
 }

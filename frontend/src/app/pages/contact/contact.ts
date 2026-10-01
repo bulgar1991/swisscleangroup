@@ -8,6 +8,8 @@ import { IconsId } from '@models/icons';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/contact';
 
 interface ContactCard {
+  // Stable name, used in data-testid attributes.
+  id: string;
   icon: IconsId;
   // Translation key for the card title.
   titleKey: string;
@@ -19,26 +21,29 @@ interface ContactCard {
 @Component({
   selector: 'app-contact',
   imports: [NgTemplateOutlet, TranslatePipe, PageHeaderComponent, ContactButtonsComponent, ContactFormComponent],
-  templateUrl: './contact.html',
   styleUrl: './contact.scss',
+  templateUrl: './contact.html',
 })
 export class Contact {
   cards: ContactCard[] = [
     {
-      icon: 'phone',
+      id: 'phone',
+      icon: 'phone-solid-full',
       titleKey: 'pages.contact.phone',
       lines: [CONTACT_PHONE],
       href: 'tel:' + CONTACT_PHONE.replace(/\s/g, ''),
     },
     {
-      icon: 'whatsapp',
+      id: 'whatsapp',
+      icon: 'whatsapp-brands-solid-full',
       titleKey: 'pages.contact.whatsapp',
       lines: [CONTACT_PHONE],
       href: 'https://wa.me/' + CONTACT_PHONE.replace(/\D/g, ''),
       external: true,
     },
     {
-      icon: 'email',
+      id: 'email',
+      icon: 'envelope-solid-full',
       titleKey: 'pages.contact.email',
       lines: [CONTACT_EMAIL],
       href: 'mailto:' + CONTACT_EMAIL,

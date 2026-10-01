@@ -16,7 +16,8 @@
     "mainMenu": "Hauptmenü",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schliessen",
-    "contactCta": "Kontakt aufnehmen"
+    "contactCta": "Kontakt aufnehmen",
+    "skipToContent": "Zum Hauptinhalt springen"
   },
   "banner": {
     "ariaLabel": "Unsere wichtigsten Dienstleistungen",
@@ -114,13 +115,6 @@
         "text": "Wir kommen zur vereinbarten Zeit."
       }
     }
-  },
-  "stats": {
-    "ariaLabel": "Unsere Zahlen",
-    "customers": "Zufriedene Kunden",
-    "buildings": "Gereinigte Gebäude",
-    "employees": "Qualifizierte Mitarbeitende",
-    "offices": "Büros weltweit"
   },
   "news": {
     "eyebrow": "Blog",

@@ -16,7 +16,8 @@
     "mainMenu": "Menu principal",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "contactCta": "Contactez-nous"
+    "contactCta": "Contactez-nous",
+    "skipToContent": "Aller au contenu principal"
   },
   "banner": {
     "ariaLabel": "Nos services phares",
@@ -114,13 +115,6 @@
         "text": "Nous arrivons à l'heure convenue."
       }
     }
-  },
-  "stats": {
-    "ariaLabel": "Nos chiffres",
-    "customers": "Clients satisfaits",
-    "buildings": "Bâtiments nettoyés",
-    "employees": "Employés qualifiés",
-    "offices": "Bureaux dans le monde"
   },
   "news": {
     "eyebrow": "Blog",

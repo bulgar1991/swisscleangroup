@@ -1,11 +1,12 @@
 <app-page-header
   titleKey="pages.services.title"
   subtitleKey="pages.services.subtitle"
-  image="assets/images/banner/window-cleaning.jpg"
+  image="assets/images/services/window-cleaning.jpg"
 />
 
-<section class="services-page">
+<section class="services-page" aria-labelledby="services-list-title" data-testid="services-page">
   <div class="container mx-auto px-4 lg:px-6">
+    <h2 id="services-list-title" class="sr-only">{{ 'servicesSlider.title' | translate }}</h2>
     <div class="services-page__grid">
       @for (service of services; track service.id) {
         <app-service-card [service]="service" />
@@ -17,7 +18,9 @@
         <h2>{{ 'pages.services.ctaTitle' | translate }}</h2>
         <p>{{ 'pages.services.ctaText' | translate }}</p>
       </div>
-      <a class="btn services-page__cta-button" routerLink="/contact">{{ 'pages.services.ctaButton' | translate }}</a>
+      <a class="btn services-page__cta-button" routerLink="/contact" data-testid="services-page-cta">{{
+        'pages.services.ctaButton' | translate
+      }}</a>
     </div>
   </div>
 </section>

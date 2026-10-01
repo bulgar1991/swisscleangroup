@@ -6,6 +6,8 @@ import { TranslatePipe } from '@ngx-translate/core';
  * Title band at the top of inner pages, with a breadcrumb back to home.
  *
  *   <app-page-header titleKey="pages.about.title" subtitleKey="pages.about.subtitle" />
+ *
+ * `parent` adds a middle breadcrumb step, e.g. Home > Blog > <post title>.
  */
 @Component({
   imports: [RouterLink, TranslatePipe],
@@ -16,6 +18,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class PageHeaderComponent {
   titleKey = input.required<string>();
   subtitleKey = input<string>();
-  // Dummy placeholder photo - replace or pass a different one per page.
-  image = input('assets/images/banner/team.jpg');
+  parent = input<{ labelKey: string; link: string }>();
+  // Placeholder photo - pass a different one per page.
+  image = input('assets/images/banner/banner-1.jpg');
 }

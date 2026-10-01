@@ -15,28 +15,28 @@ export interface ContactLink {
 export const CONTACT_LINKS: ContactLink[] = [
   {
     id: 'phone',
-    icon: 'phone',
+    icon: 'phone-solid-full',
     href: 'tel:' + CONTACT_PHONE.replace(/\s/g, ''),
     labelKey: 'header.contacts.phone',
     external: false,
   },
   {
     id: 'whatsapp',
-    icon: 'whatsapp',
+    icon: 'whatsapp-brands-solid-full',
     href: 'https://wa.me/' + CONTACT_PHONE.replace(/\D/g, ''),
     labelKey: 'header.contacts.whatsapp',
     external: true,
   },
   {
     id: 'facebook',
-    icon: 'facebook',
+    icon: 'facebook-f-brands-solid-full',
     href: 'https://www.facebook.com/',
     labelKey: 'header.contacts.facebook',
     external: true,
   },
   {
     id: 'instagram',
-    icon: 'instagram',
+    icon: 'instagram-brands-solid-full',
     href: 'https://www.instagram.com/',
     labelKey: 'header.contacts.instagram',
     external: true,

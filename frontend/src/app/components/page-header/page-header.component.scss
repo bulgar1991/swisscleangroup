@@ -1,76 +1,47 @@
 :host {
-  display: block;
+  @apply block;
 }
 
 .page-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 16rem;
-  overflow: hidden;
-  padding: 3.5rem 0;
-  background: #1a2a33;
-  color: #fff;
-
-  @media (min-width: 1024px) {
-    min-height: 20rem;
-  }
+  @apply relative flex min-h-64 items-center overflow-hidden bg-dark-slate py-14 text-white lg:min-h-80;
 
   &__image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
+    @apply absolute inset-0 h-full w-full max-w-none object-cover;
   }
 
   &__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgb(20 20 20 / 85%) 0%, rgb(20 20 20 / 55%) 60%, rgb(218 41 28 / 35%) 100%);
+    @apply absolute inset-0 bg-gradient-to-r from-dark/85 via-dark/55 via-60% to-primary/35;
   }
 
   &__content {
-    position: relative;
+    @apply relative;
   }
 
   &__breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.35rem;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    color: rgb(255 255 255 / 75%);
+    @apply mb-4 text-[0.9rem] text-white/75;
+
+    ol {
+      @apply m-0 flex list-none flex-wrap items-center gap-[0.35rem] p-0;
+    }
+
+    li {
+      @apply flex items-center gap-[0.35rem];
+    }
 
     a {
-      color: #fff;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      @apply text-white no-underline hover:underline;
     }
 
     i {
-      font-size: 1.1rem;
-      color: var(--color-primary);
+      @apply text-[1.1rem] text-primary;
     }
   }
 
   &__title {
-    margin: 0;
-    font-size: clamp(2rem, 5vw, 3.25rem);
-    font-weight: 800;
-    line-height: 1.1;
+    @apply m-0 text-[clamp(2rem,5vw,3.25rem)] font-extrabold leading-[1.1];
   }
 
   &__subtitle {
-    max-width: 38rem;
-    margin: 1rem 0 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: rgb(255 255 255 / 85%);
+    @apply mb-0 mt-4 max-w-[38rem] text-[1.1rem] leading-relaxed text-white/85;
   }
 }

@@ -1,12 +1,16 @@
-<header class="site-header site-header--desktop">
+<div class="site-header">
   <div class="container mx-auto px-6">
-    <div class="site-header__inner-container flex items-center gap-10">
-      <a class="site-header__logo-container shrink-0" routerLink="/">
-        <img [src]="siteLogo" alt="Swiss Clean Group">
+    <div class="site-header__inner-container">
+      <a class="site-header__logo-container" routerLink="/" data-testid="header-logo">
+        <img [src]="siteLogo" alt="Swiss Clean Group" width="192" height="64" />
       </a>
 
-      <nav class="site-header__menu flex-1" [attr.aria-label]="'header.mainMenu' | translate">
-        <ul class="flex items-center justify-center gap-8">
+      <nav
+        class="site-header__menu"
+        [attr.aria-label]="'header.mainMenu' | translate"
+        data-testid="header-navigation"
+      >
+        <ul>
           @for (item of menuItems; track item.labelKey) {
             <li>
               <a
@@ -14,17 +18,20 @@
                 [routerLink]="item.link"
                 routerLinkActive="site-header__menu-link--active"
                 [routerLinkActiveOptions]="activeOptions"
-              >{{ item.labelKey | translate }}</a>
+                ariaCurrentWhenActive="page"
+                [attr.data-testid]="'header-nav-link-' + item.id"
+                >{{ item.labelKey | translate }}</a
+              >
             </li>
           }
         </ul>
       </nav>
 
-      <div class="site-header__actions flex items-center gap-5 shrink-0">
+      <div class="site-header__actions">
         <app-contact-buttons />
         <span class="site-header__divider" aria-hidden="true"></span>
         <app-language-switcher variant="dropdown" />
       </div>
     </div>
   </div>
-</header>
+</div>
