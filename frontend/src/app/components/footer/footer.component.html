@@ -60,7 +60,20 @@
 
   <div class="site-footer__bottom">
     <div class="container mx-auto px-4 lg:px-6 site-footer__bottom-inner">
-      <p class="site-footer__copyright">© {{ year }} Swiss Clean Group. {{ 'footer.rights' | translate }}</p>
+      <p class="site-footer__copyright" data-testid="footer-copyright">
+        <span class="site-footer__credit" data-testid="footer-powered-by">
+          {{ 'footer.poweredBy' | translate }}
+          <img
+            class="site-footer__credit-logo"
+            [src]="developerLogo"
+            alt="CBL Tech"
+            width="634"
+            height="300"
+            loading="lazy"
+          />
+        </span>
+        <span>© {{ year }} Swiss Clean Group. {{ 'footer.rights' | translate }}</span>
+      </p>
       <div class="site-footer__legal">
         <!-- TODO: point to the real privacy and terms pages once they exist. -->
         <a routerLink="/" data-testid="footer-privacy-link">{{ 'footer.privacy' | translate }}</a>
