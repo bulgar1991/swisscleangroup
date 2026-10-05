@@ -1,8 +1,8 @@
 import { IconsId } from '@models/icons';
 
-// Dummy contact data - replace with the real details. Used by the header and the footer.
-export const CONTACT_PHONE = '+41 00 000 00 00';
-export const CONTACT_EMAIL = 'info@swisscleangroup.ch';
+// Contact details used across the site (header, footer, contact page, forms).
+export const CONTACT_PHONE = '+41 78 323 10 39';
+export const CONTACT_EMAIL = 'swisscleangroup@hotmail.com';
 
 export interface ContactLink {
   id: string;
