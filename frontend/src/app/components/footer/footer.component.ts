@@ -14,6 +14,7 @@ import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/contact';
 })
 export class FooterComponent {
   siteLogo: string = 'assets/images/header/site-logo-desktop.png';
+  developerLogo: string = 'assets/images/footer/cbl.svg';
   year = new Date().getFullYear();
 
   menuItems = MENU_ITEMS;

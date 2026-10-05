@@ -70,7 +70,16 @@
   }
 
   &__copyright {
-    @apply m-0;
+    @apply m-0 flex flex-col items-start gap-2;
+  }
+
+  &__credit {
+    @apply inline-flex items-center gap-2;
+  }
+
+  // The logo has dark text, so like the site logo it sits on a white card.
+  &__credit-logo {
+    @apply h-7 w-auto rounded-md bg-white px-2 py-0.5;
   }
 
   &__legal {
