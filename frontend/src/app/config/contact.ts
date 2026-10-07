@@ -30,7 +30,7 @@ export const CONTACT_LINKS: ContactLink[] = [
   {
     id: 'facebook',
     icon: 'facebook-f-brands-solid-full',
-    href: 'https://www.facebook.com/',
+    href: 'https://www.facebook.com/people/SwissClean-Group/61574877284649/',
     labelKey: 'header.contacts.facebook',
     external: true,
   },
