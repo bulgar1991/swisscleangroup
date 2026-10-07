@@ -3,18 +3,28 @@
 }
 
 .page-header {
-  @apply relative flex min-h-64 items-center overflow-hidden bg-dark-slate py-14 text-white lg:min-h-80;
+  @apply bg-dark-slate text-white;
 
-  &__image {
-    @apply absolute inset-0 h-full w-full max-w-none object-cover;
+  // Photo box kept by the ::before padding: 8:5 on mobile (same ratio as .post-card__image),
+  // a shorter 20:7 band from `md` up so it doesn't take over the screen.
+  &__inner {
+    @apply relative overflow-hidden;
+
+    &::before {
+      @apply block w-full pt-[62.5%] content-[''] md:pt-[35%];
+    }
   }
 
-  &__overlay {
-    @apply absolute inset-0 bg-gradient-to-r from-dark/85 via-dark/55 via-60% to-primary/35;
+  &__image-wrapper {
+    @apply absolute inset-0;
+  }
+
+  &__image {
+    @apply h-full w-full max-w-none object-cover object-top;
   }
 
   &__content {
-    @apply relative;
+    @apply py-10 lg:py-14;
   }
 
   &__breadcrumb {

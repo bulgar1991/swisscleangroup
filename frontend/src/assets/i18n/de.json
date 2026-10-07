@@ -268,7 +268,8 @@
     "blog": {
       "title": "Blog",
       "subtitle": "Neuigkeiten, Tipps und Ratschläge vom Team der Swiss Clean Group."
-    }
+    },
+    "loading": "Wird geladen…"
   },
   "seo": {
     "home": {
