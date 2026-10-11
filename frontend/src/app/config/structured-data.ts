@@ -74,7 +74,6 @@ export function service(
 
 // Price list as a schema.org OfferCatalog.
 export function offerCatalog(translate: Translate, page: PricingPage, url: string): object {
-  // The headline prices (the tiles); the tables below them only add detail.
   const offers = page.tiles.map((tile) => ({
     price: tile,
     nameKey: `${page.key}.tiles.${tile.id}.title`,

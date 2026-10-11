@@ -298,15 +298,8 @@
   },
   "pricing": {
     "from": "from",
-    "popular": "Most popular",
-    "service": "Service",
-    "price": "Price",
     "units": {
-      "window": "/ window",
-      "item": "/ item",
-      "hour": "/ hour",
-      "meter": "/ linear metre",
-      "appliance": "/ appliance"
+      "hour": "/ hour"
     },
     "notesTitle": "Good to know",
     "disclaimer": "Guide prices in Swiss francs, VAT included. The final price is confirmed in your free quote, before any work starts.",
@@ -352,115 +345,30 @@
     "furnitureKitchen": {
       "title": "Furniture & kitchen assembly prices",
       "subtitle": "Flat-pack furniture, wardrobes and kitchens of every brand, assembled with care.",
-      "seoTitle": "Furniture & kitchen assembly prices – clear rates",
-      "seoDescription": "Furniture and kitchen assembly prices: fixed price per item, hourly rate, kitchen assembly per linear metre, appliance installation. Free quote.",
-      "intro": "A fixed price per item for everyday assembly, an hourly rate for custom work, and a price per linear metre for kitchens. Tools and packaging removal included.",
-      "packagesTitle": "Our options",
-      "packages": {
-        "smallFurniture": {
-          "name": "Single item",
-          "description": "A fixed price per item, known in advance.",
-          "features": [
-            "Shelves, chests, beds, wardrobes",
-            "Every brand (IKEA, Conforama, Lipo...)",
-            "Adjusted and ready to use"
-          ]
-        },
-        "hourly": {
-          "name": "Hourly rate",
-          "description": "For several items or custom work.",
-          "features": [
-            "Price per fitter",
-            "Ideal when moving in",
-            "2 hours minimum"
-          ]
-        },
-        "kitchen": {
-          "name": "Kitchen assembly",
-          "description": "Flat-pack kitchens, fitted from start to finish.",
-          "features": [
-            "Cabinets, doors and plinths",
-            "Levelling and wall fixing",
-            "Cut-outs and appliances as options"
-          ]
-        }
-      },
-      "groups": {
-        "furniture": "Furniture assembly",
-        "kitchen": "Kitchens"
-      },
-      "items": {
-        "shelf": {
-          "name": "Shelf or bookcase"
-        },
-        "chest": {
-          "name": "Chest of drawers"
-        },
-        "tvUnit": {
-          "name": "TV unit or desk"
-        },
-        "bed": {
-          "name": "Double bed"
-        },
-        "wardrobe2": {
-          "name": "2-door wardrobe"
-        },
-        "wardrobe3": {
-          "name": "Large wardrobe, 3 doors or more",
-          "note": "For example IKEA PAX, sliding doors"
-        },
-        "wallFixing": {
-          "name": "Anti-tip wall fixing",
-          "note": "Recommended for wardrobes and tall shelves"
-        },
-        "kitchenAssembly": {
-          "name": "Flat-pack kitchen assembly",
-          "note": "Wall and base cabinets, doors, plinths"
-        },
-        "kitchenRemoval": {
-          "name": "Removing the old kitchen"
-        },
-        "worktopCutout": {
-          "name": "Worktop cut-out",
-          "note": "For the sink or hob"
-        },
-        "appliance": {
-          "name": "Built-in appliance installation",
-          "note": "Oven, dishwasher, fridge"
-        },
-        "disassembly": {
-          "name": "Taking apart an item"
-        }
-      },
+      "seoTitle": "Furniture & kitchen assembly prices – from CHF 60",
+      "seoDescription": "Prices: furniture assembly from CHF 60, disassembly from CHF 50, kitchen assembly from CHF 500, kitchen disassembly from CHF 300. Free, no-obligation quote.",
+      "intro": "A clear starting price for assembling and taking apart your furniture and kitchen. Tools and packaging removal included.",
       "notes": [
         "Fixed electrical and water connections are made by a licensed installer.",
         "Travel included within our service area.",
         "Delivery and carrying furniture upstairs on request."
       ],
       "tiles": {
-        "furniture": {
-          "title": "Small furniture",
-          "text": "Shelf, chest of drawers, TV unit"
+        "furnitureAssembly": {
+          "title": "Furniture assembly",
+          "text": "Flat-pack furniture of every brand"
         },
-        "bed": {
-          "title": "Bed",
-          "text": "Single and double beds, bed bases"
+        "furnitureDisassembly": {
+          "title": "Furniture disassembly",
+          "text": "Before a move or a clear-out"
         },
-        "wardrobe": {
-          "title": "Wardrobe",
-          "text": "Wardrobes and walk-ins, IKEA PAX"
+        "kitchenAssembly": {
+          "title": "Kitchen assembly",
+          "text": "Flat-pack kitchen, fitted from start to finish"
         },
-        "kitchen": {
-          "title": "Kitchen",
-          "text": "Full flat-pack kitchen assembly"
-        },
-        "appliance": {
-          "title": "Appliances",
-          "text": "Oven, dishwasher, fridge"
-        },
-        "other": {
-          "title": "Other",
-          "text": "Taking apart, wall fixing, adjustments"
+        "kitchenDisassembly": {
+          "title": "Kitchen disassembly",
+          "text": "Old kitchen taken apart cleanly"
         }
       },
       "tilesNote": {

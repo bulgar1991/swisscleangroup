@@ -298,15 +298,8 @@
   },
   "pricing": {
     "from": "ab",
-    "popular": "Am beliebtesten",
-    "service": "Leistung",
-    "price": "Preis",
     "units": {
-      "window": "/ Fenster",
-      "item": "/ Stück",
-      "hour": "/ Stunde",
-      "meter": "/ Laufmeter",
-      "appliance": "/ Gerät"
+      "hour": "/ Stunde"
     },
     "notesTitle": "Gut zu wissen",
     "disclaimer": "Richtpreise in Schweizer Franken, inkl. MwSt. Der Endpreis wird in Ihrer kostenlosen Offerte bestätigt, bevor wir mit der Arbeit beginnen.",
@@ -352,115 +345,30 @@
     "furnitureKitchen": {
       "title": "Preise Möbel- und Küchenmontage",
       "subtitle": "Bausatzmöbel, Schränke und Küchen aller Marken, sorgfältig montiert.",
-      "seoTitle": "Preise Möbel- und Küchenmontage – klare Tarife",
-      "seoDescription": "Preise für die Möbel- und Küchenmontage: Festpreis pro Möbel, Stundenansatz, Küchenmontage pro Laufmeter, Einbau von Geräten. Gratis-Offerte.",
-      "intro": "Festpreis pro Möbel für übliche Montagen, Stundenansatz für Arbeiten nach Mass und Preis pro Laufmeter für Küchen. Werkzeug und Entsorgung der Verpackung inklusive.",
-      "packagesTitle": "Unsere Angebote",
-      "packages": {
-        "smallFurniture": {
-          "name": "Einzelnes Möbel",
-          "description": "Ein Festpreis pro Möbel, im Voraus bekannt.",
-          "features": [
-            "Regale, Kommoden, Betten, Schränke",
-            "Alle Marken (IKEA, Conforama, Lipo...)",
-            "Möbel eingestellt und gebrauchsfertig"
-          ]
-        },
-        "hourly": {
-          "name": "Stundenansatz",
-          "description": "Für mehrere Möbel oder Arbeiten nach Mass.",
-          "features": [
-            "Preis pro Monteur",
-            "Ideal beim Einzug",
-            "Mindestens 2 Stunden"
-          ]
-        },
-        "kitchen": {
-          "name": "Küchenmontage",
-          "description": "Bausatzküchen, von A bis Z montiert.",
-          "features": [
-            "Korpusse, Fronten und Sockel",
-            "Ausrichten und Wandbefestigung",
-            "Ausschnitte und Geräte optional"
-          ]
-        }
-      },
-      "groups": {
-        "furniture": "Möbelmontage",
-        "kitchen": "Küchen"
-      },
-      "items": {
-        "shelf": {
-          "name": "Regal oder Bücherregal"
-        },
-        "chest": {
-          "name": "Kommode"
-        },
-        "tvUnit": {
-          "name": "TV-Möbel oder Schreibtisch"
-        },
-        "bed": {
-          "name": "Doppelbett"
-        },
-        "wardrobe2": {
-          "name": "Kleiderschrank 2 Türen"
-        },
-        "wardrobe3": {
-          "name": "Grosser Kleiderschrank ab 3 Türen",
-          "note": "Zum Beispiel IKEA PAX, Schiebetüren"
-        },
-        "wallFixing": {
-          "name": "Kippsicherung an der Wand",
-          "note": "Empfohlen für Schränke und hohe Regale"
-        },
-        "kitchenAssembly": {
-          "name": "Montage einer Bausatzküche",
-          "note": "Ober- und Unterschränke, Fronten, Sockel"
-        },
-        "kitchenRemoval": {
-          "name": "Demontage der alten Küche"
-        },
-        "worktopCutout": {
-          "name": "Ausschnitt in der Arbeitsplatte",
-          "note": "Für Spüle oder Kochfeld"
-        },
-        "appliance": {
-          "name": "Einbau eines Einbaugeräts",
-          "note": "Backofen, Geschirrspüler, Kühlschrank"
-        },
-        "disassembly": {
-          "name": "Demontage eines Möbels"
-        }
-      },
+      "seoTitle": "Preise Möbel- und Küchenmontage – ab CHF 60",
+      "seoDescription": "Preise: Möbelmontage ab CHF 60, Möbeldemontage ab CHF 50, Küchenmontage ab CHF 500, Küchendemontage ab CHF 300. Kostenlose, unverbindliche Offerte.",
+      "intro": "Ein klarer Startpreis für Montage und Demontage Ihrer Möbel und Ihrer Küche. Werkzeug und Entsorgung der Verpackung inklusive.",
       "notes": [
         "Feste Elektro- und Wasseranschlüsse werden von einem konzessionierten Installateur ausgeführt.",
         "Anfahrt in unserem Einsatzgebiet inklusive.",
         "Lieferung und Hochtragen der Möbel auf Anfrage."
       ],
       "tiles": {
-        "furniture": {
-          "title": "Kleines Möbel",
-          "text": "Regal, Kommode, TV-Möbel"
+        "furnitureAssembly": {
+          "title": "Möbelmontage",
+          "text": "Bausatzmöbel aller Marken"
         },
-        "bed": {
-          "title": "Bett",
-          "text": "Einzel- und Doppelbetten, Lattenroste"
+        "furnitureDisassembly": {
+          "title": "Möbeldemontage",
+          "text": "Vor einem Umzug oder einer Räumung"
         },
-        "wardrobe": {
-          "title": "Kleiderschrank",
-          "text": "Schränke und Ankleiden, IKEA PAX"
+        "kitchenAssembly": {
+          "title": "Küchenmontage",
+          "text": "Bausatzküche, von A bis Z montiert"
         },
-        "kitchen": {
-          "title": "Küche",
-          "text": "Komplette Montage von Bausatzküchen"
-        },
-        "appliance": {
-          "title": "Haushaltgeräte",
-          "text": "Backofen, Geschirrspüler, Kühlschrank"
-        },
-        "other": {
-          "title": "Weiteres",
-          "text": "Demontage, Wandbefestigung, Anpassungen"
+        "kitchenDisassembly": {
+          "title": "Küchendemontage",
+          "text": "Alte Küche sauber demontiert"
         }
       },
       "tilesNote": {

@@ -298,15 +298,8 @@
   },
   "pricing": {
     "from": "dès",
-    "popular": "Le plus demandé",
-    "service": "Prestation",
-    "price": "Prix",
     "units": {
-      "window": "/ fenêtre",
-      "item": "/ pièce",
-      "hour": "/ heure",
-      "meter": "/ mètre linéaire",
-      "appliance": "/ appareil"
+      "hour": "/ heure"
     },
     "notesTitle": "Bon à savoir",
     "disclaimer": "Prix indicatifs en francs suisses, TVA incluse. Le prix final est confirmé dans votre devis gratuit, avant toute intervention.",
@@ -352,115 +345,30 @@
     "furnitureKitchen": {
       "title": "Tarifs montage de meubles et cuisines",
       "subtitle": "Meubles en kit, armoires et cuisines de toutes marques, montés avec soin.",
-      "seoTitle": "Prix montage de meubles et cuisines – tarifs clairs",
-      "seoDescription": "Tarifs du montage de meubles et de cuisines : prix fixe par meuble, tarif horaire, montage de cuisine au mètre linéaire, pose d'électroménager. Devis gratuit.",
-      "intro": "Prix fixe par meuble pour les montages courants, tarif horaire pour les travaux sur mesure, et prix au mètre linéaire pour les cuisines. Outillage et reprise des emballages inclus.",
-      "packagesTitle": "Nos formules",
-      "packages": {
-        "smallFurniture": {
-          "name": "Meuble à l'unité",
-          "description": "Un prix fixe par meuble, connu à l'avance.",
-          "features": [
-            "Étagères, commodes, lits, armoires",
-            "Toutes marques (IKEA, Conforama, Lipo...)",
-            "Meuble réglé et prêt à l'emploi"
-          ]
-        },
-        "hourly": {
-          "name": "Tarif horaire",
-          "description": "Pour plusieurs meubles ou des travaux sur mesure.",
-          "features": [
-            "Prix par monteur",
-            "Idéal pour un emménagement",
-            "Minimum 2 heures"
-          ]
-        },
-        "kitchen": {
-          "name": "Montage de cuisine",
-          "description": "Cuisines en kit, posées de A à Z.",
-          "features": [
-            "Caissons, façades et plinthes",
-            "Mise à niveau et fixation murale",
-            "Découpes et électroménager en option"
-          ]
-        }
-      },
-      "groups": {
-        "furniture": "Montage de meubles",
-        "kitchen": "Cuisines"
-      },
-      "items": {
-        "shelf": {
-          "name": "Étagère ou bibliothèque"
-        },
-        "chest": {
-          "name": "Commode"
-        },
-        "tvUnit": {
-          "name": "Meuble TV ou bureau"
-        },
-        "bed": {
-          "name": "Lit double"
-        },
-        "wardrobe2": {
-          "name": "Armoire 2 portes"
-        },
-        "wardrobe3": {
-          "name": "Grande armoire 3 portes ou plus",
-          "note": "Par exemple IKEA PAX, portes coulissantes"
-        },
-        "wallFixing": {
-          "name": "Fixation murale anti-basculement",
-          "note": "Recommandée pour les armoires et étagères hautes"
-        },
-        "kitchenAssembly": {
-          "name": "Montage de cuisine en kit",
-          "note": "Caissons hauts et bas, façades, plinthes"
-        },
-        "kitchenRemoval": {
-          "name": "Démontage de l'ancienne cuisine"
-        },
-        "worktopCutout": {
-          "name": "Découpe du plan de travail",
-          "note": "Pour l'évier ou la plaque de cuisson"
-        },
-        "appliance": {
-          "name": "Pose d'électroménager encastrable",
-          "note": "Four, lave-vaisselle, réfrigérateur"
-        },
-        "disassembly": {
-          "name": "Démontage d'un meuble"
-        }
-      },
+      "seoTitle": "Prix montage de meubles et cuisines – dès CHF 60",
+      "seoDescription": "Tarifs : montage de meubles dès CHF 60, démontage dès CHF 50, montage de cuisine dès CHF 500, démontage de cuisine dès CHF 300. Devis gratuit et sans engagement.",
+      "intro": "Un prix de départ clair pour le montage et le démontage de vos meubles et de votre cuisine. Outillage et reprise des emballages inclus.",
       "notes": [
         "Les raccordements électriques et d'eau fixes sont réalisés par un installateur agréé.",
         "Déplacement inclus dans notre zone d'intervention.",
         "Livraison et montée des meubles sur demande."
       ],
       "tiles": {
-        "furniture": {
-          "title": "Petit meuble",
-          "text": "Étagère, commode, meuble TV"
+        "furnitureAssembly": {
+          "title": "Montage de meubles",
+          "text": "Meubles en kit de toutes marques"
         },
-        "bed": {
-          "title": "Lit",
-          "text": "Lits simples et doubles, sommiers"
+        "furnitureDisassembly": {
+          "title": "Démontage de meubles",
+          "text": "Avant un déménagement ou une évacuation"
         },
-        "wardrobe": {
-          "title": "Armoire",
-          "text": "Armoires et dressings, IKEA PAX"
+        "kitchenAssembly": {
+          "title": "Montage de cuisine",
+          "text": "Cuisine en kit, posée de A à Z"
         },
-        "kitchen": {
-          "title": "Cuisine",
-          "text": "Montage complet de cuisines en kit"
-        },
-        "appliance": {
-          "title": "Électroménager",
-          "text": "Four, lave-vaisselle, réfrigérateur"
-        },
-        "other": {
-          "title": "Autres",
-          "text": "Démontage, fixation murale, ajustements"
+        "kitchenDisassembly": {
+          "title": "Démontage de cuisine",
+          "text": "Ancienne cuisine démontée proprement"
         }
       },
       "tilesNote": {

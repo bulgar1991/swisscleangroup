@@ -1,6 +1,7 @@
 <header class="page-header" data-testid="page-header">
   <img
     class="page-header__image"
+    [class.page-header__image--bottom]="imagePosition() === 'bottom'"
     [src]="image()"
     alt=""
     width="1920"

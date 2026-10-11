@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff2?66349f9355679e93f01685edf4dcd91b") format("woff2"),
-url("./icons.woff?66349f9355679e93f01685edf4dcd91b") format("woff");
+    src: url("./icons.woff2?f49f92fbb566cf703865fca107c19cdc") format("woff2"),
+url("./icons.woff?f49f92fbb566cf703865fca107c19cdc") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -33,22 +33,22 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-screwdriver-wrench-solid-full:before {
     content: "\f106";
 }
-.icon-plug-solid-full:before {
+.icon-phone-solid-full:before {
     content: "\f107";
 }
-.icon-phone-solid-full:before {
+.icon-paper-plane-solid-full:before {
     content: "\f108";
 }
-.icon-paper-plane-solid-full:before {
+.icon-kitchen-set-solid-full:before {
     content: "\f109";
 }
-.icon-kitchen-set-solid-full:before {
+.icon-instagram-brands-solid-full:before {
     content: "\f10a";
 }
-.icon-instagram-brands-solid-full:before {
+.icon-house-solid-full:before {
     content: "\f10b";
 }
-.icon-house-solid-full:before {
+.icon-hammer:before {
     content: "\f10c";
 }
 .icon-facebook-f-brands-solid-full:before {
@@ -57,54 +57,48 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-envelope-solid-full:before {
     content: "\f10e";
 }
-.icon-door-closed-solid-full:before {
+.icon-couch-solid-full:before {
     content: "\f10f";
 }
-.icon-couch-solid-full:before {
+.icon-clock-regular-full:before {
     content: "\f110";
 }
-.icon-clock-regular-full:before {
+.icon-circle-info-solid-full:before {
     content: "\f111";
 }
-.icon-circle-info-solid-full:before {
+.icon-circle-exclamation-solid-full:before {
     content: "\f112";
 }
-.icon-circle-exclamation-solid-full:before {
+.icon-circle-check-solid-full:before {
     content: "\f113";
 }
-.icon-circle-check-solid-full:before {
+.icon-check-solid-full:before {
     content: "\f114";
 }
-.icon-check-solid-full:before {
+.icon-calendar-days-regular-full:before {
     content: "\f115";
 }
-.icon-calendar-days-regular-full:before {
+.icon-building-solid-full:before {
     content: "\f116";
 }
-.icon-building-solid-full:before {
+.icon-briefcase-solid-full:before {
     content: "\f117";
 }
-.icon-briefcase-solid-full:before {
+.icon-arrow-up-solid-full:before {
     content: "\f118";
 }
-.icon-bed-solid-full:before {
+.icon-arrow-right-solid-full:before {
     content: "\f119";
 }
-.icon-arrow-up-solid-full:before {
+.icon-angle-up-solid-full:before {
     content: "\f11a";
 }
-.icon-arrow-right-solid-full:before {
+.icon-angle-right-solid-full:before {
     content: "\f11b";
 }
-.icon-angle-up-solid-full:before {
+.icon-angle-left-solid-full:before {
     content: "\f11c";
 }
-.icon-angle-right-solid-full:before {
-    content: "\f11d";
-}
-.icon-angle-left-solid-full:before {
-    content: "\f11e";
-}
 .icon-angle-down-solid-full:before {
-    content: "\f11f";
+    content: "\f11d";
 }

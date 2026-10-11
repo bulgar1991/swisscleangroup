@@ -22,4 +22,6 @@ export class PageHeaderComponent {
   parent = input<{ labelKey: string; link: string }>();
   // Placeholder photo - pass a different one per page.
   image = input('assets/images/banner/banner-1.jpg');
+  // Which part of the photo stays visible when it is cropped.
+  imagePosition = input<'center' | 'bottom'>('center');
 }
