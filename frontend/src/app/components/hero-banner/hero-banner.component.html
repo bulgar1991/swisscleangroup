@@ -35,7 +35,7 @@
               <h2 class="hero-banner__title" data-testid="hero-title">{{ slide.key + '.title' | translate }}</h2>
             }
             <p class="hero-banner__text">{{ slide.key + '.text' | translate }}</p>
-            <a class="btn hero-banner__cta" [routerLink]="slide.ctaLink" data-testid="hero-cta">
+            <a class="btn hero-banner__cta" [routerLink]="slide.ctaLink | localize" data-testid="hero-cta">
               {{ slide.key + '.cta' | translate }}
             </a>
           </div>

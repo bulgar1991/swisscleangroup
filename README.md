@@ -65,7 +65,7 @@ Or import the repo/folder directly in the Vercel dashboard — it will pick up `
 1. Open the deployed URL — the home page should list 6 services (confirms `GET /api/services` works).
 2. Click "Choose this service" on any card, fill in the form, and submit (confirms `POST /api/request` works and client-side validation/error messages behave).
 3. Try submitting with an invalid email or missing phone to see the 400 validation errors surfaced in the form.
-4. Refresh the page while on a `/request/<service-id>` URL — it should still load correctly (this is what the `vercel.json` rewrite to `index.html` is for, since Angular handles routing client-side).
+4. Refresh the page while on a `/fr/request/<service-id>` URL — it should still load correctly (this is what the `vercel.json` rewrite to `index.csr.html` is for; the public pages are prerendered per language).
 
 ## Extending later
 

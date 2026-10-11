@@ -1,6 +1,7 @@
 import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { LocalizePipe } from '@pipes/localize.pipe';
 
 /**
  * Title band at the top of inner pages, with a breadcrumb back to home.
@@ -10,7 +11,7 @@ import { TranslatePipe } from '@ngx-translate/core';
  * `parent` adds a middle breadcrumb step, e.g. Home > Blog > <post title>.
  */
 @Component({
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, LocalizePipe, TranslatePipe],
   selector: 'app-page-header',
   styleUrl: './page-header.component.scss',
   templateUrl: './page-header.component.html',

@@ -29,10 +29,10 @@
 
       <div class="article-page__actions">
         <!-- The quote form lives on the home page. -->
-        <a class="btn" routerLink="/" fragment="quote" data-testid="service-detail-quote-cta">{{
+        <a class="btn" [routerLink]="'/' | localize" fragment="quote" data-testid="service-detail-quote-cta">{{
           'servicesSlider.requestQuote' | translate
         }}</a>
-        <a class="article-page__back" routerLink="/services" data-testid="service-detail-back">
+        <a class="article-page__back" [routerLink]="'/services' | localize" data-testid="service-detail-back">
           <i class="icon-angle-left-solid-full" aria-hidden="true"></i>
           {{ 'servicesSlider.backToServices' | translate }}
         </a>
@@ -53,7 +53,7 @@
             <li>
               <a
                 class="article-page__more-link"
-                [routerLink]="other.link"
+                [routerLink]="other.link | localize"
                 [attr.data-testid]="'related-service-' + other.id"
               >
                 <img

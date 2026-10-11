@@ -4,10 +4,11 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { PageHeaderComponent } from '@components/page-header/page-header.component';
 import { SERVICE_POSTS, findServicePost } from '@components/services-slider/services-slider.items';
+import { LocalizePipe } from '@pipes/localize.pipe';
 
 @Component({
   selector: 'app-service-detail',
-  imports: [RouterLink, TranslatePipe, PageHeaderComponent],
+  imports: [RouterLink, LocalizePipe, TranslatePipe, PageHeaderComponent],
   templateUrl: './service-detail.html',
   // Shared with the other article page.
   styleUrl: '../article-page.scss',

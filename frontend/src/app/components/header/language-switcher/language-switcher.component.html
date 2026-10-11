@@ -21,18 +21,20 @@
     <ul class="language-switcher__menu" [class.language-switcher__menu--open]="open()">
       @for (lang of languages; track lang.code) {
         <li>
-          <button
-            type="button"
+          <a
             class="language-switcher__option"
             [class.language-switcher__option--active]="lang.code === currentCode()"
+            [attr.aria-current]="lang.code === currentCode() ? 'page' : null"
             [attr.lang]="lang.code"
+            [attr.hreflang]="lang.code"
+            [routerLink]="links()[lang.code]"
             [attr.data-testid]="'language-option-' + lang.code"
-            (click)="select(lang.code)"
+            (click)="close()"
           >
             <img class="language-switcher__flag" [src]="lang.flag" alt="" width="21" height="14" />
             <span class="language-switcher__code">{{ lang.label }}</span>
             {{ lang.name }}
-          </button>
+          </a>
         </li>
       }
     </ul>
@@ -44,19 +46,19 @@
     [attr.aria-label]="'header.language' | translate"
   >
     @for (lang of languages; track lang.code) {
-      <button
-        type="button"
+      <a
         class="language-switcher__pill"
         [class.language-switcher__pill--active]="lang.code === currentCode()"
-        [attr.aria-pressed]="lang.code === currentCode()"
+        [attr.aria-current]="lang.code === currentCode() ? 'page' : null"
         [attr.lang]="lang.code"
+        [attr.hreflang]="lang.code"
         [title]="lang.name"
+        [routerLink]="links()[lang.code]"
         [attr.data-testid]="'language-option-' + lang.code"
-        (click)="select(lang.code)"
       >
         <img class="language-switcher__flag" [src]="lang.flag" alt="" width="21" height="14" />
         {{ lang.label }}
-      </button>
+      </a>
     }
   </div>
 }

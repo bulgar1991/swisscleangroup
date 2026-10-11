@@ -2,13 +2,14 @@ import { DOCUMENT } from '@angular/common';
 import { Injectable, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
-import { OG_LOCALES, SITE_OG_IMAGE, SITE_URL } from '@/config/site';
+import { OG_LOCALES, SITE_NAME, SITE_OG_IMAGE, SITE_URL } from '@/config/site';
 import { SeoData } from '@models/seo.model';
+import { DEFAULT_LANGUAGE, LANGUAGES, switchLanguagePath } from '@services/language.service';
 
 /**
  * Sets the page title, description, canonical link, Open Graph and Twitter tags for the
- * current route (from its `data.seo`), and sets them again when the language changes.
- * The tags in src/index.html are the fallback before this runs.
+ * current route (from its `data.seo`), plus hreflang links to the same page in the other
+ * languages. The tags in src/index.html are the fallback before this runs.
  */
 @Injectable({ providedIn: 'root' })
 export class SeoService {
@@ -17,20 +18,13 @@ export class SeoService {
   private translate = inject(TranslateService);
   private document = inject(DOCUMENT);
 
-  private current?: { seo: SeoData; path: string };
-
-  constructor() {
-    this.translate.onLangChange.subscribe(() => {
-      if (this.current) this.apply(this.current.seo, this.current.path);
-    });
-  }
-
-  // `path` is the page's URL path, e.g. '/services'.
+  // `path` is the page's URL path, e.g. '/fr/services'. Runs again on every language switch,
+  // since the language is part of the URL.
   apply(seo: SeoData, path: string): void {
-    this.current = { seo, path };
-
     const lang = this.translate.getCurrentLang() ?? 'fr';
-    const title = this.translate.instant(seo.title);
+    const pageTitle: string = this.translate.instant(seo.title);
+    // Service and blog titles come from the page heading - add the brand like the other pages.
+    const title = pageTitle.includes(SITE_NAME) ? pageTitle : `${pageTitle} | ${SITE_NAME}`;
     const description = this.translate.instant(seo.description);
     // Path only - query strings and #fragments aren't separate pages.
     const cleanPath = path.split(/[?#]/)[0] || '/';
@@ -54,6 +48,7 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:image', content: image });
 
     this.setCanonical(url);
+    this.setAlternates(cleanPath);
     this.setJsonLd(seo.jsonLd?.((key) => this.translate.instant(key), url, lang) ?? []);
 
     // Extra per-route tags (e.g. robots: noindex) - these win over the defaults above.
@@ -75,6 +70,25 @@ export class SeoService {
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(items.length === 1 ? items[0] : items);
     this.document.head.appendChild(script);
+  }
+
+  // <link rel="alternate" hreflang="de" href=".../de/services"> for every language, plus
+  // x-default (French) for visitors whose language isn't offered.
+  private setAlternates(path: string): void {
+    this.document.head
+      .querySelectorAll('link[rel="alternate"][hreflang]')
+      .forEach((link) => link.remove());
+    const links = [
+      ...LANGUAGES.map((lang) => ({ hreflang: lang.code, code: lang.code })),
+      { hreflang: 'x-default', code: DEFAULT_LANGUAGE },
+    ];
+    for (const { hreflang, code } of links) {
+      const link = this.document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', hreflang);
+      link.setAttribute('href', SITE_URL + switchLanguagePath(path, code));
+      this.document.head.appendChild(link);
+    }
   }
 
   private setCanonical(url: string): void {

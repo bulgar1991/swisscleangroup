@@ -18,7 +18,7 @@
         <h2>{{ 'pages.services.ctaTitle' | translate }}</h2>
         <p>{{ 'pages.services.ctaText' | translate }}</p>
       </div>
-      <a class="btn services-page__cta-button" routerLink="/contact" data-testid="services-page-cta">{{
+      <a class="btn services-page__cta-button" [routerLink]="'/contact' | localize" data-testid="services-page-cta">{{
         'pages.services.ctaButton' | translate
       }}</a>
     </div>

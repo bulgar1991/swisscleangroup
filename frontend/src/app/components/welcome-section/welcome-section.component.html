@@ -18,13 +18,13 @@
 
         <div class="welcome__buttons">
           @if (showAboutButton()) {
-            <a class="btn welcome__button" routerLink="/about" data-testid="welcome-about-link">{{
+            <a class="btn welcome__button" [routerLink]="'/about' | localize" data-testid="welcome-about-link">{{
               'welcome.aboutUs' | translate
             }}</a>
           }
           <a
             class="btn welcome__button welcome__button--outline"
-            routerLink="/contact"
+            [routerLink]="'/contact' | localize"
             data-testid="welcome-contact-link"
           >
             {{ 'welcome.contact' | translate }}

@@ -17,12 +17,12 @@
     >
       <ol>
         <li>
-          <a routerLink="/" data-testid="breadcrumb-home">{{ 'header.menu.home' | translate }}</a>
+          <a [routerLink]="'/' | localize" data-testid="breadcrumb-home">{{ 'header.menu.home' | translate }}</a>
         </li>
         @if (parent(); as parent) {
           <li>
             <i class="icon-angle-right-solid-full" aria-hidden="true"></i>
-            <a [routerLink]="parent.link" data-testid="breadcrumb-parent">{{ parent.labelKey | translate }}</a>
+            <a [routerLink]="parent.link | localize" data-testid="breadcrumb-parent">{{ parent.labelKey | translate }}</a>
           </li>
         }
         <li>

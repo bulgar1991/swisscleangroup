@@ -3,7 +3,7 @@
     <div class="site-footer__grid">
       <!-- About -->
       <div>
-        <a class="site-footer__logo" routerLink="/" data-testid="footer-logo">
+        <a class="site-footer__logo" [routerLink]="'/' | localize" data-testid="footer-logo">
           <img [src]="siteLogo" alt="Swiss Clean Group" width="156" height="52" loading="lazy" />
         </a>
         <p class="site-footer__description">{{ 'footer.description' | translate }}</p>
@@ -17,7 +17,7 @@
         <ul class="site-footer__links">
           @for (item of menuItems; track item.labelKey) {
             <li>
-              <a [routerLink]="item.link" [attr.data-testid]="'footer-nav-link-' + item.id">{{
+              <a [routerLink]="item.link | localize" [attr.data-testid]="'footer-nav-link-' + item.id">{{
                 item.labelKey | translate
               }}</a>
             </li>
@@ -31,7 +31,7 @@
         <ul class="site-footer__links">
           @for (service of services; track service.id) {
             <li>
-              <a [routerLink]="service.link" [attr.data-testid]="'footer-service-link-' + service.id">{{
+              <a [routerLink]="service.link | localize" [attr.data-testid]="'footer-service-link-' + service.id">{{
                 service.key + '.title' | translate
               }}</a>
             </li>
@@ -76,8 +76,8 @@
       </p>
       <div class="site-footer__legal">
         <!-- TODO: point to the real privacy and terms pages once they exist. -->
-        <a routerLink="/" data-testid="footer-privacy-link">{{ 'footer.privacy' | translate }}</a>
-        <a routerLink="/" data-testid="footer-terms-link">{{ 'footer.terms' | translate }}</a>
+        <a [routerLink]="'/' | localize" data-testid="footer-privacy-link">{{ 'footer.privacy' | translate }}</a>
+        <a [routerLink]="'/' | localize" data-testid="footer-terms-link">{{ 'footer.terms' | translate }}</a>
         <button
           type="button"
           class="site-footer__to-top"

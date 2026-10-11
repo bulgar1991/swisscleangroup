@@ -1,8 +1,10 @@
+import { isPlatformServer } from '@angular/common';
 import {
-  AfterViewInit,
   Directive,
   ElementRef,
   OnDestroy,
+  PLATFORM_ID,
+  afterNextRender,
   effect,
   inject,
   input,
@@ -17,9 +19,11 @@ import { LanguageService } from '@services/language.service';
 @Directive({
   selector: '[appCountUp]',
 })
-export class CountUpDirective implements AfterViewInit, OnDestroy {
+export class CountUpDirective implements OnDestroy {
   private el = inject(ElementRef<HTMLElement>);
   private language = inject(LanguageService);
+  // Prerendered HTML gets the final number, so crawlers don't read "0".
+  private isServer = isPlatformServer(inject(PLATFORM_ID));
 
   appCountUp = input.required<number>();
   // Wait this long (ms) after the element becomes visible before counting.
@@ -35,11 +39,12 @@ export class CountUpDirective implements AfterViewInit, OnDestroy {
     // Re-render with the right thousands separator when the language changes.
     effect(() => {
       this.language.current();
-      this.render(this.current);
+      this.render(this.isServer ? this.appCountUp() : this.current);
     });
+    afterNextRender(() => this.start());
   }
 
-  ngAfterViewInit(): void {
+  private start(): void {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion || !('IntersectionObserver' in window)) {
       this.render(this.appCountUp());

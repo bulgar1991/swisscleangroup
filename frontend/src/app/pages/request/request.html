@@ -1,5 +1,5 @@
 <section class="request">
-  <a routerLink="/" class="back-link">&larr; Back to services</a>
+  <a [routerLink]="'/' | localize" class="back-link">&larr; Back to services</a>
   <h1>Request: {{ serviceId() }}</h1>
 
   @if (successMessage()) {

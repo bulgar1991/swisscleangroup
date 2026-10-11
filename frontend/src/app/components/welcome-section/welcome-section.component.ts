@@ -2,6 +2,7 @@ import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IconsId } from '../../models/icons';
+import { LocalizePipe } from '@pipes/localize.pipe';
 
 interface WelcomeFeature {
   icon: IconsId;
@@ -10,7 +11,7 @@ interface WelcomeFeature {
 }
 
 @Component({
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, LocalizePipe, TranslatePipe],
   selector: 'app-welcome-section',
   styleUrl: './welcome-section.component.scss',
   templateUrl: './welcome-section.component.html',

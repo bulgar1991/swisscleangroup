@@ -1,0 +1,80 @@
+# LiteSpeed / Apache config for the hosting server (copied to the build output by angular.json).
+
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+# URLs have no trailing slash (/contact, not /contact/). Without this, the server would
+# redirect /contact to /contact/ because a "contact" folder exists.
+DirectorySlash Off
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # --- HTTPS + www -----------------------------------------------------------------------
+  # Turn this on ONLY after a valid SSL certificate covers both swisscleangroup.ch and
+  # www.swisscleangroup.ch (cPanel > SSL/TLS Status > Run AutoSSL). Enabled before that,
+  # it sends every visitor to a certificate error page.
+  # RewriteCond %{HTTPS} off [OR]
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteRule ^ https://www.swisscleangroup.ch%{REQUEST_URI} [R=301,L]
+
+  # --- One URL per page ------------------------------------------------------------------
+  # /contact/ -> /contact (301), so only the canonical address gets indexed.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+  # --- Languages -------------------------------------------------------------------------
+  # Every page lives under /fr, /de or /en. The bare domain sends visitors to their browser's
+  # language (302, since the answer differs per visitor), French by default.
+  RewriteCond %{HTTP:Accept-Language} ^de [NC]
+  RewriteRule ^$ /de [R=302,L]
+  RewriteCond %{HTTP:Accept-Language} ^en [NC]
+  RewriteRule ^$ /en [R=302,L]
+  RewriteRule ^$ /fr [R=302,L]
+
+  # --- Prerendered pages -----------------------------------------------------------------
+  # Every page is prerendered at build time to <path>/index.html.
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+)$ $1/index.html [L]
+
+  # Existing files (JS, CSS, images, robots.txt, sitemap.xml...) are served as they are.
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # A missing file (anything with an extension) stays a real 404.
+  RewriteRule \.[a-z0-9]+$ - [NC,L]
+
+  # Old URLs from before the language prefix (/contact, /services/window-cleaning), which
+  # Google already knows: 301 to the French page, so they keep their ranking.
+  RewriteCond $1 !^(fr|de|en)(/|$)
+  RewriteRule ^(.*)$ /fr/$1 [R=301,L]
+
+  # Anything else (e.g. /fr/request/window-cleaning) is an Angular route rendered in the browser.
+  RewriteRule ^ index.csr.html [L]
+</IfModule>
+
+# --- Caching -------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  # HTML is always re-checked, so visitors get new deploys straight away.
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Build files have a content hash in their name (main-23FPFF3V.js) - safe to cache for a year.
+  <FilesMatch "-[A-Za-z0-9_]{8}\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# --- Compression ---------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript application/json image/svg+xml
+</IfModule>

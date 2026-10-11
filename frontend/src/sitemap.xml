@@ -1,14 +1,276 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Add new pages here. Update the domain if it changes (also in src/app/config/site.ts). -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.swisscleangroup.ch/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/services/window-cleaning</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/services/furniture-assembly</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/blog/streak-free-windows</loc><lastmod>2026-09-15</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/blog/prepare-assembly</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/blog/autumn-window-cleaning</loc><lastmod>2026-08-10</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.swisscleangroup.ch/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<!-- Every page in every language, each listing its translations (hreflang).
+     Add new pages here (once per language) and in src/app/app.routes.server.ts.
+     Update the domain if it changes (also in src/app/config/site.ts). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/services</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/services</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/services/window-cleaning</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services/window-cleaning" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/services/window-cleaning</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services/window-cleaning" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/services/window-cleaning</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services/window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services/window-cleaning" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/services/furniture-assembly</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services/furniture-assembly" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/services/furniture-assembly</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services/furniture-assembly" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/services/furniture-assembly</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/services/furniture-assembly" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/services/furniture-assembly" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog" />
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/blog/streak-free-windows</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/streak-free-windows" />
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/blog/streak-free-windows</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/streak-free-windows" />
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/blog/streak-free-windows</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/streak-free-windows" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/streak-free-windows" />
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/blog/prepare-assembly</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/prepare-assembly" />
+    <lastmod>2026-08-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/blog/prepare-assembly</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/prepare-assembly" />
+    <lastmod>2026-08-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/blog/prepare-assembly</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/prepare-assembly" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/prepare-assembly" />
+    <lastmod>2026-08-28</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/blog/autumn-window-cleaning</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/autumn-window-cleaning" />
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/blog/autumn-window-cleaning</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/autumn-window-cleaning" />
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/blog/autumn-window-cleaning</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/blog/autumn-window-cleaning" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/blog/autumn-window-cleaning" />
+    <lastmod>2026-08-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/about" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/about" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/about" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/about" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/fr/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/de/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.swisscleangroup.ch/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.swisscleangroup.ch/fr/contact" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.swisscleangroup.ch/de/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.swisscleangroup.ch/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.swisscleangroup.ch/fr/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

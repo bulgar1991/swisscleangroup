@@ -1,15 +1,20 @@
 import { SITE_NAME, SITE_URL } from '@/config/site';
 import { Translate } from '@models/seo.model';
+import { LanguageCode, localizePath } from '@services/language.service';
 
 // schema.org builders for SeoData.jsonLd. Names are translation keys unless noted.
 
 export interface BreadcrumbStep {
   nameKey: string;
-  // Site path, e.g. '/blog'.
+  // Site path without the language, e.g. '/blog'.
   path: string;
 }
 
-export function breadcrumbList(translate: Translate, steps: BreadcrumbStep[]): object {
+export function breadcrumbList(
+  translate: Translate,
+  steps: BreadcrumbStep[],
+  lang: LanguageCode,
+): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -17,7 +22,7 @@ export function breadcrumbList(translate: Translate, steps: BreadcrumbStep[]): o
       '@type': 'ListItem',
       position: index + 1,
       name: translate(step.nameKey),
-      item: SITE_URL + step.path,
+      item: SITE_URL + localizePath(step.path, lang),
     })),
   };
 }

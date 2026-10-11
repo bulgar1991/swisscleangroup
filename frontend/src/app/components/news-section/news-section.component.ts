@@ -4,9 +4,10 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { LocalDatePipe } from '@pipes/local-date.pipe';
 import { LanguageService } from '@services/language.service';
 import { NEWS_POSTS, NewsPost } from './news-section.posts';
+import { LocalizePipe } from '@pipes/localize.pipe';
 
 @Component({
-  imports: [RouterLink, TranslatePipe, LocalDatePipe],
+  imports: [RouterLink, LocalizePipe, TranslatePipe, LocalDatePipe],
   selector: 'app-news-section',
   styleUrl: './news-section.component.scss',
   templateUrl: './news-section.component.html',

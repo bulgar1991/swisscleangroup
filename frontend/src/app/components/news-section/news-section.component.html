@@ -6,7 +6,7 @@
           <p class="news__eyebrow">{{ 'news.eyebrow' | translate }}</p>
           <h2 id="news-title" class="news__title">{{ 'news.title' | translate }}</h2>
         </div>
-        <a class="news__view-all" routerLink="/blog" data-testid="news-view-all">
+        <a class="news__view-all" [routerLink]="'/blog' | localize" data-testid="news-view-all">
           {{ 'news.viewAll' | translate }}
           <i class="icon-arrow-right-solid-full" aria-hidden="true"></i>
         </a>
@@ -20,11 +20,11 @@
       @for (post of posts; track post.id) {
         <article class="news-card" [attr.data-testid]="'news-card-' + post.id">
           <!-- Duplicate of the title link, so hidden from keyboard and screen readers. -->
-          <a class="news-card__image-wrapper" [routerLink]="['/blog', post.id]" tabindex="-1" aria-hidden="true">
+          <a class="news-card__image-wrapper" [routerLink]="'/blog/' + post.id | localize" tabindex="-1" aria-hidden="true">
             <img
               class="news-card__image"
               [src]="post.image"
-              alt=""
+              [alt]="post.key + '.imageAlt' | translate"
               width="1920"
               height="1280"
               loading="lazy"
@@ -41,10 +41,10 @@
               <time [attr.datetime]="post.date">{{ post.date | localDate: lang() }}</time>
             </p>
             <h3 class="news-card__title">
-              <a [routerLink]="['/blog', post.id]" data-testid="news-card-link">{{ post.key + '.title' | translate }}</a>
+              <a [routerLink]="'/blog/' + post.id | localize" data-testid="news-card-link">{{ post.key + '.title' | translate }}</a>
             </h3>
             <p class="news-card__excerpt">{{ post.key + '.excerpt' | translate }}</p>
-            <a class="news-card__read-more" [routerLink]="['/blog', post.id]" data-testid="news-card-read-more">
+            <a class="news-card__read-more" [routerLink]="'/blog/' + post.id | localize" data-testid="news-card-read-more">
               {{ 'news.readMore' | translate }}
               <span class="sr-only">: {{ post.key + '.title' | translate }}</span>
               <i class="icon-arrow-right-solid-full" aria-hidden="true"></i>
