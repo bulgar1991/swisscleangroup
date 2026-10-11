@@ -5,13 +5,13 @@
 .post-card {
   @apply flex h-full flex-col no-underline;
 
-  // Same 8:5 ratio as the service photos.
   &__image-wrapper {
-    @apply relative aspect-[8/5] overflow-hidden;
+    @apply relative;
   }
 
+  // Same 8:5 ratio as the service photos.
   &__image {
-    @apply absolute inset-0 h-full w-full object-cover;
+    @apply block aspect-[8/5] w-full object-cover;
   }
 
   &__body {
@@ -22,9 +22,9 @@
     @apply m-0 flex-1 text-[1.15rem] font-semibold leading-[1.35] text-ink;
   }
 
-  // Starting price, first thing on the card: pinned to the photo's top-left corner.
+  // Starting price, on the photo's bottom-left corner.
   &__price {
-    @apply absolute left-4 top-4 z-[1];
+    @apply absolute bottom-3 left-3 z-[1] sm:bottom-4 sm:left-4;
   }
 
   &__link {
