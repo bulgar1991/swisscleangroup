@@ -1,0 +1,85 @@
+:host {
+  @apply block;
+}
+
+.service-area {
+  @apply py-12 lg:py-20;
+
+  &__header {
+    @apply mx-auto mb-8 max-w-[45rem] text-center;
+  }
+
+  &__eyebrow {
+    @apply mb-3 mt-0 text-[0.78rem] font-extrabold uppercase tracking-[0.16em] text-primary;
+  }
+
+  &__title {
+    @apply m-0 text-[clamp(1.8rem,4vw,3rem)] font-bold leading-[1.12] tracking-[-0.04em] text-ink;
+  }
+
+  &__description {
+    @apply mb-0 mt-4 text-[clamp(1rem,2vw,1.15rem)] leading-relaxed text-ink-muted;
+  }
+
+  &__map {
+    @apply m-0 overflow-hidden rounded-[0.8rem] border border-border bg-surface shadow-[0_18px_55px_theme(colors.black/9%)] sm:rounded-[1.25rem];
+  }
+
+  // Fixed height, so nothing jumps when the map loads.
+  &__canvas {
+    @apply z-0 h-[380px] bg-background md:h-[520px];
+  }
+
+  &__caption {
+    @apply flex items-start justify-center gap-[0.65rem] border-t border-border px-5 py-4 text-center text-[0.8rem] text-ink-muted sm:items-center sm:text-[0.9rem];
+  }
+
+  &__legend-dot {
+    @apply mt-[0.1rem] h-3 w-3 shrink-0 rounded-full border-2 border-primary bg-primary/20 sm:mt-0;
+  }
+}
+
+// Shapes, markers and labels are created by Leaflet outside this component's template.
+:host ::ng-deep {
+  // CSS wins over the fill/stroke attributes Leaflet puts on the SVG paths.
+  .service-map-canton {
+    @apply fill-primary/35 stroke-primary stroke-[2.5];
+  }
+
+  // Fractional zoom leaves hairline gaps between tiles - overlap them by half a pixel.
+  .leaflet-tile {
+    @apply outline outline-1 outline-transparent;
+    @apply [margin:-0.25px] [width:256.5px!important] [height:256.5px!important];
+  }
+
+  .service-map-icon {
+    @apply border-none bg-transparent;
+  }
+
+  // Round logo badge with a point at the bottom, like a map pin.
+  .service-map-hq {
+    @apply relative flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-primary bg-white shadow-[0_6px_16px_theme(colors.black/30%)];
+
+    &::after {
+      @apply absolute -bottom-[9px] left-1/2 h-0 w-0 -translate-x-1/2 border-x-[8px] border-t-[9px] border-x-transparent border-t-primary content-[''];
+    }
+
+    img {
+      @apply h-10 w-10 object-contain;
+    }
+  }
+
+  // Canton names: white on the red area, like the reference map.
+  .service-map-label {
+    @apply border-none bg-transparent p-0 text-[1.05rem] font-extrabold text-white shadow-none [text-shadow:0_1px_3px_theme(colors.primary-dark)] md:text-[1.3rem];
+
+    &::before {
+      @apply hidden;
+    }
+
+    &--hq {
+      @apply whitespace-nowrap;
+      @apply rounded-lg bg-primary px-2 py-1 text-[0.8rem] font-bold shadow-[0_2px_8px_theme(colors.black/25%)] [text-shadow:none] md:text-[0.85rem];
+    }
+  }
+}

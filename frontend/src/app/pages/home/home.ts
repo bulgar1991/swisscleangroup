@@ -4,10 +4,11 @@ import { ServicesSliderComponent } from '@components/services-slider/services-sl
 import { WelcomeSectionComponent } from '@components/welcome-section/welcome-section.component';
 import { NewsSectionComponent } from '@components/news-section/news-section.component';
 import { QuoteFormComponent } from '@components/quote-form/quote-form.component';
+import { ServiceAreaComponent } from '@components/service-area/service-area.component';
 
 @Component({
   selector: 'app-home',
-  imports: [HeroBannerComponent, ServicesSliderComponent, WelcomeSectionComponent, NewsSectionComponent, QuoteFormComponent],
+  imports: [HeroBannerComponent, ServicesSliderComponent, WelcomeSectionComponent, NewsSectionComponent, ServiceAreaComponent, QuoteFormComponent],
   templateUrl: './home.html',
 })
 export class Home {}

@@ -29,7 +29,7 @@
     <meta
       property="og:description"
       content="Nettoyage de vitres et montage de meubles pour particuliers et entreprises en Suisse. Devis gratuit, équipe fiable et prix transparents." />
-    <meta property="og:url" content="https://www.swisscleangroup.ch/" />
+    <meta property="og:url" content="https://www.swisscleangroup.ch/fr" />
     <meta property="og:image" content="https://www.swisscleangroup.ch/assets/images/seo/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -44,10 +44,11 @@
     <meta name="twitter:image" content="https://www.swisscleangroup.ch/assets/images/seo/og-image.jpg" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.swisscleangroup.ch/" />
+    <link rel="canonical" href="https://www.swisscleangroup.ch/fr" />
 
     <!-- Structured data: tells Google this is a local business (name, contact, area served).
-         Dummy contact data - keep in sync with src/app/config/contact.ts. -->
+         Dummy contact data - keep in sync with src/app/config/contact.ts.
+         areaServed: keep in sync with the service area map (Vaud, Valais, Fribourg). -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -59,8 +60,20 @@
         "image": "https://www.swisscleangroup.ch/assets/images/seo/og-image.jpg",
         "telephone": "+41783231039",
         "email": "swisscleangroup@hotmail.com",
-        "areaServed": { "@type": "Country", "name": "Switzerland" },
-        "sameAs": ["https://www.facebook.com/people/SwissClean-Group/61574877284649/", "https://www.instagram.com/"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sion",
+          "postalCode": "1950",
+          "addressRegion": "VS",
+          "addressCountry": "CH"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 46.2331, "longitude": 7.3606 },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Vaud" },
+          { "@type": "AdministrativeArea", "name": "Valais" },
+          { "@type": "AdministrativeArea", "name": "Fribourg" }
+        ],
+        "sameAs": ["https://www.facebook.com/people/SwissClean-Group/61574877284649/"],
         "knowsLanguage": ["fr", "de", "en"]
       }
     </script>

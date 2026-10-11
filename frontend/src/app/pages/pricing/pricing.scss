@@ -1,0 +1,133 @@
+.pricing {
+  &__container {
+    @apply pb-16 pt-12 lg:pb-20 lg:pt-16;
+  }
+
+  &__lead {
+    @apply mx-auto mb-12 mt-0 max-w-[46rem] text-center text-[1.15rem] leading-relaxed text-ink;
+  }
+
+  &__section {
+    @apply mx-auto mb-14 max-w-[62rem];
+  }
+
+  &__title {
+    @apply mb-6 mt-0 text-[clamp(1.3rem,2.2vw,1.6rem)] font-bold text-ink;
+  }
+
+  &__packages {
+    @apply m-0 grid list-none gap-6 p-0 sm:grid-cols-2;
+  }
+
+  // --- Price tables ----------------------------------------------------------------------
+  &__table {
+    @apply w-full border-collapse overflow-hidden rounded-2xl border border-border bg-surface;
+  }
+
+  &__row {
+    @apply border-b border-border last:border-b-0;
+  }
+
+  &__item {
+    @apply px-5 py-4 text-left align-top font-semibold text-ink;
+  }
+
+  &__note {
+    @apply mt-1 block text-[0.9rem] font-normal leading-snug text-ink-muted;
+  }
+
+  &__cell {
+    @apply px-5 py-4 text-right align-top;
+  }
+
+  // --- Good to know ----------------------------------------------------------------------
+  &__notes {
+    @apply rounded-2xl border border-border bg-surface p-6 lg:p-8;
+  }
+
+  &__notes-list {
+    @apply m-0 grid list-none gap-3 p-0;
+
+    li {
+      @apply flex items-start gap-[0.6rem] leading-normal text-ink;
+    }
+
+    i {
+      @apply mt-[0.15rem] text-[1.1rem] text-primary;
+    }
+  }
+
+  &__disclaimer {
+    @apply mb-0 mt-6 text-[0.9rem] text-ink-muted;
+  }
+
+  // --- Call to action --------------------------------------------------------------------
+  &__cta {
+    @apply mx-auto flex max-w-[62rem] flex-wrap items-center justify-between gap-6 rounded-[1.25rem] bg-gradient-to-br from-primary-dark to-primary p-8 text-white lg:p-10;
+
+    h2 {
+      @apply mb-2 mt-0 text-[clamp(1.4rem,2.5vw,1.9rem)] font-bold;
+    }
+
+    p {
+      @apply m-0 opacity-90;
+    }
+  }
+
+  &__cta-actions {
+    @apply flex flex-wrap items-center gap-x-6 gap-y-3;
+  }
+
+  &__cta-button {
+    @apply bg-white px-7 py-[0.9rem] text-base text-primary;
+  }
+
+  &__cta-link {
+    @apply inline-flex items-center gap-1 font-semibold text-white no-underline hover:underline;
+  }
+
+  &__other {
+    @apply mx-auto mb-0 mt-8 max-w-[62rem] text-center;
+
+    a {
+      @apply inline-flex items-center gap-1 font-semibold text-primary no-underline hover:underline;
+    }
+  }
+}
+
+// One package card.
+.pricing-card {
+  @apply relative flex flex-col rounded-2xl border border-border bg-surface p-6 lg:p-7;
+
+  &--highlighted {
+    @apply border-2 border-primary shadow-[0_12px_32px_theme(colors.primary/15%)];
+  }
+
+  &__badge {
+    @apply absolute -top-3 left-6 rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-[0.06em] text-white;
+  }
+
+  &__name {
+    @apply mb-3 mt-0 text-[1.2rem] font-bold text-ink;
+  }
+
+  &__price {
+    @apply mb-4;
+  }
+
+  &__description {
+    @apply mb-5 mt-0 leading-normal text-ink-muted;
+  }
+
+  &__features {
+    @apply m-0 mt-auto grid list-none gap-2 p-0;
+
+    li {
+      @apply flex items-start gap-2 text-[0.95rem] leading-snug text-ink;
+    }
+
+    i {
+      @apply mt-[0.1rem] text-primary;
+    }
+  }
+}

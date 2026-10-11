@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff2?193fdeaedf806d5443535eb977494366") format("woff2"),
-url("./icons.woff?193fdeaedf806d5443535eb977494366") format("woff");
+    src: url("./icons.woff2?66349f9355679e93f01685edf4dcd91b") format("woff2"),
+url("./icons.woff?66349f9355679e93f01685edf4dcd91b") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -24,54 +24,87 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-users-solid-full:before {
     content: "\f103";
 }
-.icon-shield-solid-full:before {
+.icon-store-solid-full:before {
     content: "\f104";
 }
-.icon-phone-solid-full:before {
+.icon-shield-solid-full:before {
     content: "\f105";
 }
-.icon-paper-plane-solid-full:before {
+.icon-screwdriver-wrench-solid-full:before {
     content: "\f106";
 }
-.icon-instagram-brands-solid-full:before {
+.icon-plug-solid-full:before {
     content: "\f107";
 }
-.icon-facebook-f-brands-solid-full:before {
+.icon-phone-solid-full:before {
     content: "\f108";
 }
-.icon-envelope-solid-full:before {
+.icon-paper-plane-solid-full:before {
     content: "\f109";
 }
-.icon-clock-regular-full:before {
+.icon-kitchen-set-solid-full:before {
     content: "\f10a";
 }
-.icon-circle-exclamation-solid-full:before {
+.icon-instagram-brands-solid-full:before {
     content: "\f10b";
 }
-.icon-circle-check-solid-full:before {
+.icon-house-solid-full:before {
     content: "\f10c";
 }
-.icon-check-solid-full:before {
+.icon-facebook-f-brands-solid-full:before {
     content: "\f10d";
 }
-.icon-calendar-days-regular-full:before {
+.icon-envelope-solid-full:before {
     content: "\f10e";
 }
-.icon-arrow-up-solid-full:before {
+.icon-door-closed-solid-full:before {
     content: "\f10f";
 }
-.icon-arrow-right-solid-full:before {
+.icon-couch-solid-full:before {
     content: "\f110";
 }
-.icon-angle-up-solid-full:before {
+.icon-clock-regular-full:before {
     content: "\f111";
 }
-.icon-angle-right-solid-full:before {
+.icon-circle-info-solid-full:before {
     content: "\f112";
 }
-.icon-angle-left-solid-full:before {
+.icon-circle-exclamation-solid-full:before {
     content: "\f113";
 }
-.icon-angle-down-solid-full:before {
+.icon-circle-check-solid-full:before {
     content: "\f114";
+}
+.icon-check-solid-full:before {
+    content: "\f115";
+}
+.icon-calendar-days-regular-full:before {
+    content: "\f116";
+}
+.icon-building-solid-full:before {
+    content: "\f117";
+}
+.icon-briefcase-solid-full:before {
+    content: "\f118";
+}
+.icon-bed-solid-full:before {
+    content: "\f119";
+}
+.icon-arrow-up-solid-full:before {
+    content: "\f11a";
+}
+.icon-arrow-right-solid-full:before {
+    content: "\f11b";
+}
+.icon-angle-up-solid-full:before {
+    content: "\f11c";
+}
+.icon-angle-right-solid-full:before {
+    content: "\f11d";
+}
+.icon-angle-left-solid-full:before {
+    content: "\f11e";
+}
+.icon-angle-down-solid-full:before {
+    content: "\f11f";
 }

@@ -1,7 +1,7 @@
 <div class="site-header">
   <div class="container mx-auto px-4">
     <div class="site-header__inner-container">
-      <a class="site-header__logo-container" routerLink="/" data-testid="header-logo-mobile">
+      <a class="site-header__logo-container" [routerLink]="'/' | localize" data-testid="header-logo-mobile">
         <img [src]="siteLogo" alt="Swiss Clean Group" width="60" height="60" />
       </a>
 
@@ -37,7 +37,7 @@
     data-testid="mobile-menu"
   >
     <div class="sidebar__header">
-      <a class="sidebar__logo" routerLink="/" (click)="closeSidebar()">
+      <a class="sidebar__logo" [routerLink]="'/' | localize" (click)="closeSidebar()">
         <img [src]="sidebarLogo" alt="Swiss Clean Group" class="sidebar__logo-img" width="108" height="36" />
       </a>
       <button
@@ -55,7 +55,7 @@
       @for (item of menuItems; track item.labelKey) {
         <a
           class="sidebar__link"
-          [routerLink]="item.link"
+          [routerLink]="item.link | localize"
           routerLinkActive="sidebar__link--active"
           [routerLinkActiveOptions]="activeOptions"
           ariaCurrentWhenActive="page"
@@ -71,7 +71,7 @@
     <div class="sidebar__footer">
       <app-contact-buttons theme="dark" />
       <app-language-switcher variant="inline" />
-      <a class="btn sidebar__cta" routerLink="/contact" data-testid="mobile-menu-contact" (click)="closeSidebar()">
+      <a class="btn sidebar__cta" [routerLink]="'/contact' | localize" data-testid="mobile-menu-contact" (click)="closeSidebar()">
         {{ 'header.contactCta' | translate }}
       </a>
     </div>

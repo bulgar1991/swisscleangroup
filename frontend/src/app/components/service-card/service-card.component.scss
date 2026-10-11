@@ -22,6 +22,11 @@
     @apply m-0 flex-1 text-[1.15rem] font-semibold leading-[1.35] text-ink;
   }
 
+  // Starting price, first thing on the card: pinned to the photo's top-left corner.
+  &__price {
+    @apply absolute left-4 top-4 z-[1];
+  }
+
   &__link {
     @apply inline-flex items-center gap-[0.4rem] text-[0.95rem] font-semibold text-primary;
 

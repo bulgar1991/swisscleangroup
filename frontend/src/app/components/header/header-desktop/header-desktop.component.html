@@ -1,7 +1,7 @@
 <div class="site-header">
   <div class="container mx-auto px-6">
     <div class="site-header__inner-container">
-      <a class="site-header__logo-container" routerLink="/" data-testid="header-logo">
+      <a class="site-header__logo-container" [routerLink]="'/' | localize" data-testid="header-logo">
         <img [src]="siteLogo" alt="Swiss Clean Group" width="192" height="64" />
       </a>
 
@@ -15,7 +15,7 @@
             <li>
               <a
                 class="site-header__menu-link"
-                [routerLink]="item.link"
+                [routerLink]="item.link | localize"
                 routerLinkActive="site-header__menu-link--active"
                 [routerLinkActiveOptions]="activeOptions"
                 ariaCurrentWhenActive="page"

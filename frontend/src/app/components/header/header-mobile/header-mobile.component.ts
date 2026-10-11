@@ -5,12 +5,13 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { ContactButtonsComponent } from '@components/contact-buttons/contact-buttons.component';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 import { MENU_ACTIVE_OPTIONS, MENU_ITEMS } from '../menu-items';
+import { LocalizePipe } from '@pipes/localize.pipe';
 
 // Same breakpoint as `xl` in header.component.html, where the desktop header takes over.
 const DESKTOP_MIN_WIDTH = 1280;
 
 @Component({
-  imports: [RouterLink, RouterLinkActive, TranslatePipe, ContactButtonsComponent, LanguageSwitcherComponent],
+  imports: [RouterLink, LocalizePipe, RouterLinkActive, TranslatePipe, ContactButtonsComponent, LanguageSwitcherComponent],
   selector: 'app-header-mobile',
   styleUrl: './header-mobile.component.scss',
   templateUrl: './header-mobile.component.html',
@@ -44,7 +45,7 @@ export class HeaderMobileComponent implements OnDestroy {
   // the page locked behind a hidden sidebar.
   @HostListener('window:resize')
   onResize(): void {
-    if (this.sidebarOpen() && window.innerWidth >= DESKTOP_MIN_WIDTH) this.closeSidebar();
+    if (this.sidebarOpen() && (this.document.defaultView?.innerWidth ?? 0) >= DESKTOP_MIN_WIDTH) this.closeSidebar();
   }
 
   ngOnDestroy(): void {

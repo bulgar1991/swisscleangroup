@@ -27,7 +27,7 @@
         }
       </div>
 
-      <a class="article-page__back" routerLink="/blog" data-testid="blog-post-back">
+      <a class="article-page__back" [routerLink]="'/blog' | localize" data-testid="blog-post-back">
         <i class="icon-angle-left-solid-full" aria-hidden="true"></i>
         {{ 'news.backToBlog' | translate }}
       </a>
@@ -45,7 +45,7 @@
             <li>
               <a
                 class="article-page__more-link"
-                [routerLink]="['/blog', other.id]"
+                [routerLink]="'/blog/' + other.id | localize"
                 [attr.data-testid]="'related-post-' + other.id"
               >
                 <img

@@ -6,10 +6,11 @@ import { PageHeaderComponent } from '@components/page-header/page-header.compone
 import { NEWS_POSTS, findNewsPost } from '@components/news-section/news-section.posts';
 import { LocalDatePipe } from '@pipes/local-date.pipe';
 import { LanguageService } from '@services/language.service';
+import { LocalizePipe } from '@pipes/localize.pipe';
 
 @Component({
   selector: 'app-blog-post',
-  imports: [RouterLink, TranslatePipe, PageHeaderComponent, LocalDatePipe],
+  imports: [RouterLink, LocalizePipe, TranslatePipe, PageHeaderComponent, LocalDatePipe],
   templateUrl: './blog-post.html',
   // Shared with the other article page.
   styleUrl: '../article-page.scss',

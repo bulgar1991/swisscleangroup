@@ -1,0 +1,13 @@
+@let item = price();
+
+<span
+  class="price"
+  [class.price--large]="variant() === 'large'"
+  [class.price--badge]="variant() === 'badge'"
+>
+  <span class="price__from">{{ 'pricing.from' | translate }}</span>
+  <span class="price__amount">{{ amount() }}</span>
+  @if (item.unit) {
+    <span class="price__unit">{{ 'pricing.units.' + item.unit | translate }}</span>
+  }
+</span>

@@ -1,0 +1,48 @@
+:host {
+  @apply block;
+}
+
+.price-tiles {
+  // 1 per row on mobile, 2 (repeat(2, minmax(0, 1fr))) from tablet up.
+  @apply m-0 grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 md:gap-5;
+}
+
+.price-tile {
+  @apply flex flex-col items-start rounded-2xl border border-border bg-surface p-4 transition-all duration-200 sm:p-5;
+  @apply hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_12px_28px_theme(colors.primary/12%)];
+
+  // Icon and price on one row.
+  &__header {
+    @apply mb-3 flex w-full items-center gap-2 sm:gap-3;
+  }
+
+  &__icon {
+    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-[1.2rem] text-white sm:h-12 sm:w-12 sm:text-[1.5rem];
+    @apply shadow-[0_8px_18px_theme(colors.primary/30%)];
+  }
+
+  &__title {
+    @apply mb-1 mt-0 text-[1.05rem] font-bold leading-snug text-ink;
+  }
+
+  &__text {
+    @apply m-0 text-[0.9rem] leading-snug text-ink-muted;
+  }
+}
+
+// "The final price depends on..." below the tiles.
+.price-tiles-note {
+  @apply mt-5 flex items-start gap-4 rounded-2xl border-l-4 border-primary bg-gradient-to-br from-primary/5 to-primary/10 p-5;
+
+  &__icon {
+    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface text-[1.35rem] text-primary shadow-[0_4px_12px_theme(colors.primary/15%)];
+  }
+
+  &__title {
+    @apply mb-1 mt-0 font-bold text-ink;
+  }
+
+  &__text {
+    @apply m-0 text-[0.95rem] leading-relaxed text-ink;
+  }
+}

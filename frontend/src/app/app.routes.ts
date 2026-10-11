@@ -1,7 +1,13 @@
 import { Routes } from '@angular/router';
+import {
+  languageGuard,
+  languageMatchGuard,
+  redirectToPreferredLanguage,
+} from './guards/language.guard';
 import { Home } from './pages/home/home';
 import { Request } from './pages/request/request';
 import { blogPostSeoResolver } from './resolvers/blog-post-seo.resolver';
+import { pricingSeoResolver } from './resolvers/pricing-seo.resolver';
 import { seoResolver } from './resolvers/seo.resolver';
 import { serviceSeoResolver } from './resolvers/service-seo.resolver';
 
@@ -25,6 +31,11 @@ const mainLayoutRoutes: Routes = [
     loadComponent: () =>
       import('./pages/service-detail/service-detail').then((m) => m.ServiceDetail),
     resolve: { seo: serviceSeoResolver },
+  },
+  {
+    path: 'prices/:id',
+    loadComponent: () => import('./pages/pricing/pricing').then((m) => m.Pricing),
+    resolve: { seo: pricingSeoResolver },
   },
   {
     path: 'about',
@@ -65,11 +76,16 @@ const mainLayoutRoutes: Routes = [
   { path: '**', redirectTo: '' },
 ];
 
+// Every page lives under its language: /fr/services, /de/services, /en/services.
 export const routes: Routes = [
   {
-    path: '',
+    path: ':lang',
+    canMatch: [languageMatchGuard],
+    canActivate: [languageGuard],
     loadComponent: () =>
       import('@components/main-layout/main-layout.component').then((m) => m.MainLayoutComponent),
     children: mainLayoutRoutes,
   },
+  // '/' and old URLs without a language.
+  { path: '**', redirectTo: redirectToPreferredLanguage },
 ];

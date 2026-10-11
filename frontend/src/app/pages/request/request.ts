@@ -3,10 +3,11 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { BookingService } from '../../services/booking.service';
+import { LocalizePipe } from '@pipes/localize.pipe';
 
 @Component({
   selector: 'app-request',
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, LocalizePipe],
   styleUrl: './request.scss',
   templateUrl: './request.html',
 })

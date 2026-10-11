@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, PlatformLocation } from '@angular/common';
 import { Injectable, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
@@ -23,17 +23,52 @@ export const DEFAULT_LANGUAGE: LanguageCode = 'fr';
 
 const STORAGE_KEY = 'scg-lang';
 
+export function isLanguageCode(value: string | null | undefined): value is LanguageCode {
+  return LANGUAGES.some((lang) => lang.code === value);
+}
+
+// A route's :lang param as a language code (French if it's missing or unknown).
+export function toLanguageCode(value: string | null | undefined): LanguageCode {
+  return isLanguageCode(value) ? value : DEFAULT_LANGUAGE;
+}
+
+/**
+ * Adds the language to a site path: localizePath('/services', 'de') -> '/de/services',
+ * localizePath('/', 'de') -> '/de'.
+ */
+export function localizePath(path: string, lang: LanguageCode): string {
+  return path === '/' ? `/${lang}` : `/${lang}${path}`;
+}
+
+/**
+ * Swaps the language in a localized URL: '/fr/blog/x?a=1' -> '/de/blog/x?a=1'.
+ * A URL without a language gets one added.
+ */
+export function switchLanguagePath(url: string, lang: LanguageCode): string {
+  const [, first, rest = ''] = url.match(/^\/([^/?#]*)(.*)$/) ?? [];
+  if (isLanguageCode(first)) return `/${lang}${rest}`;
+  return localizePath(url || '/', lang);
+}
+
+/**
+ * The language lives in the URL (/fr/..., /de/..., /en/...), so every language version is its
+ * own page for search engines. languageGuard sets it on every navigation; the last choice is
+ * remembered to pick the language when someone opens the bare domain.
+ */
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
   private translate = inject(TranslateService);
   private document = inject(DOCUMENT);
+  private location = inject(PlatformLocation);
 
   readonly languages = LANGUAGES;
   readonly current = this.translate.currentLang;
 
-  // Called once on app start, before the first render.
+  // Called once on app start, before the first render. Loads the URL's language straight away,
+  // so the prerendered HTML is hydrated in the same language it was rendered in.
   init(): Observable<unknown> {
-    return this.use(this.savedLanguage() ?? DEFAULT_LANGUAGE);
+    const fromUrl = this.location.pathname.split('/')[1];
+    return this.use(isLanguageCode(fromUrl) ? fromUrl : this.preferred());
   }
 
   use(code: LanguageCode): Observable<unknown> {
@@ -41,17 +76,25 @@ export class LanguageService {
     try {
       localStorage.setItem(STORAGE_KEY, code);
     } catch {
-      // Storage can be blocked (private mode); the language just won't be remembered.
+      // Storage can be blocked (private mode), or missing while prerendering.
     }
     return this.translate.use(code);
   }
 
-  private savedLanguage(): LanguageCode | null {
+  // The language for a URL without one: the last choice, then the browser's language.
+  preferred(): LanguageCode {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      return LANGUAGES.some((lang) => lang.code === saved) ? (saved as LanguageCode) : null;
+      if (isLanguageCode(saved)) return saved;
     } catch {
-      return null;
+      // Fall through to the browser language.
     }
+    const browser = this.document.defaultView?.navigator?.language?.slice(0, 2);
+    return isLanguageCode(browser) ? browser : DEFAULT_LANGUAGE;
+  }
+
+  // Current language, for building links.
+  code(): LanguageCode {
+    return toLanguageCode(this.current());
   }
 }

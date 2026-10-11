@@ -1,0 +1,11 @@
+<div
+  class="page-loader"
+  [class.page-loader--hidden]="!visible()"
+  role="status"
+  [attr.aria-hidden]="!visible()"
+  data-testid="page-loader"
+>
+  <img class="page-loader__logo" [src]="logo" alt="" width="192" height="64" />
+  <span class="page-loader__spinner" aria-hidden="true"></span>
+  <span class="sr-only">{{ 'pages.loading' | translate }}</span>
+</div>

@@ -4,9 +4,10 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { ContactButtonsComponent } from '@components/contact-buttons/contact-buttons.component';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 import { MENU_ACTIVE_OPTIONS, MENU_ITEMS } from '../menu-items';
+import { LocalizePipe } from '@pipes/localize.pipe';
 
 @Component({
-  imports: [RouterLink, RouterLinkActive, TranslatePipe, ContactButtonsComponent, LanguageSwitcherComponent],
+  imports: [RouterLink, LocalizePipe, RouterLinkActive, TranslatePipe, ContactButtonsComponent, LanguageSwitcherComponent],
   selector: 'app-header-desktop',
   styleUrl: './header-desktop.component.scss',
   templateUrl: './header-desktop.component.html',
