@@ -22,9 +22,9 @@
     @apply m-0 flex-1 text-[1.15rem] font-semibold leading-[1.35] text-ink;
   }
 
-  // Starting price: below the photo on mobile, on its bottom-left corner from 640px.
+  // Starting price, on the photo's bottom-left corner.
   &__price {
-    @apply mt-3 sm:absolute sm:bottom-4 sm:left-4 sm:z-[1] sm:mt-0;
+    @apply absolute bottom-3 left-3 z-[1] sm:bottom-4 sm:left-4;
   }
 
   &__link {
