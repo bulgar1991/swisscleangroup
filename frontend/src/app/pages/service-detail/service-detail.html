@@ -3,7 +3,8 @@
 <article class="article-page" data-testid="service-detail">
   <app-page-header
     [titleKey]="item.key + '.title'"
-    [image]="item.image"
+    [image]="item.headerImage"
+    [imagePosition]="item.headerImagePosition"
     [parent]="{ labelKey: 'header.menu.services', link: '/services' }"
   />
 

@@ -7,6 +7,10 @@
 
   &__image {
     @apply absolute inset-0 h-full w-full max-w-none object-cover;
+
+    &--bottom {
+      @apply object-bottom;
+    }
   }
 
   &__overlay {
