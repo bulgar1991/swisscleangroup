@@ -1,5 +1,17 @@
-<a class="post-card" [routerLink]="service().link | localize" [attr.data-testid]="'service-card-' + service().id">
+<a
+  class="post-card"
+  [routerLink]="service().link | localize"
+  [attr.data-testid]="'service-card-' + service().id"
+>
   <div class="post-card__image-wrapper">
+    @if (startingPrice(); as price) {
+      <app-price
+        class="post-card__price"
+        [price]="{ price }"
+        variant="badge"
+        data-testid="service-card-price"
+      />
+    }
     <img
       class="post-card__image"
       [src]="service().image"

@@ -5,10 +5,12 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { PageHeaderComponent } from '@components/page-header/page-header.component';
 import { SERVICE_POSTS, findServicePost } from '@components/services-slider/services-slider.items';
 import { LocalizePipe } from '@pipes/localize.pipe';
+import { PriceTilesComponent } from '@components/price-tiles/price-tiles.component';
+import { PRICING_PAGES } from '../pricing/pricing.data';
 
 @Component({
   selector: 'app-service-detail',
-  imports: [RouterLink, LocalizePipe, TranslatePipe, PageHeaderComponent],
+  imports: [RouterLink, LocalizePipe, TranslatePipe, PageHeaderComponent, PriceTilesComponent],
   templateUrl: './service-detail.html',
   // Shared with the other article page.
   styleUrl: '../article-page.scss',
@@ -18,5 +20,6 @@ export class ServiceDetail {
 
   // serviceSeoResolver already redirected away from unknown ids.
   service = computed(() => findServicePost(this.params().get('id'))!);
+  pricing = computed(() => PRICING_PAGES.find((page) => page.serviceId === this.service().id));
   otherServices = computed(() => SERVICE_POSTS.filter((service) => service !== this.service()));
 }

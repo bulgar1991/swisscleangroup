@@ -1,0 +1,25 @@
+<section class="service-area" aria-labelledby="service-area-title" data-testid="service-area">
+  <div class="container mx-auto px-4 lg:px-6">
+    <div class="service-area__header">
+      <p class="service-area__eyebrow">Swiss Clean Group</p>
+      <h2 id="service-area-title" class="service-area__title">
+        {{ 'serviceArea.title' | translate }}
+      </h2>
+      <p class="service-area__description">{{ 'serviceArea.description' | translate }}</p>
+    </div>
+
+    <figure class="service-area__map" data-testid="service-area-map">
+      <!-- Filled by Leaflet in the browser; the caption below says the same in words. -->
+      <div
+        #mapEl
+        class="service-area__canvas"
+        role="region"
+        [attr.aria-label]="'serviceArea.mapLabel' | translate"
+      ></div>
+      <figcaption class="service-area__caption">
+        <span class="service-area__legend-dot" aria-hidden="true"></span>
+        <span>{{ 'serviceArea.legend' | translate }}</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>

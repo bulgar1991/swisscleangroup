@@ -7,6 +7,7 @@ import {
 import { Home } from './pages/home/home';
 import { Request } from './pages/request/request';
 import { blogPostSeoResolver } from './resolvers/blog-post-seo.resolver';
+import { pricingSeoResolver } from './resolvers/pricing-seo.resolver';
 import { seoResolver } from './resolvers/seo.resolver';
 import { serviceSeoResolver } from './resolvers/service-seo.resolver';
 
@@ -30,6 +31,11 @@ const mainLayoutRoutes: Routes = [
     loadComponent: () =>
       import('./pages/service-detail/service-detail').then((m) => m.ServiceDetail),
     resolve: { seo: serviceSeoResolver },
+  },
+  {
+    path: 'prices/:id',
+    loadComponent: () => import('./pages/pricing/pricing').then((m) => m.Pricing),
+    resolve: { seo: pricingSeoResolver },
   },
   {
     path: 'about',

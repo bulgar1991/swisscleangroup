@@ -9,12 +9,6 @@
     @apply pb-16 lg:pb-20;
   }
 
-  // Short lines read better.
-  &__inner,
-  &__more {
-    @apply mx-auto max-w-[46rem];
-  }
-
   &__meta {
     @apply mb-6 mt-0 flex flex-wrap items-center gap-x-4 gap-y-3;
   }
@@ -39,6 +33,15 @@
     @apply mb-6 mt-0 text-[1.2rem] font-semibold leading-relaxed text-ink;
   }
 
+  // Price tiles on the service pages.
+  &__prices {
+    @apply mb-10;
+
+    .article-page__subtitle {
+      @apply mt-0;
+    }
+  }
+
   &__paragraph {
     @apply mb-5 mt-0 text-[1.05rem] leading-[1.75] text-ink;
   }
@@ -60,11 +63,11 @@
   }
 
   &__actions {
-    @apply mt-4 flex flex-wrap items-center gap-x-6 gap-y-4;
+    @apply mt-4 flex flex-col items-start gap-x-6 gap-y-4;
   }
 
   &__back {
-    @apply mt-4 inline-flex items-center gap-[0.3rem] font-semibold text-primary no-underline hover:underline;
+    @apply mt-4 inline-flex items-center gap-[0.3rem] font-semibold text-primary hover:text-primary-dark;
   }
 
   &__actions &__back {

@@ -1,0 +1,43 @@
+:host {
+  @apply inline-block;
+}
+
+.price {
+  @apply inline-flex flex-wrap items-baseline gap-x-[0.35rem] whitespace-nowrap;
+
+  &__from,
+  &__unit {
+    @apply text-[0.85rem] font-medium text-ink-muted;
+  }
+
+  &__amount {
+    @apply text-[1.05rem] font-bold text-ink;
+  }
+
+  &--large &__amount {
+    @apply text-[1.5rem] leading-none text-primary sm:text-[2rem];
+  }
+
+  &--large &__from,
+  &--large &__unit {
+    @apply text-[0.95rem];
+  }
+
+  // Starting price of a service: a red pill, "DÈS" small on top of a big amount.
+  &--badge {
+    @apply flex-col items-start gap-0 rounded-2xl bg-gradient-to-br from-primary to-primary-dark px-4 py-[0.6rem] text-white;
+    @apply shadow-[0_10px_24px_theme(colors.primary/35%)] ring-1 ring-white/25;
+  }
+
+  &--badge &__from {
+    @apply text-[0.7rem] font-bold uppercase leading-none tracking-[0.12em] text-white/85;
+  }
+
+  &--badge &__amount {
+    @apply mt-1 text-[1.5rem] font-extrabold leading-none tracking-tight text-white;
+  }
+
+  &--badge &__unit {
+    @apply text-white/85;
+  }
+}

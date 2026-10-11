@@ -1,0 +1,25 @@
+@let item = page();
+
+<ul class="price-tiles" data-testid="price-tiles">
+  @for (tile of item.tiles; track tile.id) {
+    @let tileKey = item.key + '.tiles.' + tile.id;
+    <li class="price-tile" [attr.data-testid]="'price-tile-' + tile.id">
+      <div class="price-tile__header">
+        <span class="price-tile__icon" aria-hidden="true"><i class="icon-{{ tile.icon }}"></i></span>
+        <app-price class="price-tile__price" [price]="tile" variant="large" />
+      </div>
+      <h3 class="price-tile__title">{{ tileKey + '.title' | translate }}</h3>
+      <p class="price-tile__text">{{ tileKey + '.text' | translate }}</p>
+    </li>
+  }
+</ul>
+
+<aside class="price-tiles-note" data-testid="price-tiles-note">
+  <span class="price-tiles-note__icon" aria-hidden="true"
+    ><i class="icon-circle-info-solid-full"></i
+  ></span>
+  <div>
+    <p class="price-tiles-note__title">{{ item.key + '.tilesNote.title' | translate }}</p>
+    <p class="price-tiles-note__text">{{ item.key + '.tilesNote.text' | translate }}</p>
+  </div>
+</aside>

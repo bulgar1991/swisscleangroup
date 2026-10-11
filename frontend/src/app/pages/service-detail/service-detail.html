@@ -10,6 +10,21 @@
   <div class="container mx-auto px-4 lg:px-6 article-page__container">
     <div class="article-page__inner">
       <div data-testid="service-detail-content">
+        @if (pricing(); as pricingPage) {
+          <section class="article-page__prices" aria-labelledby="service-prices-title" data-testid="service-detail-prices">
+            <h2 id="service-prices-title" class="article-page__subtitle">{{ 'pricing.tilesTitle' | translate }}</h2>
+            <app-price-tiles [page]="pricingPage" />
+            <a
+              class="article-page__back"
+              [routerLink]="'/prices/' + pricingPage.id | localize"
+              data-testid="service-detail-all-prices"
+            >
+              {{ 'pricing.allPrices' | translate }}
+              <i class="icon-angle-right-solid-full" aria-hidden="true"></i>
+            </a>
+          </section>
+        }
+
         <p class="article-page__lead">{{ item.key + '.description' | translate }}</p>
 
         @for (paragraph of item.key + '.content' | translate; track $index) {
@@ -28,10 +43,23 @@
       </div>
 
       <div class="article-page__actions">
-        <!-- The quote form lives on the home page. -->
-        <a class="btn" [routerLink]="'/' | localize" fragment="quote" data-testid="service-detail-quote-cta">{{
-          'servicesSlider.requestQuote' | translate
-        }}</a>
+        <div class="flex gap-5 items-center justify-start">
+          <a class="btn" [routerLink]="'/' | localize" fragment="quote" data-testid="service-detail-quote-cta">{{
+              'servicesSlider.requestQuote' | translate
+            }}</a>
+          @if (pricing(); as pricingPage) {
+            <a
+              class="article-page__back"
+              [routerLink]="'/prices/' + pricingPage.id | localize"
+              data-testid="service-detail-pricing-link"
+            >
+              {{ 'pricing.seePrices' | translate }}
+              <i class="icon-angle-right-solid-full" aria-hidden="true"></i>
+            </a>
+          }
+        </div>
+
+
         <a class="article-page__back" [routerLink]="'/services' | localize" data-testid="service-detail-back">
           <i class="icon-angle-left-solid-full" aria-hidden="true"></i>
           {{ 'servicesSlider.backToServices' | translate }}

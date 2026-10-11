@@ -2,8 +2,8 @@ import { NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ContactButtonsComponent } from '@components/contact-buttons/contact-buttons.component';
-import { PageHeaderComponent } from '@components/page-header/page-header.component';
 import { ContactFormComponent } from '@components/contact-form/contact-form.component';
+import { ServiceAreaComponent } from '@components/service-area/service-area.component';
 import { IconsId } from '@models/icons';
 import { CONTACT_EMAIL, CONTACT_PHONE } from '@/config/contact';
 
@@ -20,7 +20,7 @@ interface ContactCard {
 
 @Component({
   selector: 'app-contact',
-  imports: [NgTemplateOutlet, TranslatePipe, PageHeaderComponent, ContactButtonsComponent, ContactFormComponent],
+  imports: [NgTemplateOutlet, TranslatePipe, ContactButtonsComponent, ServiceAreaComponent, ContactFormComponent],
   styleUrl: './contact.scss',
   templateUrl: './contact.html',
 })

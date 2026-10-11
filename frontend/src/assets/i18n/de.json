@@ -295,5 +295,192 @@
       "title": "Blog – Neuigkeiten und Tipps | Swiss Clean Group",
       "description": "Tipps zur Fensterreinigung und Möbelmontage sowie die neuesten Nachrichten der Swiss Clean Group."
     }
+  },
+  "pricing": {
+    "from": "ab",
+    "popular": "Am beliebtesten",
+    "service": "Leistung",
+    "price": "Preis",
+    "units": {
+      "window": "/ Fenster",
+      "item": "/ Stück",
+      "hour": "/ Stunde",
+      "meter": "/ Laufmeter",
+      "appliance": "/ Gerät"
+    },
+    "notesTitle": "Gut zu wissen",
+    "disclaimer": "Richtpreise in Schweizer Franken, inkl. MwSt. Der Endpreis wird in Ihrer kostenlosen Offerte bestätigt, bevor wir mit der Arbeit beginnen.",
+    "ctaTitle": "Erhalten Sie Ihren genauen Preis",
+    "ctaText": "Beschreiben Sie kurz Ihren Bedarf: Wir senden Ihnen eine kostenlose und unverbindliche Offerte.",
+    "cta": "Gratis-Offerte anfordern",
+    "aboutService": "Mehr über diese Leistung",
+    "seePrices": "Preise ansehen",
+    "windowCleaning": {
+      "title": "Preise Fensterreinigung",
+      "subtitle": "Klare Preise ohne Überraschungen, für Wohnungen, Häuser, Geschäfte und Büros.",
+      "seoTitle": "Preise Fensterreinigung in der Schweiz – ab CHF 75",
+      "seoDescription": "Preise für die Fensterreinigung: Wohnungen ab CHF 75, Häuser ab CHF 195, Geschäfte und Büros CHF 55 pro Stunde. Kostenlose, unverbindliche Offerte.",
+      "intro": "Ein klarer Startpreis für jede Art von Objekt. Alle Fenster werden innen und aussen gereinigt, Rahmen und Fensterbänke inklusive. Geschäfte und Büros verrechnen wir nach Stunden.",
+      "notes": [
+        "Professionelle Produkte und Material inklusive.",
+        "Anfahrt in unserem Einsatzgebiet inklusive.",
+        "Hohe oder schwer zugängliche Fenster: Preis nach Besichtigung."
+      ],
+      "tiles": {
+        "apartment": {
+          "title": "Wohnung",
+          "text": "Alle Fenster, innen und aussen"
+        },
+        "house": {
+          "title": "Einfamilienhaus",
+          "text": "Alle Fenster, Dachfenster und Fensterfronten"
+        },
+        "shop": {
+          "title": "Geschäft",
+          "text": "Schaufenster und Ladenfronten, Stundenansatz"
+        },
+        "office": {
+          "title": "Büro",
+          "text": "Büros und Geschäftsräume, Stundenansatz"
+        }
+      },
+      "tilesNote": {
+        "title": "Ein fairer Preis, für Sie berechnet",
+        "text": "Der Endpreis hängt von der Anzahl der Fenster, ihrer Grösse und ihrer Zugänglichkeit ab (Stockwerk, Höhe, Zugang von aussen). Senden Sie uns ein paar Angaben oder ein Foto: Wir antworten mit einer genauen, kostenlosen und unverbindlichen Offerte."
+      }
+    },
+    "furnitureKitchen": {
+      "title": "Preise Möbel- und Küchenmontage",
+      "subtitle": "Bausatzmöbel, Schränke und Küchen aller Marken, sorgfältig montiert.",
+      "seoTitle": "Preise Möbel- und Küchenmontage – klare Tarife",
+      "seoDescription": "Preise für die Möbel- und Küchenmontage: Festpreis pro Möbel, Stundenansatz, Küchenmontage pro Laufmeter, Einbau von Geräten. Gratis-Offerte.",
+      "intro": "Festpreis pro Möbel für übliche Montagen, Stundenansatz für Arbeiten nach Mass und Preis pro Laufmeter für Küchen. Werkzeug und Entsorgung der Verpackung inklusive.",
+      "packagesTitle": "Unsere Angebote",
+      "packages": {
+        "smallFurniture": {
+          "name": "Einzelnes Möbel",
+          "description": "Ein Festpreis pro Möbel, im Voraus bekannt.",
+          "features": [
+            "Regale, Kommoden, Betten, Schränke",
+            "Alle Marken (IKEA, Conforama, Lipo...)",
+            "Möbel eingestellt und gebrauchsfertig"
+          ]
+        },
+        "hourly": {
+          "name": "Stundenansatz",
+          "description": "Für mehrere Möbel oder Arbeiten nach Mass.",
+          "features": [
+            "Preis pro Monteur",
+            "Ideal beim Einzug",
+            "Mindestens 2 Stunden"
+          ]
+        },
+        "kitchen": {
+          "name": "Küchenmontage",
+          "description": "Bausatzküchen, von A bis Z montiert.",
+          "features": [
+            "Korpusse, Fronten und Sockel",
+            "Ausrichten und Wandbefestigung",
+            "Ausschnitte und Geräte optional"
+          ]
+        }
+      },
+      "groups": {
+        "furniture": "Möbelmontage",
+        "kitchen": "Küchen"
+      },
+      "items": {
+        "shelf": {
+          "name": "Regal oder Bücherregal"
+        },
+        "chest": {
+          "name": "Kommode"
+        },
+        "tvUnit": {
+          "name": "TV-Möbel oder Schreibtisch"
+        },
+        "bed": {
+          "name": "Doppelbett"
+        },
+        "wardrobe2": {
+          "name": "Kleiderschrank 2 Türen"
+        },
+        "wardrobe3": {
+          "name": "Grosser Kleiderschrank ab 3 Türen",
+          "note": "Zum Beispiel IKEA PAX, Schiebetüren"
+        },
+        "wallFixing": {
+          "name": "Kippsicherung an der Wand",
+          "note": "Empfohlen für Schränke und hohe Regale"
+        },
+        "kitchenAssembly": {
+          "name": "Montage einer Bausatzküche",
+          "note": "Ober- und Unterschränke, Fronten, Sockel"
+        },
+        "kitchenRemoval": {
+          "name": "Demontage der alten Küche"
+        },
+        "worktopCutout": {
+          "name": "Ausschnitt in der Arbeitsplatte",
+          "note": "Für Spüle oder Kochfeld"
+        },
+        "appliance": {
+          "name": "Einbau eines Einbaugeräts",
+          "note": "Backofen, Geschirrspüler, Kühlschrank"
+        },
+        "disassembly": {
+          "name": "Demontage eines Möbels"
+        }
+      },
+      "notes": [
+        "Feste Elektro- und Wasseranschlüsse werden von einem konzessionierten Installateur ausgeführt.",
+        "Anfahrt in unserem Einsatzgebiet inklusive.",
+        "Lieferung und Hochtragen der Möbel auf Anfrage."
+      ],
+      "tiles": {
+        "furniture": {
+          "title": "Kleines Möbel",
+          "text": "Regal, Kommode, TV-Möbel"
+        },
+        "bed": {
+          "title": "Bett",
+          "text": "Einzel- und Doppelbetten, Lattenroste"
+        },
+        "wardrobe": {
+          "title": "Kleiderschrank",
+          "text": "Schränke und Ankleiden, IKEA PAX"
+        },
+        "kitchen": {
+          "title": "Küche",
+          "text": "Komplette Montage von Bausatzküchen"
+        },
+        "appliance": {
+          "title": "Haushaltgeräte",
+          "text": "Backofen, Geschirrspüler, Kühlschrank"
+        },
+        "other": {
+          "title": "Weiteres",
+          "text": "Demontage, Wandbefestigung, Anpassungen"
+        }
+      },
+      "tilesNote": {
+        "title": "Ein fairer Preis, für Sie berechnet",
+        "text": "Der Endpreis hängt von der Anzahl der Möbel, ihrer Grösse und Komplexität sowie vom Zugang zu Ihrer Wohnung ab (Stockwerk, Lift). Senden Sie uns die Liste oder die Artikelnummern Ihrer Möbel: Wir antworten mit einer genauen, kostenlosen und unverbindlichen Offerte."
+      }
+    },
+    "tilesTitle": "Unsere Preise auf einen Blick",
+    "allPrices": "Alle Preise ansehen"
+  },
+  "serviceArea": {
+    "title": "Unser Einsatzgebiet",
+    "description": "Unsere Dienstleistungen in den Kantonen Waadt, Wallis und Freiburg.",
+    "legend": "Einsatzgebiet: Waadt, Wallis und Freiburg",
+    "mapLabel": "Karte unseres Einsatzgebiets: Kantone Waadt, Wallis und Freiburg, Sitz in Sitten",
+    "headquarters": "Sitz in Sitten",
+    "cantons": {
+      "VD": "Waadt",
+      "VS": "Wallis",
+      "FR": "Freiburg"
+    }
   }
 }

@@ -1,12 +1,7 @@
-<app-page-header
-  titleKey="pages.contact.title"
-  subtitleKey="pages.contact.subtitle"
-  image="assets/images/services/furniture-assembly.jpg"
-/>
-
 <section class="contact-page" aria-labelledby="contact-options-title" data-testid="contact-options">
   <div class="container mx-auto px-4 lg:px-6">
-    <h2 id="contact-options-title" class="sr-only">{{ 'pages.contact.title' | translate }}</h2>
+    <!-- The page's only h1: the contact page has no page header. -->
+    <h1 id="contact-options-title" class="sr-only">{{ 'pages.contact.title' | translate }}</h1>
     <ul class="contact-page__grid">
       @for (card of cards; track card.titleKey) {
         <li>
@@ -31,6 +26,8 @@
   </div>
 </section>
 
+<app-service-area />
+
 <app-contact-form />
 
 <section class="contact-page contact-page--follow" aria-labelledby="contact-follow-title">
@@ -45,7 +42,7 @@
 
 <ng-template #cardContent let-card>
   <span class="contact-card__icon" aria-hidden="true"><i class="icon-{{ card.icon }}"></i></span>
-  <h3 class="contact-card__title">{{ card.titleKey | translate }}</h3>
+  <h2 class="contact-card__title">{{ card.titleKey | translate }}</h2>
   <p class="contact-card__text">
     @for (line of card.lines; track line) {
       {{ line }}<br />

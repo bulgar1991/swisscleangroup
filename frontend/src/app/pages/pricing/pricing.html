@@ -1,0 +1,139 @@
+@let item = page();
+@let itemService = service();
+
+<article class="pricing" [attr.data-testid]="'pricing-page-' + item.id">
+  <app-page-header
+    [titleKey]="item.key + '.title'"
+    [subtitleKey]="item.key + '.subtitle'"
+    [image]="item.image"
+    [parent]="{ labelKey: 'header.menu.services', link: '/services' }"
+  />
+
+  <div class="container mx-auto px-4 lg:px-6 pricing__container">
+    <section class="pricing__section" aria-labelledby="pricing-tiles-title">
+      <h2 id="pricing-tiles-title" class="pricing__title">
+        {{ 'pricing.tilesTitle' | translate }}
+      </h2>
+      <app-price-tiles [page]="item" />
+    </section>
+
+    <p class="pricing__lead">{{ item.key + '.intro' | translate }}</p>
+
+    @if (item.packages.length) {
+      <section class="pricing__section" aria-labelledby="pricing-packages-title">
+        <h2 id="pricing-packages-title" class="pricing__title">
+          {{ item.key + '.packagesTitle' | translate }}
+        </h2>
+        <ul class="pricing__packages" data-testid="pricing-packages">
+          @for (pack of item.packages; track pack.id) {
+            @let packKey = item.key + '.packages.' + pack.id;
+            <li
+              class="pricing-card"
+              [class.pricing-card--highlighted]="pack.highlighted"
+              [attr.data-testid]="'pricing-package-' + pack.id"
+            >
+              @if (pack.highlighted) {
+                <span class="pricing-card__badge">{{ 'pricing.popular' | translate }}</span>
+              }
+              <h3 class="pricing-card__name">{{ packKey + '.name' | translate }}</h3>
+              <app-price class="pricing-card__price" [price]="pack" variant="large" />
+              <p class="pricing-card__description">{{ packKey + '.description' | translate }}</p>
+              <ul class="pricing-card__features">
+                @for (feature of packKey + '.features' | translate; track $index) {
+                  <li>
+                    <i class="icon-circle-check-solid-full" aria-hidden="true"></i>
+                    {{ feature }}
+                  </li>
+                }
+              </ul>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+
+    @for (group of item.groups; track group.id) {
+      <section class="pricing__section" [attr.aria-labelledby]="'pricing-group-' + group.id">
+        <h2 [id]="'pricing-group-' + group.id" class="pricing__title">
+          {{ item.key + '.groups.' + group.id | translate }}
+        </h2>
+        <table class="pricing__table" [attr.data-testid]="'pricing-table-' + group.id">
+          <thead class="sr-only">
+            <tr>
+              <th scope="col">{{ 'pricing.service' | translate }}</th>
+              <th scope="col">{{ 'pricing.price' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of group.items; track row.id) {
+              @let rowKey = item.key + '.items.' + row.id;
+              <tr class="pricing__row" [attr.data-testid]="'pricing-row-' + row.id">
+                <th class="pricing__item" scope="row">
+                  {{ rowKey + '.name' | translate }}
+                  @if (row.note) {
+                    <span class="pricing__note">{{ rowKey + '.note' | translate }}</span>
+                  }
+                </th>
+                <td class="pricing__cell"><app-price [price]="row" /></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </section>
+    }
+
+    <section
+      class="pricing__section pricing__notes"
+      aria-labelledby="pricing-notes-title"
+      data-testid="pricing-notes"
+    >
+      <h2 id="pricing-notes-title" class="pricing__title">
+        {{ 'pricing.notesTitle' | translate }}
+      </h2>
+      <ul class="pricing__notes-list">
+        @for (note of item.key + '.notes' | translate; track $index) {
+          <li>
+            <i class="icon-circle-check-solid-full" aria-hidden="true"></i>
+            {{ note }}
+          </li>
+        }
+      </ul>
+      <p class="pricing__disclaimer">{{ 'pricing.disclaimer' | translate }}</p>
+    </section>
+
+    <div class="pricing__cta">
+      <div>
+        <h2>{{ 'pricing.ctaTitle' | translate }}</h2>
+        <p>{{ 'pricing.ctaText' | translate }}</p>
+      </div>
+      <div class="pricing__cta-actions">
+        <a
+          class="btn pricing__cta-button"
+          [routerLink]="'/request/' + itemService.id | localize"
+          data-testid="pricing-quote-cta"
+          >{{ 'pricing.cta' | translate }}</a
+        >
+        <a
+          class="pricing__cta-link"
+          [routerLink]="itemService.link | localize"
+          data-testid="pricing-service-link"
+        >
+          {{ 'pricing.aboutService' | translate }}
+          <i class="icon-angle-right-solid-full" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    @for (other of otherPages(); track other.id) {
+      <p class="pricing__other">
+        <a
+          [routerLink]="'/prices/' + other.id | localize"
+          [attr.data-testid]="'pricing-other-' + other.id"
+        >
+          {{ other.key + '.title' | translate }}
+          <i class="icon-angle-right-solid-full" aria-hidden="true"></i>
+        </a>
+      </p>
+    }
+  </div>
+</article>

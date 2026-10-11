@@ -295,5 +295,192 @@
       "title": "Blog – Actualités et astuces | Swiss Clean Group",
       "description": "Astuces pour le nettoyage de vitres et le montage de meubles, et les dernières actualités de Swiss Clean Group."
     }
+  },
+  "pricing": {
+    "from": "dès",
+    "popular": "Le plus demandé",
+    "service": "Prestation",
+    "price": "Prix",
+    "units": {
+      "window": "/ fenêtre",
+      "item": "/ pièce",
+      "hour": "/ heure",
+      "meter": "/ mètre linéaire",
+      "appliance": "/ appareil"
+    },
+    "notesTitle": "Bon à savoir",
+    "disclaimer": "Prix indicatifs en francs suisses, TVA incluse. Le prix final est confirmé dans votre devis gratuit, avant toute intervention.",
+    "ctaTitle": "Recevez votre prix exact",
+    "ctaText": "Décrivez votre besoin en quelques mots : nous vous envoyons un devis gratuit et sans engagement.",
+    "cta": "Demander un devis gratuit",
+    "aboutService": "En savoir plus sur le service",
+    "seePrices": "Voir les tarifs",
+    "windowCleaning": {
+      "title": "Tarifs nettoyage de vitres",
+      "subtitle": "Des prix clairs, sans surprise, pour les appartements, maisons, commerces et bureaux.",
+      "seoTitle": "Prix nettoyage de vitres en Suisse – dès CHF 75",
+      "seoDescription": "Tarifs du nettoyage de vitres : appartements dès CHF 75, maisons dès CHF 195, commerces et bureaux CHF 55 de l'heure. Devis gratuit et sans engagement.",
+      "intro": "Un prix de départ clair pour chaque type de bien. Toutes les vitres sont nettoyées à l'intérieur et à l'extérieur, cadres et rebords compris. Les commerces et les bureaux sont facturés à l'heure.",
+      "notes": [
+        "Produits et matériel professionnels inclus.",
+        "Déplacement inclus dans notre zone d'intervention.",
+        "Fenêtres en hauteur ou difficiles d'accès : prix confirmé après évaluation."
+      ],
+      "tiles": {
+        "apartment": {
+          "title": "Appartement",
+          "text": "Toutes les fenêtres, à l'intérieur et à l'extérieur"
+        },
+        "house": {
+          "title": "Maison individuelle",
+          "text": "Toutes les fenêtres, velux et baies vitrées"
+        },
+        "shop": {
+          "title": "Commerce",
+          "text": "Vitrines et devantures, tarif horaire"
+        },
+        "office": {
+          "title": "Bureau",
+          "text": "Bureaux et locaux professionnels, tarif horaire"
+        }
+      },
+      "tilesNote": {
+        "title": "Un prix juste, calculé pour vous",
+        "text": "Le prix final dépend du nombre de fenêtres, de leur taille et de leur accessibilité (étage, hauteur, accès par l'extérieur). Envoyez-nous quelques détails ou une photo : nous vous répondons avec un devis précis, gratuit et sans engagement."
+      }
+    },
+    "furnitureKitchen": {
+      "title": "Tarifs montage de meubles et cuisines",
+      "subtitle": "Meubles en kit, armoires et cuisines de toutes marques, montés avec soin.",
+      "seoTitle": "Prix montage de meubles et cuisines – tarifs clairs",
+      "seoDescription": "Tarifs du montage de meubles et de cuisines : prix fixe par meuble, tarif horaire, montage de cuisine au mètre linéaire, pose d'électroménager. Devis gratuit.",
+      "intro": "Prix fixe par meuble pour les montages courants, tarif horaire pour les travaux sur mesure, et prix au mètre linéaire pour les cuisines. Outillage et reprise des emballages inclus.",
+      "packagesTitle": "Nos formules",
+      "packages": {
+        "smallFurniture": {
+          "name": "Meuble à l'unité",
+          "description": "Un prix fixe par meuble, connu à l'avance.",
+          "features": [
+            "Étagères, commodes, lits, armoires",
+            "Toutes marques (IKEA, Conforama, Lipo...)",
+            "Meuble réglé et prêt à l'emploi"
+          ]
+        },
+        "hourly": {
+          "name": "Tarif horaire",
+          "description": "Pour plusieurs meubles ou des travaux sur mesure.",
+          "features": [
+            "Prix par monteur",
+            "Idéal pour un emménagement",
+            "Minimum 2 heures"
+          ]
+        },
+        "kitchen": {
+          "name": "Montage de cuisine",
+          "description": "Cuisines en kit, posées de A à Z.",
+          "features": [
+            "Caissons, façades et plinthes",
+            "Mise à niveau et fixation murale",
+            "Découpes et électroménager en option"
+          ]
+        }
+      },
+      "groups": {
+        "furniture": "Montage de meubles",
+        "kitchen": "Cuisines"
+      },
+      "items": {
+        "shelf": {
+          "name": "Étagère ou bibliothèque"
+        },
+        "chest": {
+          "name": "Commode"
+        },
+        "tvUnit": {
+          "name": "Meuble TV ou bureau"
+        },
+        "bed": {
+          "name": "Lit double"
+        },
+        "wardrobe2": {
+          "name": "Armoire 2 portes"
+        },
+        "wardrobe3": {
+          "name": "Grande armoire 3 portes ou plus",
+          "note": "Par exemple IKEA PAX, portes coulissantes"
+        },
+        "wallFixing": {
+          "name": "Fixation murale anti-basculement",
+          "note": "Recommandée pour les armoires et étagères hautes"
+        },
+        "kitchenAssembly": {
+          "name": "Montage de cuisine en kit",
+          "note": "Caissons hauts et bas, façades, plinthes"
+        },
+        "kitchenRemoval": {
+          "name": "Démontage de l'ancienne cuisine"
+        },
+        "worktopCutout": {
+          "name": "Découpe du plan de travail",
+          "note": "Pour l'évier ou la plaque de cuisson"
+        },
+        "appliance": {
+          "name": "Pose d'électroménager encastrable",
+          "note": "Four, lave-vaisselle, réfrigérateur"
+        },
+        "disassembly": {
+          "name": "Démontage d'un meuble"
+        }
+      },
+      "notes": [
+        "Les raccordements électriques et d'eau fixes sont réalisés par un installateur agréé.",
+        "Déplacement inclus dans notre zone d'intervention.",
+        "Livraison et montée des meubles sur demande."
+      ],
+      "tiles": {
+        "furniture": {
+          "title": "Petit meuble",
+          "text": "Étagère, commode, meuble TV"
+        },
+        "bed": {
+          "title": "Lit",
+          "text": "Lits simples et doubles, sommiers"
+        },
+        "wardrobe": {
+          "title": "Armoire",
+          "text": "Armoires et dressings, IKEA PAX"
+        },
+        "kitchen": {
+          "title": "Cuisine",
+          "text": "Montage complet de cuisines en kit"
+        },
+        "appliance": {
+          "title": "Électroménager",
+          "text": "Four, lave-vaisselle, réfrigérateur"
+        },
+        "other": {
+          "title": "Autres",
+          "text": "Démontage, fixation murale, ajustements"
+        }
+      },
+      "tilesNote": {
+        "title": "Un prix juste, calculé pour vous",
+        "text": "Le prix final dépend du nombre de meubles, de leur taille et de leur complexité, ainsi que de l'accès à votre logement (étage, ascenseur). Envoyez-nous la liste ou les références de vos meubles : nous vous répondons avec un devis précis, gratuit et sans engagement."
+      }
+    },
+    "tilesTitle": "Nos prix en un coup d'œil",
+    "allPrices": "Voir tous les tarifs"
+  },
+  "serviceArea": {
+    "title": "Notre zone d'intervention",
+    "description": "Nos services dans les cantons de Vaud, du Valais et de Fribourg.",
+    "legend": "Zones d'intervention : Vaud, Valais et Fribourg",
+    "mapLabel": "Carte de notre zone d'intervention : cantons de Vaud, du Valais et de Fribourg, siège à Sion",
+    "headquarters": "Siège à Sion",
+    "cantons": {
+      "VD": "Vaud",
+      "VS": "Valais",
+      "FR": "Fribourg"
+    }
   }
 }

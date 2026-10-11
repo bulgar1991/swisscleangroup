@@ -36,6 +36,15 @@
               }}</a>
             </li>
           }
+          @for (pricingPage of pricingPages; track pricingPage.id) {
+            <li>
+              <a
+                [routerLink]="'/prices/' + pricingPage.id | localize"
+                [attr.data-testid]="'footer-pricing-link-' + pricingPage.id"
+                >{{ pricingPage.key + '.title' | translate }}</a
+              >
+            </li>
+          }
         </ul>
       </nav>
 

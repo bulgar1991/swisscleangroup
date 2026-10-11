@@ -1,6 +1,7 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
 import { NEWS_POSTS } from '@components/news-section/news-section.posts';
 import { SERVICE_POSTS } from '@components/services-slider/services-slider.items';
+import { PRICING_PAGES } from '@/pages/pricing/pricing.data';
 import { LANGUAGES } from '@services/language.service';
 
 const languages = async () => LANGUAGES.map((lang) => ({ lang: lang.code }));
@@ -26,6 +27,12 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     getPrerenderParams: async () =>
       LANGUAGES.flatMap((lang) => SERVICE_POSTS.map((item) => ({ lang: lang.code, id: item.id }))),
+  },
+  {
+    path: ':lang/prices/:id',
+    renderMode: RenderMode.Prerender,
+    getPrerenderParams: async () =>
+      LANGUAGES.flatMap((lang) => PRICING_PAGES.map((page) => ({ lang: lang.code, id: page.id }))),
   },
   {
     path: ':lang/blog/:id',

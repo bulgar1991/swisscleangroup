@@ -295,5 +295,192 @@
       "title": "Blog – News and Tips | Swiss Clean Group",
       "description": "Window cleaning and furniture assembly tips, plus the latest news from Swiss Clean Group."
     }
+  },
+  "pricing": {
+    "from": "from",
+    "popular": "Most popular",
+    "service": "Service",
+    "price": "Price",
+    "units": {
+      "window": "/ window",
+      "item": "/ item",
+      "hour": "/ hour",
+      "meter": "/ linear metre",
+      "appliance": "/ appliance"
+    },
+    "notesTitle": "Good to know",
+    "disclaimer": "Guide prices in Swiss francs, VAT included. The final price is confirmed in your free quote, before any work starts.",
+    "ctaTitle": "Get your exact price",
+    "ctaText": "Tell us briefly what you need: we'll send you a free, no-obligation quote.",
+    "cta": "Request a free quote",
+    "aboutService": "More about this service",
+    "seePrices": "See prices",
+    "windowCleaning": {
+      "title": "Window cleaning prices",
+      "subtitle": "Clear prices with no surprises, for flats, houses, shops and offices.",
+      "seoTitle": "Window cleaning prices in Switzerland – from CHF 75",
+      "seoDescription": "Window cleaning prices: flats from CHF 75, houses from CHF 195, shops and offices CHF 55 per hour. Free, no-obligation quote.",
+      "intro": "A clear starting price for every type of property. Every window is cleaned inside and out, frames and sills included. Shops and offices are billed by the hour.",
+      "notes": [
+        "Professional products and equipment included.",
+        "Travel included within our service area.",
+        "High or hard-to-reach windows: price confirmed after assessment."
+      ],
+      "tiles": {
+        "apartment": {
+          "title": "Flat",
+          "text": "Every window, inside and out"
+        },
+        "house": {
+          "title": "Detached house",
+          "text": "Every window, roof windows and glass fronts"
+        },
+        "shop": {
+          "title": "Shop",
+          "text": "Shop windows and fronts, hourly rate"
+        },
+        "office": {
+          "title": "Office",
+          "text": "Offices and business premises, hourly rate"
+        }
+      },
+      "tilesNote": {
+        "title": "A fair price, worked out for you",
+        "text": "The final price depends on how many windows you have, how big they are and how easy they are to reach (floor, height, outside access). Send us a few details or a photo and we'll reply with an exact, free, no-obligation quote."
+      }
+    },
+    "furnitureKitchen": {
+      "title": "Furniture & kitchen assembly prices",
+      "subtitle": "Flat-pack furniture, wardrobes and kitchens of every brand, assembled with care.",
+      "seoTitle": "Furniture & kitchen assembly prices – clear rates",
+      "seoDescription": "Furniture and kitchen assembly prices: fixed price per item, hourly rate, kitchen assembly per linear metre, appliance installation. Free quote.",
+      "intro": "A fixed price per item for everyday assembly, an hourly rate for custom work, and a price per linear metre for kitchens. Tools and packaging removal included.",
+      "packagesTitle": "Our options",
+      "packages": {
+        "smallFurniture": {
+          "name": "Single item",
+          "description": "A fixed price per item, known in advance.",
+          "features": [
+            "Shelves, chests, beds, wardrobes",
+            "Every brand (IKEA, Conforama, Lipo...)",
+            "Adjusted and ready to use"
+          ]
+        },
+        "hourly": {
+          "name": "Hourly rate",
+          "description": "For several items or custom work.",
+          "features": [
+            "Price per fitter",
+            "Ideal when moving in",
+            "2 hours minimum"
+          ]
+        },
+        "kitchen": {
+          "name": "Kitchen assembly",
+          "description": "Flat-pack kitchens, fitted from start to finish.",
+          "features": [
+            "Cabinets, doors and plinths",
+            "Levelling and wall fixing",
+            "Cut-outs and appliances as options"
+          ]
+        }
+      },
+      "groups": {
+        "furniture": "Furniture assembly",
+        "kitchen": "Kitchens"
+      },
+      "items": {
+        "shelf": {
+          "name": "Shelf or bookcase"
+        },
+        "chest": {
+          "name": "Chest of drawers"
+        },
+        "tvUnit": {
+          "name": "TV unit or desk"
+        },
+        "bed": {
+          "name": "Double bed"
+        },
+        "wardrobe2": {
+          "name": "2-door wardrobe"
+        },
+        "wardrobe3": {
+          "name": "Large wardrobe, 3 doors or more",
+          "note": "For example IKEA PAX, sliding doors"
+        },
+        "wallFixing": {
+          "name": "Anti-tip wall fixing",
+          "note": "Recommended for wardrobes and tall shelves"
+        },
+        "kitchenAssembly": {
+          "name": "Flat-pack kitchen assembly",
+          "note": "Wall and base cabinets, doors, plinths"
+        },
+        "kitchenRemoval": {
+          "name": "Removing the old kitchen"
+        },
+        "worktopCutout": {
+          "name": "Worktop cut-out",
+          "note": "For the sink or hob"
+        },
+        "appliance": {
+          "name": "Built-in appliance installation",
+          "note": "Oven, dishwasher, fridge"
+        },
+        "disassembly": {
+          "name": "Taking apart an item"
+        }
+      },
+      "notes": [
+        "Fixed electrical and water connections are made by a licensed installer.",
+        "Travel included within our service area.",
+        "Delivery and carrying furniture upstairs on request."
+      ],
+      "tiles": {
+        "furniture": {
+          "title": "Small furniture",
+          "text": "Shelf, chest of drawers, TV unit"
+        },
+        "bed": {
+          "title": "Bed",
+          "text": "Single and double beds, bed bases"
+        },
+        "wardrobe": {
+          "title": "Wardrobe",
+          "text": "Wardrobes and walk-ins, IKEA PAX"
+        },
+        "kitchen": {
+          "title": "Kitchen",
+          "text": "Full flat-pack kitchen assembly"
+        },
+        "appliance": {
+          "title": "Appliances",
+          "text": "Oven, dishwasher, fridge"
+        },
+        "other": {
+          "title": "Other",
+          "text": "Taking apart, wall fixing, adjustments"
+        }
+      },
+      "tilesNote": {
+        "title": "A fair price, worked out for you",
+        "text": "The final price depends on how many items you have, their size and complexity, and access to your home (floor, lift). Send us a list or the product references and we'll reply with an exact, free, no-obligation quote."
+      }
+    },
+    "tilesTitle": "Our prices at a glance",
+    "allPrices": "See all prices"
+  },
+  "serviceArea": {
+    "title": "Our service area",
+    "description": "Our services in the cantons of Vaud, Valais and Fribourg.",
+    "legend": "Service area: Vaud, Valais and Fribourg",
+    "mapLabel": "Map of our service area: the cantons of Vaud, Valais and Fribourg, based in Sion",
+    "headquarters": "Based in Sion",
+    "cantons": {
+      "VD": "Vaud",
+      "VS": "Valais",
+      "FR": "Fribourg"
+    }
   }
 }
