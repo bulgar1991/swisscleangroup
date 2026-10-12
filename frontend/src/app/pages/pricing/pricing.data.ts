@@ -34,7 +34,7 @@ export const PRICING_PAGES: PricingPage[] = [
   {
     id: 'window-cleaning',
     serviceId: 'window-cleaning',
-    image: 'assets/images/services/clean-window-service.jpg',
+    image: 'assets/images/banner/services/clean-window-service.jpg',
     key: 'pricing.windowCleaning',
     // Shops and offices are billed by the hour.
     tiles: [
@@ -47,7 +47,7 @@ export const PRICING_PAGES: PricingPage[] = [
   {
     id: 'furniture-kitchen-assembly',
     serviceId: 'furniture-assembly',
-    image: 'assets/images/services/montage_demontage.jpg',
+    image: 'assets/images/banner/services/montage_demontage.jpg',
     key: 'pricing.furnitureKitchen',
     tiles: [
       { id: 'furnitureAssembly', icon: 'couch-solid-full', price: 60 },
