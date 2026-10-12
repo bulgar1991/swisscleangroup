@@ -245,6 +245,7 @@
   },
   "pages": {
     "breadcrumb": "Fil d'Ariane",
+    "loading": "Chargement…",
     "services": {
       "title": "Nos services",
       "subtitle": "Nettoyage de vitres et montage de meubles pour particuliers et entreprises, partout en Suisse.",
