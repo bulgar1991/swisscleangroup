@@ -245,6 +245,7 @@
   },
   "pages": {
     "breadcrumb": "Breadcrumb",
+    "loading": "Loading…",
     "services": {
       "title": "Our services",
       "subtitle": "Window cleaning and furniture assembly for homes and businesses across Switzerland.",

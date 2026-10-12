@@ -79,6 +79,12 @@
     </script>
   </head>
   <body>
-    <app-root></app-root>
+    <app-root>
+      <!-- Shown until Angular boots; PageLoaderComponent then takes over (same markup/styles). -->
+      <div class="page-loader" role="status">
+        <img class="page-loader__logo" src="assets/images/header/site-logo-desktop.png" alt="" width="192" height="64" />
+        <span class="page-loader__spinner" aria-hidden="true"></span>
+      </div>
+    </app-root>
   </body>
 </html>
